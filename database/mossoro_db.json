@@ -1,0 +1,42 @@
+{
+  "users": {
+    "lucas": {
+      "completedTopics": [],
+      "notes": {},
+      "finance": {
+        "registrationFee": 100,
+        "vehicleType": "fox",
+        "roundTripDistanceKm": 560,
+        "fuelPricePerLiter": 6.29,
+        "vehicleConsumptionKmPerL": 11.5,
+        "fuelCostManual": 0,
+        "useManualFuel": false,
+        "nights": 1,
+        "costPerNight": 180,
+        "daysEating": 2,
+        "foodPerDay": 75,
+        "extraEmergency": 80
+      },
+      "updatedAt": "2026-10-23T11:00:00Z"
+    },
+    "ana": {
+      "completedTopics": [],
+      "notes": {},
+      "finance": {
+        "registrationFee": 100,
+        "vehicleType": "fox",
+        "roundTripDistanceKm": 560,
+        "fuelPricePerLiter": 6.29,
+        "vehicleConsumptionKmPerL": 11.5,
+        "fuelCostManual": 0,
+        "useManualFuel": false,
+        "nights": 1,
+        "costPerNight": 180,
+        "daysEating": 2,
+        "foodPerDay": 75,
+        "extraEmergency": 80
+      },
+      "updatedAt": "2026-10-23T11:00:00Z"
+    }
+  }
+}
