@@ -56,14 +56,6 @@ export function Navbar({ activeTab, onTabChange, isDark, onToggleTheme }) {
             <FileText size={18} />
             <span>Central de Editais & PDFs</span>
           </button>
-
-          <button
-            className={`nav-btn ${activeTab === 'cloud' ? 'active' : ''}`}
-            onClick={() => onTabChange('cloud')}
-          >
-            <Cloud size={18} />
-            <span>Nuvem (BD)</span>
-          </button>
         </nav>
 
         <div className="nav-actions">

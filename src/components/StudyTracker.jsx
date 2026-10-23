@@ -324,10 +324,10 @@ export function StudyTracker() {
               {user?.login === 'lucas' ? 'Perfil TI (Lucas Silva)' : 'Perfil Administrativo (Ana Dias)'}
             </span>
             {syncStatus === 'saving' && (
-              <span className="badge badge-warning">Salvando...</span>
+              <span className="badge badge-warning">Salvando no Supabase...</span>
             )}
             {syncStatus === 'saved' && (
-              <span className="badge badge-success">Sincronizado</span>
+              <span className="badge badge-success">Sincronizado (Supabase)</span>
             )}
           </div>
           <p className="tracker-sub">

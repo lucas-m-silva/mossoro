@@ -71,11 +71,11 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
   }, []);
 
   // Financial Calculator State
-  const defaultFee = user?.login === 'lucas' ? 100 : 100;
+  const defaultFee = 100;
   const [finance, setFinance] = useState({
     registrationFee: defaultFee,
     vehicleType: 'fox', // 'fox' | 'mt03' | 'custom'
-    roundTripDistanceKm: 560, // Natal <-> Mossoró
+    roundTripDistanceKm: 1578, // Distância padrão configurada (1578 km)
     fuelPricePerLiter: 6.29,
     vehicleConsumptionKmPerL: 11.5, // 11.5 km/l for Fox, 22 km/l for MT-03
     fuelCostManual: 0,
@@ -99,7 +99,8 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
         } else {
           setFinance(prev => ({
             ...prev,
-            registrationFee: user.login === 'ana' ? 100 : 100
+            roundTripDistanceKm: 1578,
+            registrationFee: 100
           }));
         }
       });
@@ -518,7 +519,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
               title="Salvar custos para o usuário atual"
             >
               {savedSuccess ? <CheckCircle2 size={16} color="var(--success)" /> : <Save size={16} />}
-              <span>{savedSuccess ? 'Orçamento Salvo!' : 'Salvar Orçamento'}</span>
+              <span>{savedSuccess ? 'Salvo na Nuvem (Supabase)!' : 'Salvar no Supabase'}</span>
             </button>
           </div>
         </div>
@@ -533,27 +534,55 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                 <span>Taxa de Inscrição no Concurso</span>
               </label>
               <div className="fee-preset-buttons">
-                <button
-                  type="button"
-                  className={`preset-pill ${finance.registrationFee === 100 ? 'active' : ''}`}
-                  onClick={() => setFinance(p => ({ ...p, registrationFee: 100 }))}
-                >
-                  R$ 100 (Médio/Técnico)
-                </button>
-                <button
-                  type="button"
-                  className={`preset-pill ${finance.registrationFee === 150 ? 'active' : ''}`}
-                  onClick={() => setFinance(p => ({ ...p, registrationFee: 150 }))}
-                >
-                  R$ 150 (Superior)
-                </button>
-                <button
-                  type="button"
-                  className={`preset-pill ${finance.registrationFee === 0 ? 'active' : ''}`}
-                  onClick={() => setFinance(p => ({ ...p, registrationFee: 0 }))}
-                >
-                  R$ 0 (Isento)
-                </button>
+                {user?.login === 'ana' ? (
+                  <>
+                    <button
+                      type="button"
+                      className={`preset-pill ${finance.registrationFee === 100 ? 'active' : ''}`}
+                      onClick={() => setFinance(p => ({ ...p, registrationFee: 100 }))}
+                    >
+                      R$ 100 (Médio/Técnico)
+                    </button>
+                    <button
+                      type="button"
+                      className={`preset-pill ${finance.registrationFee === 0 ? 'active' : ''}`}
+                      onClick={() => setFinance(p => ({ ...p, registrationFee: 0 }))}
+                    >
+                      R$ 0 (Isento)
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button
+                      type="button"
+                      className={`preset-pill ${finance.registrationFee === 100 ? 'active' : ''}`}
+                      onClick={() => setFinance(p => ({ ...p, registrationFee: 100 }))}
+                    >
+                      R$ 100 (Técnico de TI)
+                    </button>
+                    <button
+                      type="button"
+                      className={`preset-pill ${finance.registrationFee === 130 ? 'active' : ''}`}
+                      onClick={() => setFinance(p => ({ ...p, registrationFee: 130 }))}
+                    >
+                      R$ 130 (Analista de TI)
+                    </button>
+                    <button
+                      type="button"
+                      className={`preset-pill ${finance.registrationFee === 230 ? 'active' : ''}`}
+                      onClick={() => setFinance(p => ({ ...p, registrationFee: 230 }))}
+                    >
+                      R$ 230 (Dois Cargos)
+                    </button>
+                    <button
+                      type="button"
+                      className={`preset-pill ${finance.registrationFee === 0 ? 'active' : ''}`}
+                      onClick={() => setFinance(p => ({ ...p, registrationFee: 0 }))}
+                    >
+                      R$ 0 (Isento)
+                    </button>
+                  </>
+                )}
               </div>
               <div className="custom-stepper-input">
                 <span className="currency-prefix">R$</span>
@@ -632,6 +661,12 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                       </div>
                     </div>
                     <div className="quick-distances">
+                      <span
+                        className={finance.roundTripDistanceKm === 1578 ? 'active-quick' : ''}
+                        onClick={() => setFinance(p => ({ ...p, roundTripDistanceKm: 1578 }))}
+                      >
+                        1.578km (Padrão)
+                      </span>
                       <span onClick={() => setFinance(p => ({ ...p, roundTripDistanceKm: 560 }))}>
                         Natal: 560km
                       </span>

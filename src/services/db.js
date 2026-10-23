@@ -1,266 +1,226 @@
 /**
- * Database & Persistence Service
- * Supports:
- * - Local Database Server (/api/progress and /api/finance -> database/mossoro_db.json)
- * - Browser LocalStorage (offline instant cache)
- * - Supabase Cloud Database (PostgreSQL)
- * - Firebase Firestore (Google NoSQL)
+ * Database & Persistence Service - Supabase Cloud Database (PostgreSQL)
+ * Project: Concurso Câmara de Mossoró (COMPERVE)
  */
 
 import { createClient } from '@supabase/supabase-js';
-import { initializeApp, getApps, getApp } from 'firebase/app';
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 
-const CONFIG_KEY = 'mossoro_concurso_cloud_config';
+export const SUPABASE_URL =
+  import.meta.env.VITE_SUPABASE_URL || 'https://knxiketttiukrzvrqhsv.supabase.co';
+export const SUPABASE_ANON_KEY =
+  import.meta.env.VITE_SUPABASE_ANON_KEY ||
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtueGlrZXR0dGl1a3J6dnJxaHN2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MjgwODYsImV4cCI6MjEwODMwNDA4Nn0.2zFbR2aGKi_c688G3EqbtYaAQIs3nb4dLvD04UKLVUM';
+
+export const TABLE_NAME = 'mossoro_study_progress';
+
+// Single Supabase client instance
+export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 const LOCAL_STORAGE_PREFIX = 'mossoro_study_progress_';
 const FINANCE_STORAGE_PREFIX = 'mossoro_finance_plan_';
 
-export function getCloudConfig() {
-  try {
-    const raw = localStorage.getItem(CONFIG_KEY);
-    if (raw) return JSON.parse(raw);
-  } catch (e) {
-    console.error('Error loading cloud config:', e);
-  }
-  return {
-    provider: 'local', // 'local' | 'supabase' | 'firebase'
-    supabase: {
-      url: import.meta.env.VITE_SUPABASE_URL || '',
-      anonKey: import.meta.env.VITE_SUPABASE_ANON_KEY || '',
-      table: 'mossoro_study_progress'
-    },
-    firebase: {
-      apiKey: import.meta.env.VITE_FIREBASE_API_KEY || '',
-      authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || '',
-      projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || '',
-      storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || '',
-      messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '',
-      appId: import.meta.env.VITE_FIREBASE_APP_ID || '',
-      collection: 'mossoro_study_progress'
-    }
-  };
-}
+/**
+ * SQL script needed to create the table and public access in Supabase SQL Editor
+ */
+export const SUPABASE_SETUP_SQL = `-- Cole e execute este script no SQL Editor do Supabase (1 clique em Run):
+CREATE TABLE IF NOT EXISTS public.mossoro_study_progress (
+  username text PRIMARY KEY,
+  data jsonb NOT NULL,
+  updated_at timestamp with time zone DEFAULT timezone('utc'::text, now())
+);
 
-export function saveCloudConfig(newConfig) {
-  try {
-    localStorage.setItem(CONFIG_KEY, JSON.stringify(newConfig));
-    supabaseClient = null;
-    firestoreDb = null;
-    return true;
-  } catch (e) {
-    console.error('Error saving cloud config:', e);
-    return false;
-  }
-}
+-- Habilitar Row Level Security (RLS)
+ALTER TABLE public.mossoro_study_progress ENABLE ROW LEVEL SECURITY;
 
-let supabaseClient = null;
-function getSupabaseClient() {
-  if (supabaseClient) return supabaseClient;
-  const cfg = getCloudConfig();
-  if (cfg.provider === 'supabase' && cfg.supabase?.url && cfg.supabase?.anonKey) {
-    try {
-      supabaseClient = createClient(cfg.supabase.url, cfg.supabase.anonKey);
-      return supabaseClient;
-    } catch (e) {
-      console.error('Failed to init Supabase:', e);
-    }
-  }
-  return null;
-}
-
-let firestoreDb = null;
-function getFirestoreInstance() {
-  if (firestoreDb) return firestoreDb;
-  const cfg = getCloudConfig();
-  if (cfg.provider === 'firebase' && cfg.firebase?.apiKey && cfg.firebase?.projectId) {
-    try {
-      const app = getApps().length > 0 ? getApp() : initializeApp(cfg.firebase);
-      firestoreDb = getFirestore(app);
-      return firestoreDb;
-    } catch (e) {
-      console.error('Failed to init Firebase:', e);
-    }
-  }
-  return null;
-}
+-- Permitir leitura e escrita para o app
+CREATE POLICY "Acesso publico ao progresso do concurso"
+ON public.mossoro_study_progress
+FOR ALL
+USING (true)
+WITH CHECK (true);
+`;
 
 /**
- * Load Study Progress for a specific user
+ * Load Study Progress for a specific user directly from Supabase Cloud
  */
 export async function loadStudyProgress(username) {
-  const cfg = getCloudConfig();
-
-  // 1. Try Supabase if configured
-  if (cfg.provider === 'supabase') {
-    const sb = getSupabaseClient();
-    if (sb) {
-      try {
-        const { data, error } = await sb
-          .from(cfg.supabase.table || 'mossoro_study_progress')
-          .select('data')
-          .eq('username', username)
-          .single();
-
-        if (!error && data?.data) {
-          return data.data;
-        }
-      } catch (err) {
-        console.warn('Supabase fetch error:', err);
-      }
-    }
-  }
-
-  // 2. Try Firebase Firestore if configured
-  if (cfg.provider === 'firebase') {
-    const db = getFirestoreInstance();
-    if (db) {
-      try {
-        const coll = cfg.firebase.collection || 'mossoro_study_progress';
-        const docRef = doc(db, coll, username);
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-          return docSnap.data();
-        }
-      } catch (err) {
-        console.warn('Firebase fetch error:', err);
-      }
-    }
-  }
-
-  // 3. Try Local Server Database API (database/mossoro_db.json)
   try {
-    const res = await fetch(`/api/progress?user=${encodeURIComponent(username)}`);
-    if (res.ok) {
-      const apiData = await res.json();
-      if (apiData && (apiData.completedTopics || apiData.notes)) {
-        // Cache to localStorage
-        localStorage.setItem(`${LOCAL_STORAGE_PREFIX}${username}`, JSON.stringify(apiData));
-        return apiData;
-      }
+    const { data, error } = await supabase
+      .from(TABLE_NAME)
+      .select('data')
+      .eq('username', username)
+      .maybeSingle();
+
+    if (!error && data?.data) {
+      const studyData = {
+        completedTopics: data.data.completedTopics || [],
+        notes: data.data.notes || {},
+        updatedAt: data.data.updatedAt || new Date().toISOString()
+      };
+      // Optimistic browser cache
+      localStorage.setItem(`${LOCAL_STORAGE_PREFIX}${username}`, JSON.stringify(studyData));
+      return studyData;
+    }
+
+    if (error) {
+      console.warn('[Supabase Cloud] Erro ao buscar progresso:', error.message);
     }
   } catch (err) {
-    // API not reachable (e.g. static host without server middleware)
+    console.warn('[Supabase Cloud] Conexão indisponível:', err);
   }
 
-  // 4. Fallback to LocalStorage
+  // Fallback to cache if cloud fails or table not yet created
   try {
-    const saved = localStorage.getItem(`${LOCAL_STORAGE_PREFIX}${username}`);
-    if (saved) {
-      return JSON.parse(saved);
-    }
-  } catch (e) {
-    console.error('LocalStorage read error:', e);
-  }
+    const cached = localStorage.getItem(`${LOCAL_STORAGE_PREFIX}${username}`);
+    if (cached) return JSON.parse(cached);
+  } catch (e) {}
 
   return { completedTopics: [], notes: {}, updatedAt: new Date().toISOString() };
 }
 
 /**
- * Save Study Progress for a specific user
+ * Save Study Progress for a specific user directly to Supabase Cloud
  */
-export async function saveStudyProgress(username, data) {
+export async function saveStudyProgress(username, studyData) {
   const payload = {
-    ...data,
+    completedTopics: studyData.completedTopics || [],
+    notes: studyData.notes || {},
     updatedAt: new Date().toISOString()
   };
 
-  // 1. Save to LocalStorage immediately
+  // Immediate optimistic local cache
   try {
     localStorage.setItem(`${LOCAL_STORAGE_PREFIX}${username}`, JSON.stringify(payload));
-  } catch (e) {
-    console.error('LocalStorage write error:', e);
-  }
+  } catch (e) {}
 
-  // 2. Save to Local Server Database API (database/mossoro_db.json)
   try {
-    fetch('/api/progress', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        username,
-        completedTopics: payload.completedTopics,
-        notes: payload.notes
-      })
-    }).catch(() => {});
+    // 1. Fetch current row to preserve finance data if exists
+    const { data: existingRow } = await supabase
+      .from(TABLE_NAME)
+      .select('data')
+      .eq('username', username)
+      .maybeSingle();
+
+    const mergedData = {
+      ...(existingRow?.data || {}),
+      ...payload
+    };
+
+    // 2. Upsert to Supabase
+    const { error } = await supabase
+      .from(TABLE_NAME)
+      .upsert(
+        {
+          username,
+          data: mergedData,
+          updated_at: new Date().toISOString()
+        },
+        { onConflict: 'username' }
+      );
+
+    if (error) {
+      console.error('[Supabase Cloud] Erro ao salvar progresso:', error.message);
+      return { success: false, error: error.message };
+    }
+
+    return { success: true, data: mergedData };
   } catch (err) {
-    // ignore fetch errors on static builds
+    console.error('[Supabase Cloud] Erro de rede ao salvar:', err);
+    return { success: false, error: err.message };
   }
-
-  const cfg = getCloudConfig();
-
-  // 3. Save to Supabase if configured
-  if (cfg.provider === 'supabase') {
-    const sb = getSupabaseClient();
-    if (sb) {
-      try {
-        const table = cfg.supabase.table || 'mossoro_study_progress';
-        await sb.from(table).upsert({ username, data: payload, updated_at: new Date() }, { onConflict: 'username' });
-      } catch (err) {
-        console.error('Supabase save error:', err);
-      }
-    }
-  }
-
-  // 4. Save to Firebase if configured
-  if (cfg.provider === 'firebase') {
-    const db = getFirestoreInstance();
-    if (db) {
-      try {
-        const coll = cfg.firebase.collection || 'mossoro_study_progress';
-        const docRef = doc(db, coll, username);
-        await setDoc(docRef, payload, { merge: true });
-      } catch (err) {
-        console.error('Firebase save error:', err);
-      }
-    }
-  }
-
-  return payload;
 }
 
 /**
- * Load Financial Plan for travel
+ * Load Financial Plan for travel directly from Supabase Cloud
  */
 export async function loadFinancePlan(username) {
-  // Try server API first
   try {
-    const res = await fetch(`/api/finance?user=${encodeURIComponent(username)}`);
-    if (res.ok) {
-      const data = await res.json();
-      if (data) {
-        localStorage.setItem(`${FINANCE_STORAGE_PREFIX}${username}`, JSON.stringify(data));
-        return data;
-      }
-    }
-  } catch (err) {}
+    const { data, error } = await supabase
+      .from(TABLE_NAME)
+      .select('data')
+      .eq('username', username)
+      .maybeSingle();
 
-  // Fallback to localStorage
-  try {
-    const saved = localStorage.getItem(`${FINANCE_STORAGE_PREFIX}${username}`);
-    if (saved) return JSON.parse(saved);
-  } catch (e) {
-    console.error('Error reading finance plan:', e);
+    if (!error && data?.data?.finance) {
+      localStorage.setItem(`${FINANCE_STORAGE_PREFIX}${username}`, JSON.stringify(data.data.finance));
+      return data.data.finance;
+    }
+
+    if (error) {
+      console.warn('[Supabase Cloud] Erro ao buscar financeiro:', error.message);
+    }
+  } catch (err) {
+    console.warn('[Supabase Cloud] Falha de conexão:', err);
   }
+
+  // Fallback to cache if cloud fails or table not yet created
+  try {
+    const cached = localStorage.getItem(`${FINANCE_STORAGE_PREFIX}${username}`);
+    if (cached) return JSON.parse(cached);
+  } catch (e) {}
+
   return null;
 }
 
 /**
- * Save Financial Plan for travel
+ * Save Financial Plan for travel directly to Supabase Cloud
  */
 export async function saveFinancePlan(username, financeData) {
+  // Immediate optimistic local cache
   try {
     localStorage.setItem(`${FINANCE_STORAGE_PREFIX}${username}`, JSON.stringify(financeData));
-  } catch (e) {
-    console.error('Error saving finance plan:', e);
-  }
+  } catch (e) {}
 
   try {
-    fetch('/api/finance', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, finance: financeData })
-    }).catch(() => {});
-  } catch (err) {}
+    // 1. Fetch current row to preserve study progress
+    const { data: existingRow } = await supabase
+      .from(TABLE_NAME)
+      .select('data')
+      .eq('username', username)
+      .maybeSingle();
 
+    const mergedData = {
+      ...(existingRow?.data || {}),
+      finance: financeData,
+      updatedAt: new Date().toISOString()
+    };
+
+    // 2. Upsert to Supabase
+    const { error } = await supabase
+      .from(TABLE_NAME)
+      .upsert(
+        {
+          username,
+          data: mergedData,
+          updated_at: new Date().toISOString()
+        },
+        { onConflict: 'username' }
+      );
+
+    if (error) {
+      console.error('[Supabase Cloud] Erro ao salvar financeiro:', error.message);
+      return { success: false, error: error.message };
+    }
+
+    return { success: true };
+  } catch (err) {
+    console.error('[Supabase Cloud] Erro de rede ao salvar financeiro:', err);
+    return { success: false, error: err.message };
+  }
+}
+
+// Backward compatibility helper if needed
+export function getCloudConfig() {
+  return {
+    provider: 'supabase',
+    supabase: {
+      url: SUPABASE_URL,
+      anonKey: SUPABASE_ANON_KEY,
+      table: TABLE_NAME
+    }
+  };
+}
+
+export function saveCloudConfig() {
   return true;
 }

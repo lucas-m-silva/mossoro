@@ -5,7 +5,6 @@ import { LoginScreen } from './components/LoginScreen';
 import { Dashboard } from './components/Dashboard';
 import { StudyTracker } from './components/StudyTracker';
 import { DocumentCentral } from './components/DocumentCentral';
-import { CloudConfigView } from './components/CloudConfigView';
 
 function MainLayout() {
   const { isAuthenticated } = useAuth();
@@ -53,8 +52,6 @@ function MainLayout() {
         {activeTab === 'tracker' && <StudyTracker />}
 
         {activeTab === 'docs' && <DocumentCentral />}
-
-        {activeTab === 'cloud' && <CloudConfigView />}
       </main>
 
       <footer className="app-footer">
