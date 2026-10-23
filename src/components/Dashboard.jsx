@@ -568,17 +568,17 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                     </button>
                     <button
                       type="button"
-                      className={`preset-pill ${finance.registrationFee === 130 ? 'active' : ''}`}
-                      onClick={() => setFinance(p => ({ ...p, registrationFee: 130 }))}
+                      className={`preset-pill ${finance.registrationFee === 150 ? 'active' : ''}`}
+                      onClick={() => setFinance(p => ({ ...p, registrationFee: 150 }))}
                     >
-                      R$ 130 (Analista de TI)
+                      R$ 150 (Analista de TI)
                     </button>
                     <button
                       type="button"
-                      className={`preset-pill ${finance.registrationFee === 230 ? 'active' : ''}`}
-                      onClick={() => setFinance(p => ({ ...p, registrationFee: 230 }))}
+                      className={`preset-pill ${finance.registrationFee === 250 ? 'active' : ''}`}
+                      onClick={() => setFinance(p => ({ ...p, registrationFee: 250 }))}
                     >
-                      R$ 230 (Dois Cargos)
+                      R$ 250 (Dois Cargos)
                     </button>
                     <button
                       type="button"
