@@ -95,7 +95,13 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
     if (user?.login) {
       loadFinancePlan(user.login).then((saved) => {
         if (saved) {
-          setFinance(saved);
+          const distance = (!saved.roundTripDistanceKm || saved.roundTripDistanceKm === 560)
+            ? 1578
+            : saved.roundTripDistanceKm;
+          setFinance({
+            ...saved,
+            roundTripDistanceKm: distance
+          });
         } else {
           setFinance(prev => ({
             ...prev,
@@ -659,20 +665,6 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                           <Minus size={12} />
                         </button>
                       </div>
-                    </div>
-                    <div className="quick-distances">
-                      <span
-                        className={finance.roundTripDistanceKm === 1578 ? 'active-quick' : ''}
-                        onClick={() => setFinance(p => ({ ...p, roundTripDistanceKm: 1578 }))}
-                      >
-                        1.578km (Padrão)
-                      </span>
-                      <span onClick={() => setFinance(p => ({ ...p, roundTripDistanceKm: 560 }))}>
-                        Natal: 560km
-                      </span>
-                      <span onClick={() => setFinance(p => ({ ...p, roundTripDistanceKm: 480 }))}>
-                        Fortaleza: 480km
-                      </span>
                     </div>
                   </div>
 
@@ -1469,19 +1461,6 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
         .mini-hint {
           font-size: 0.7rem;
           color: var(--text-muted);
-        }
-
-        .quick-distances {
-          display: flex;
-          gap: 0.5rem;
-          margin-top: 0.2rem;
-        }
-
-        .quick-distances span {
-          font-size: 0.68rem;
-          color: var(--brand-primary);
-          cursor: pointer;
-          text-decoration: underline;
         }
 
         /* Summary Card */

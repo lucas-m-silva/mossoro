@@ -100,12 +100,27 @@ export function StudyTracker() {
     });
   };
 
-  // Toggle group collapse
+  // Toggle group collapse (disciplines start closed by default)
   const toggleCollapse = (groupId) => {
-    setCollapsedGroups(prev => ({
-      ...prev,
-      [groupId]: !prev[groupId]
-    }));
+    setCollapsedGroups(prev => {
+      const current = prev[groupId] !== undefined ? prev[groupId] : true;
+      return {
+        ...prev,
+        [groupId]: !current
+      };
+    });
+  };
+
+  const expandAllGroups = () => {
+    const next = {};
+    disciplinesList.forEach(d => { next[d.id] = false; });
+    setCollapsedGroups(next);
+  };
+
+  const collapseAllGroups = () => {
+    const next = {};
+    disciplinesList.forEach(d => { next[d.id] = true; });
+    setCollapsedGroups(next);
   };
 
   // Structure disciplines and topics for current role
@@ -440,13 +455,32 @@ export function StudyTracker() {
           >
             Concluídos ({completedCount})
           </button>
+
+          <span className="filter-divider">|</span>
+
+          <button
+            className="filter-btn text-btn"
+            onClick={expandAllGroups}
+            title="Abrir todas as disciplinas"
+          >
+            Expandir Todos
+          </button>
+          <button
+            className="filter-btn text-btn"
+            onClick={collapseAllGroups}
+            title="Fechar todas as disciplinas"
+          >
+            Fechar Todos
+          </button>
         </div>
       </div>
 
       {/* Disciplines & Checklist */}
       <div className="disciplines-container">
         {filteredDisciplines.map(disc => {
-          const isCollapsed = !!collapsedGroups[disc.id];
+          const isCollapsed = searchQuery.trim()
+            ? false
+            : (collapsedGroups[disc.id] !== undefined ? !!collapsedGroups[disc.id] : true);
           const allChecked = disc.totalItemsInDisc > 0 && disc.completedInDisc === disc.totalItemsInDisc;
 
           return (
@@ -885,6 +919,20 @@ export function StudyTracker() {
           background-color: var(--bg-secondary);
           color: var(--brand-primary);
           box-shadow: var(--shadow-sm);
+        }
+
+        .filter-divider {
+          display: inline-flex;
+          align-items: center;
+          color: var(--text-muted);
+          opacity: 0.5;
+          margin: 0 0.15rem;
+          user-select: none;
+        }
+
+        .filter-btn.text-btn:hover {
+          color: var(--brand-primary);
+          background-color: var(--bg-secondary);
         }
 
         /* Disciplines and Checklist */

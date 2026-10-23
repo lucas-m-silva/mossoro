@@ -142,8 +142,12 @@ export async function loadFinancePlan(username) {
       .maybeSingle();
 
     if (!error && data?.data?.finance) {
-      localStorage.setItem(`${FINANCE_STORAGE_PREFIX}${username}`, JSON.stringify(data.data.finance));
-      return data.data.finance;
+      const fin = { ...data.data.finance };
+      if (!fin.roundTripDistanceKm || fin.roundTripDistanceKm === 560) {
+        fin.roundTripDistanceKm = 1578;
+      }
+      localStorage.setItem(`${FINANCE_STORAGE_PREFIX}${username}`, JSON.stringify(fin));
+      return fin;
     }
 
     if (error) {
@@ -156,7 +160,15 @@ export async function loadFinancePlan(username) {
   // Fallback to cache if cloud fails or table not yet created
   try {
     const cached = localStorage.getItem(`${FINANCE_STORAGE_PREFIX}${username}`);
-    if (cached) return JSON.parse(cached);
+    if (cached) {
+      const parsed = JSON.parse(cached);
+      if (parsed) {
+        if (!parsed.roundTripDistanceKm || parsed.roundTripDistanceKm === 560) {
+          parsed.roundTripDistanceKm = 1578;
+        }
+        return parsed;
+      }
+    }
   } catch (e) {}
 
   return null;
