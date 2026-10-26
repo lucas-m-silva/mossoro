@@ -473,9 +473,15 @@
       "codigo": "205",
       "nivel": "Superior",
       "jornada": "30 horas",
-      "remuneracao": "R$ 6.624,55",
+      "remuneracao": "R$ 8.810,69",
       "taxa_inscricao": 150.0,
       "turno": "Tarde (Portões fecham às 14h • Duração: 4h)",
+      "vagas": {
+        "imediata": 1,
+        "cadastro_reserva": 2,
+        "total": 3,
+        "descricao": "1 vaga imediata + 2 de cadastro de reserva"
+      },
       "pdf_edital": "CONHECIMENTO ESPECÍFICO - Analista de TI.pdf",
       "link_pdf": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_Analista_de_TI.pdf",
       "disciplinas": [

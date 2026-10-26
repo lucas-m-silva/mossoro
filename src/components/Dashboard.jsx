@@ -151,12 +151,12 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
   const calculatedFuelCost = finance.useManualFuel
     ? Number(finance.fuelCostManual) || 0
     : Number(
-        (
-          (Number(finance.roundTripDistanceKm || 0) /
-            (Number(finance.vehicleConsumptionKmPerL) || 1)) *
-          Number(finance.fuelPricePerLiter || 0)
-        ).toFixed(2)
-      );
+      (
+        (Number(finance.roundTripDistanceKm || 0) /
+          (Number(finance.vehicleConsumptionKmPerL) || 1)) *
+        Number(finance.fuelPricePerLiter || 0)
+      ).toFixed(2)
+    );
 
   const fuelLiters = !finance.useManualFuel && finance.vehicleConsumptionKmPerL > 0
     ? (Number(finance.roundTripDistanceKm || 0) / Number(finance.vehicleConsumptionKmPerL)).toFixed(1)
@@ -276,9 +276,14 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                 <span className="badge badge-info">Turno Matutino (Manhã)</span>
                 <h4>Nível Médio & Técnico</h4>
               </div>
-              <span className="shift-cargos-tag">
-                Agente Administrativo (101) & Técnico em Informática (102)
-              </span>
+              <div className="shift-meta-row">
+                <span className="shift-cargos-tag">
+                  Agente Administrativo (101) & Técnico em Informática (102)
+                </span>
+                <span className="shift-salary-tag">
+                  R$ 4.921,08 • 30h semanais
+                </span>
+              </div>
             </div>
 
             <div className="shift-times-row">
@@ -328,9 +333,14 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                 <span className="badge badge-primary">Turno Vespertino (Tarde)</span>
                 <h4>Nível Superior</h4>
               </div>
-              <span className="shift-cargos-tag">
-                Analista de Tecnologia da Informação (205)
-              </span>
+              <div className="shift-meta-row">
+                <span className="shift-cargos-tag">
+                  Analista de Tecnologia da Informação (Cód. 205)
+                </span>
+                <span className="shift-salary-tag">
+                  R$ 8.810,69 • 1 vaga imediata + 2 CR
+                </span>
+              </div>
             </div>
 
             <div className="shift-times-row">
@@ -905,7 +915,19 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
             <div className="summary-comparison-pill">
               <AlertCircle size={15} />
               <span>
-                Custo de {((grandTotal / 4921.08) * 100).toFixed(1)}% do 1º salário do cargo (R$ 4.921,08)
+                Custo de {(
+                  (grandTotal /
+                    (finance.registrationFee === 150 || (user?.login === 'lucas' && finance.registrationFee === 250)
+                      ? 8810.69
+                      : 4921.08)) *
+                  100
+                ).toFixed(1)}% do 1º salário ({
+                  finance.registrationFee === 150
+                    ? 'R$ 8.810,69 - Analista de TI'
+                    : finance.registrationFee === 250
+                    ? 'R$ 8.810,69 - Nível Superior'
+                    : 'R$ 4.921,08 - Nível Médio/Técnico'
+                })
               </span>
             </div>
 
@@ -1074,10 +1096,27 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
           font-size: 1.15rem;
         }
 
+        .shift-meta-row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+
         .shift-cargos-tag {
           font-size: 0.775rem;
           color: var(--text-muted);
           font-weight: 500;
+        }
+
+        .shift-salary-tag {
+          font-size: 0.775rem;
+          font-weight: 600;
+          color: var(--success);
+          background-color: var(--success-bg);
+          padding: 0.15rem 0.5rem;
+          border-radius: var(--radius-sm);
         }
 
         .shift-times-row {

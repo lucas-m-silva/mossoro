@@ -368,7 +368,9 @@ export function StudyTracker() {
                     onClick={() => setActiveRole(roleKey)}
                   >
                     <span>{c.nome}</span>
-                    <span className="cargo-sub-badge">Cód. {c.codigo} • {c.nivel}</span>
+                    <span className="cargo-sub-badge">
+                      Cód. {c.codigo} • {c.nivel} {c.remuneracao ? `• ${c.remuneracao}` : ''}
+                    </span>
                   </button>
                 );
               })}

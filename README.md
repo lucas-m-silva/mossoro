@@ -9,10 +9,10 @@ Aplicação web responsiva desenvolvida com **React 19 + Vite**, estilização m
 ### 1. Sistema de Autenticação (Mock Condicional)
 - **Usuário 1 (Perfil TI):**
   - **Login:** `lucas` | **Senha:** `12345`
-  - **Cargos disponíveis:** *Técnico em Informática (Cód. 102)* e *Analista de Tecnologia da Informação (Cód. 205)*.
+  - **Cargos disponíveis:** *Técnico em Informática (Cód. 102)* (R$ 4.921,08) e *Analista de Tecnologia da Informação (Cód. 205 — Nível Superior)*: **R$ 8.810,69** (1 vaga imediata + 2 de cadastro de reserva).
 - **Usuário 2 (Perfil Administrativo):**
   - **Login:** `ana` | **Senha:** `12345`
-  - **Cargo disponível:** *Agente Administrativo (Cód. 101)*.
+  - **Cargo disponível:** *Agente Administrativo (Cód. 101)*: **R$ 4.921,08** (15 vagas).
 - Botões de acesso rápido em 1 clique na tela de login e seletor rápido no topo da tela para facilitar a alternância entre usuários.
 
 ### 2. Dashboard / Visão Geral
@@ -22,7 +22,7 @@ Aplicação web responsiva desenvolvida com **React 19 + Vite**, estilização m
   - Presets para veículos: **Volkswagen Fox** (~11.5 km/l) e **Yamaha MT-03** (~22 km/l) ou inserção manual.
   - Taxa de inscrição: R$ 100 (Médio/Técnico) ou R$ 150 (Superior) ou isenção (R$ 0).
   - Hospedagem (diárias x valor por noite), alimentação (dias x média/dia) e reserva de emergência.
-  - Somatório total reativo e percentual em relação ao salário base (R$ 4.921,08).
+  - Somatório total reativo e percentual em relação ao salário do cargo escolhido (R$ 4.921,08 para Médio/Técnico ou R$ 8.810,69 para Superior).
   - Botão para **Salvar Orçamento** de forma persistente por usuário.
 - **Acesso Rápido:** Botão direto para a página oficial do concurso no portal da **COMPERVE / UFRN**.
 
