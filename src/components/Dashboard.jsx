@@ -243,8 +243,11 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
             </div>
             <div className="official-stat-item">
               <span className="stat-label">Remuneração Base</span>
-              <strong className="stat-val text-success">
-                {user?.login === 'lucas' ? 'R$ 4.921 a R$ 6.624' : 'R$ 4.921,08'}
+              <strong
+                className="stat-val text-success"
+                title={user?.login === 'lucas' ? 'Técnico: R$ 4.921,08 | Analista: R$ 8.810,69' : 'Agente: R$ 4.921,08'}
+              >
+                {user?.login === 'lucas' ? 'R$ 4.921 a R$ 8.810' : 'R$ 4.921,08'}
               </strong>
             </div>
           </div>
