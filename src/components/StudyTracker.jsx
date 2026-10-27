@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { useAuth } from '../context/AuthContext';
 import { loadStudyProgress, saveStudyProgress } from '../services/db';
 import syllabusData from '../data/conteudo_programatico.json';
+import { TopicMediaPanel } from './TopicMediaPanel';
 import {
   CheckSquare,
   Square,
@@ -20,7 +21,10 @@ import {
   CloudCheck,
   RotateCcw,
   X,
-  Maximize2
+  Maximize2,
+  Video,
+  HelpCircle,
+  PlayCircle
 } from 'lucide-react';
 
 export function StudyTracker() {
@@ -29,6 +33,8 @@ export function StudyTracker() {
   // Progress state: Set of completed topic IDs
   const [completedTopics, setCompletedTopics] = useState([]);
   const [notes, setNotes] = useState({});
+  const [quizAnswers, setQuizAnswers] = useState({});
+  const [expandedMediaTopic, setExpandedMediaTopic] = useState(null); // { topicId: string, tab: 'videos' | 'questoes' }
   const [syncStatus, setSyncStatus] = useState('idle'); // 'idle' | 'saving' | 'saved'
   const [searchQuery, setSearchQuery] = useState('');
   const [filterMode, setFilterMode] = useState('all'); // 'all' | 'pending' | 'completed'
@@ -69,6 +75,7 @@ export function StudyTracker() {
         if (isMounted && data) {
           setCompletedTopics(data.completedTopics || []);
           setNotes(data.notes || {});
+          setQuizAnswers(data.quizAnswers || {});
           setSyncStatus('idle');
         }
       } catch (err) {
@@ -94,9 +101,47 @@ export function StudyTracker() {
 
     // Save with status indicator
     setSyncStatus('saving');
-    saveStudyProgress(user.login, { completedTopics: next, notes }).then(() => {
+    saveStudyProgress(user.login, { completedTopics: next, notes, quizAnswers }).then(() => {
       setSyncStatus('saved');
       setTimeout(() => setSyncStatus('idle'), 2000);
+    });
+  };
+
+  // Toggle Media / Quiz Panel for a topic
+  const toggleMediaPanel = (topicId, tab) => {
+    if (expandedMediaTopic?.topicId === topicId && expandedMediaTopic?.tab === tab) {
+      setExpandedMediaTopic(null);
+    } else {
+      setExpandedMediaTopic({ topicId, tab });
+    }
+  };
+
+  // Handle answering a quiz question
+  const handleAnswerQuiz = (questionId, option) => {
+    const nextAnswers = { ...quizAnswers, [questionId]: option };
+    setQuizAnswers(nextAnswers);
+
+    setSyncStatus('saving');
+    saveStudyProgress(user.login, { completedTopics, notes, quizAnswers: nextAnswers }).then(() => {
+      setSyncStatus('saved');
+      setTimeout(() => setSyncStatus('idle'), 1500);
+    });
+  };
+
+  // Reset quiz for a specific topic
+  const handleResetTopicQuiz = (topicId) => {
+    const nextAnswers = { ...quizAnswers };
+    Object.keys(nextAnswers).forEach(qKey => {
+      if (qKey.startsWith(topicId + '_')) {
+        delete nextAnswers[qKey];
+      }
+    });
+    setQuizAnswers(nextAnswers);
+
+    setSyncStatus('saving');
+    saveStudyProgress(user.login, { completedTopics, notes, quizAnswers: nextAnswers }).then(() => {
+      setSyncStatus('saved');
+      setTimeout(() => setSyncStatus('idle'), 1500);
     });
   };
 
@@ -215,14 +260,18 @@ export function StudyTracker() {
               id: st.id,
               titulo: st.texto,
               parentTitle: t.titulo,
-              disciplineId: esp.id
+              disciplineId: esp.id,
+              videos: st.videos || t.videos || [],
+              questoes: st.questoes || t.questoes || []
             }));
           }
           return [{
             id: t.id,
             titulo: t.titulo,
             descricao: t.descricao,
-            disciplineId: esp.id
+            disciplineId: esp.id,
+            videos: t.videos || [],
+            questoes: t.questoes || []
           }];
         })
       });
@@ -282,7 +331,7 @@ export function StudyTracker() {
     setCompletedTopics(next);
 
     setSyncStatus('saving');
-    saveStudyProgress(user.login, { completedTopics: next, notes }).then(() => {
+    saveStudyProgress(user.login, { completedTopics: next, notes, quizAnswers }).then(() => {
       setSyncStatus('saved');
       setTimeout(() => setSyncStatus('idle'), 2000);
     });
@@ -303,7 +352,7 @@ export function StudyTracker() {
     setNotes(nextNotes);
 
     setSyncStatus('saving');
-    saveStudyProgress(user.login, { completedTopics, notes: nextNotes }).then(() => {
+    saveStudyProgress(user.login, { completedTopics, notes: nextNotes, quizAnswers }).then(() => {
       setSyncStatus('saved');
       setTimeout(() => setSyncStatus('idle'), 1500);
     });
@@ -322,7 +371,7 @@ export function StudyTracker() {
     setActiveNoteModal(null);
 
     setSyncStatus('saving');
-    saveStudyProgress(user.login, { completedTopics, notes: nextNotes }).then(() => {
+    saveStudyProgress(user.login, { completedTopics, notes: nextNotes, quizAnswers }).then(() => {
       setSyncStatus('saved');
       setTimeout(() => setSyncStatus('idle'), 2000);
     });
@@ -566,13 +615,50 @@ export function StudyTracker() {
                               )}
                             </div>
 
-                            <button
-                              className={`btn-topic-note ${hasNote ? 'has-note' : ''} ${isInlineExpanded ? 'active' : ''}`}
-                              onClick={() => toggleInlineNote(item.id)}
-                              title={isInlineExpanded ? 'Fechar anotação' : hasNote ? 'Editar anotação no local' : 'Adicionar anotação rápida'}
-                            >
-                              <FileEdit size={16} />
-                            </button>
+                            {/* Action Buttons Group */}
+                            <div className="topic-actions-group" onClick={(e) => e.stopPropagation()}>
+                              {item.videos && item.videos.length > 0 && (
+                                <button
+                                  type="button"
+                                  className={`btn-topic-action btn-topic-video ${expandedMediaTopic?.topicId === item.id && expandedMediaTopic?.tab === 'videos' ? 'active' : ''}`}
+                                  onClick={() => toggleMediaPanel(item.id, 'videos')}
+                                  title={`Ver ${item.videos.length} videoaulas e playlists recomendadas`}
+                                >
+                                  <Video size={14} />
+                                  <span>Vídeos ({item.videos.length})</span>
+                                </button>
+                              )}
+
+                              {item.questoes && item.questoes.length > 0 && (() => {
+                                const answeredInTopic = item.questoes.filter(q => !!quizAnswers[q.id]).length;
+                                const correctInTopic = item.questoes.filter(q => quizAnswers[q.id]?.toUpperCase() === q.gabarito.toUpperCase()).length;
+                                return (
+                                  <button
+                                    type="button"
+                                    className={`btn-topic-action btn-topic-questoes ${expandedMediaTopic?.topicId === item.id && expandedMediaTopic?.tab === 'questoes' ? 'active' : ''}`}
+                                    onClick={() => toggleMediaPanel(item.id, 'questoes')}
+                                    title={`Praticar ${item.questoes.length} questões com gabarito comentado`}
+                                  >
+                                    <HelpCircle size={14} />
+                                    <span>Questões ({item.questoes.length})</span>
+                                    {answeredInTopic > 0 && (
+                                      <span className={`quiz-pill-score ${correctInTopic / answeredInTopic >= 0.7 ? 'high' : 'low'}`}>
+                                        {correctInTopic}/{answeredInTopic}
+                                      </span>
+                                    )}
+                                  </button>
+                                );
+                              })()}
+
+                              <button
+                                type="button"
+                                className={`btn-topic-note ${hasNote ? 'has-note' : ''} ${isInlineExpanded ? 'active' : ''}`}
+                                onClick={() => toggleInlineNote(item.id)}
+                                title={isInlineExpanded ? 'Fechar anotação' : hasNote ? 'Editar anotação no local' : 'Adicionar anotação rápida'}
+                              >
+                                <FileEdit size={16} />
+                              </button>
+                            </div>
                           </div>
 
                           {/* INLINE NOTE EDITOR (Zero displacement, opens right here!) */}
@@ -623,6 +709,21 @@ export function StudyTracker() {
                                   <span>Concluir</span>
                                 </button>
                               </div>
+                            </div>
+                          )}
+
+                          {/* TOPIC MEDIA PANEL (VIDEOS & QUIZ) */}
+                          {expandedMediaTopic?.topicId === item.id && (
+                            <div className="topic-media-wrapper fade-in">
+                              <TopicMediaPanel
+                                topic={item}
+                                activeTab={expandedMediaTopic.tab}
+                                onChangeTab={(tab) => setExpandedMediaTopic({ topicId: item.id, tab })}
+                                onClose={() => setExpandedMediaTopic(null)}
+                                quizAnswers={quizAnswers}
+                                onAnswer={handleAnswerQuiz}
+                                onResetTopicQuiz={handleResetTopicQuiz}
+                              />
                             </div>
                           )}
                         </div>
@@ -1087,6 +1188,78 @@ export function StudyTracker() {
           cursor: pointer;
         }
 
+        .topic-actions-group {
+          display: flex;
+          align-items: center;
+          gap: 0.45rem;
+          flex-shrink: 0;
+          flex-wrap: wrap;
+        }
+
+        .btn-topic-action {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          padding: 0.35rem 0.65rem;
+          border-radius: var(--radius-sm);
+          border: 1px solid var(--border-light);
+          background-color: var(--bg-tertiary);
+          color: var(--text-secondary);
+          font-size: 0.8rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: var(--transition-fast);
+          white-space: nowrap;
+        }
+
+        .btn-topic-action:hover {
+          background-color: var(--bg-secondary);
+          color: var(--text-primary);
+          border-color: var(--border-subtle);
+        }
+
+        .btn-topic-video {
+          color: #2563eb;
+          border-color: rgba(37, 99, 235, 0.25);
+          background-color: rgba(37, 99, 235, 0.04);
+        }
+
+        .btn-topic-video:hover, .btn-topic-video.active {
+          background-color: rgba(37, 99, 235, 0.15);
+          border-color: #2563eb;
+          color: #2563eb;
+        }
+
+        .btn-topic-questoes {
+          color: #059669;
+          border-color: rgba(5, 150, 105, 0.25);
+          background-color: rgba(5, 150, 105, 0.04);
+        }
+
+        .btn-topic-questoes:hover, .btn-topic-questoes.active {
+          background-color: rgba(5, 150, 105, 0.15);
+          border-color: #059669;
+          color: #059669;
+        }
+
+        .quiz-pill-score {
+          font-size: 0.72rem;
+          font-weight: 700;
+          padding: 0.1rem 0.35rem;
+          border-radius: var(--radius-full);
+          line-height: 1.2;
+        }
+
+        .quiz-pill-score.high {
+          background-color: #10b981;
+          color: #ffffff;
+        }
+
+        .quiz-pill-score.low {
+          background-color: #f59e0b;
+          color: #ffffff;
+        }
+
         .btn-topic-note {
           background: none;
           color: var(--text-muted);
@@ -1106,6 +1279,21 @@ export function StudyTracker() {
         .btn-topic-note.active {
           color: white;
           background-color: var(--brand-primary);
+        }
+
+        .topic-media-wrapper {
+          margin: 0 1.5rem 1.25rem 3.5rem;
+        }
+
+        @media (max-width: 768px) {
+          .topic-media-wrapper {
+            margin: 0 0.75rem 1rem 0.75rem;
+          }
+          .topic-actions-group {
+            width: 100%;
+            margin-top: 0.5rem;
+            justify-content: flex-start;
+          }
         }
 
         /* INLINE NOTE EDITOR (Zero displacement, opens right under topic!) */

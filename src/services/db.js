@@ -55,6 +55,7 @@ export async function loadStudyProgress(username) {
       const studyData = {
         completedTopics: data.data.completedTopics || [],
         notes: data.data.notes || {},
+        quizAnswers: data.data.quizAnswers || {},
         updatedAt: data.data.updatedAt || new Date().toISOString()
       };
       // Optimistic browser cache
@@ -75,7 +76,7 @@ export async function loadStudyProgress(username) {
     if (cached) return JSON.parse(cached);
   } catch (e) {}
 
-  return { completedTopics: [], notes: {}, updatedAt: new Date().toISOString() };
+  return { completedTopics: [], notes: {}, quizAnswers: {}, updatedAt: new Date().toISOString() };
 }
 
 /**
@@ -85,6 +86,7 @@ export async function saveStudyProgress(username, studyData) {
   const payload = {
     completedTopics: studyData.completedTopics || [],
     notes: studyData.notes || {},
+    quizAnswers: studyData.quizAnswers || {},
     updatedAt: new Date().toISOString()
   };
 
