@@ -283,7 +283,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                   Técnico Legislativo: Administrativa (07) & Legislativa (08)
                 </span>
                 <span className="shift-salary-tag">
-                  R$ 3.512,00 • 30h semanais
+                  R$ 3.512,00 • 30h semanais • 5 vagas + 15 CR (por área)
                 </span>
               </div>
             </div>
@@ -340,7 +340,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                   Analista Legislativo – Tecnologia da Informação (Cód. 04)
                 </span>
                 <span className="shift-salary-tag">
-                  R$ 4.553,94 • 1 vaga imediata + 3 CR
+                  R$ 4.553,94 • 30h semanais • 1 vaga imediata + 3 CR
                 </span>
               </div>
             </div>
