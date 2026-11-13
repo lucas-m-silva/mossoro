@@ -49,14 +49,7 @@ export function StudyTracker() {
 
   // Roles available for current user
   const allowedRoles = useMemo(() => {
-    if (!user) return [];
-    if (user.login === 'lucas') {
-      return ['tecnico_informatica', 'analista_ti'];
-    }
-    if (user.login === 'ana') {
-      return ['agente_administrativo'];
-    }
-    return [];
+    return user?.roles || [];
   }, [user]);
 
   // Current selected cargo
@@ -174,21 +167,23 @@ export function StudyTracker() {
 
     const list = [];
 
-    // 1. Língua Portuguesa
-    if (cargoInfo.disciplinas.includes('lingua_portuguesa')) {
-      const lp = syllabusData.disciplinas_comuns.lingua_portuguesa;
+    // 1. Conhecimentos Gerais (dinâmico por cargo)
+    cargoInfo.disciplinas.forEach(discKey => {
+      const commonDisc = syllabusData.disciplinas_comuns?.[discKey];
+      if (!commonDisc) return;
+
       list.push({
-        id: 'lingua_portuguesa',
-        name: lp.nome,
-        questoes: lp.questoes,
+        id: commonDisc.id,
+        name: commonDisc.nome,
+        questoes: commonDisc.questoes,
         category: 'Conhecimento Geral',
-        items: lp.topicos.flatMap(t => {
+        items: commonDisc.topicos.flatMap(t => {
           if (t.subtopicos && t.subtopicos.length > 0) {
             return t.subtopicos.map(st => ({
               id: st.id,
               titulo: st.texto,
               parentTitle: t.titulo,
-              disciplineId: 'lingua_portuguesa'
+              disciplineId: commonDisc.id
             }));
           }
           return [{
@@ -196,57 +191,13 @@ export function StudyTracker() {
             titulo: t.titulo,
             parentTitle: t.titulo,
             descricao: t.descricao,
-            disciplineId: 'lingua_portuguesa'
+            disciplineId: commonDisc.id
           }];
         })
       });
-    }
+    });
 
-    // 2. Legislação
-    if (cargoInfo.disciplinas.includes('legislacao')) {
-      const leg = syllabusData.disciplinas_comuns.legislacao;
-      list.push({
-        id: 'legislacao',
-        name: leg.nome,
-        questoes: leg.questoes,
-        category: 'Conhecimento Geral',
-        items: leg.topicos.flatMap(t => {
-          if (t.subtopicos && t.subtopicos.length > 0) {
-            return t.subtopicos.map(st => ({
-              id: st.id,
-              titulo: st.texto,
-              parentTitle: t.titulo,
-              disciplineId: 'legislacao'
-            }));
-          }
-          return [{
-            id: t.id,
-            titulo: t.titulo,
-            descricao: t.descricao,
-            disciplineId: 'legislacao'
-          }];
-        })
-      });
-    }
-
-    // 3. Informática Geral (Agente Administrativo)
-    if (cargoInfo.disciplinas.includes('informatica_geral')) {
-      const inf = syllabusData.disciplinas_comuns.informatica_geral;
-      list.push({
-        id: 'informatica_geral',
-        name: inf.nome,
-        questoes: inf.questoes,
-        category: 'Conhecimento Geral',
-        items: inf.topicos.map(t => ({
-          id: t.id,
-          titulo: t.titulo,
-          descricao: t.descricao,
-          disciplineId: 'informatica_geral'
-        }))
-      });
-    }
-
-    // 4. Específica do Cargo
+    // 2. Específica do Cargo
     if (cargoInfo.especifica) {
       const esp = cargoInfo.especifica;
       list.push({
@@ -395,7 +346,7 @@ export function StudyTracker() {
             )}
           </div>
           <p className="tracker-sub">
-            Conteúdo oficial extraído diretamente dos editais da COMPERVE.
+            Conteúdo oficial extraído diretamente do edital do IDECAN.
             {user?.login === 'lucas'
               ? ' Acesso configurado para Técnico em Informática e Analista de TI.'
               : ' Acesso configurado para Agente Administrativo.'}

@@ -108,17 +108,17 @@ export function DocumentCentral() {
                 <span>Nova Aba</span>
               </a>
 
-              {/* Official COMPERVE link */}
+              {/* Official IDECAN link */}
               {activeDoc.link_oficial && (
                 <a
                   href={activeDoc.link_oficial}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline"
-                  title="Acessar página oficial da COMPERVE"
+                  title="Acessar página oficial do IDECAN"
                 >
                   <ExternalLink size={16} />
-                  <span>Portal COMPERVE</span>
+                  <span>Portal IDECAN</span>
                 </a>
               )}
             </div>
@@ -142,7 +142,7 @@ export function DocumentCentral() {
               </span>
             </div>
             <div className="footer-right">
-              <span>Banca Oficial: COMPERVE / UFRN</span>
+              <span>Banca Oficial: IDECAN</span>
             </div>
           </div>
         </div>

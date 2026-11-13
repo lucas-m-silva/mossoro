@@ -1,6 +1,6 @@
 /**
  * Database & Persistence Service - Supabase Cloud Database (PostgreSQL)
- * Project: Concurso Câmara de Mossoró (COMPERVE)
+ * Project: Concurso Câmara de Petrolina/PE (IDECAN)
  */
 
 import { createClient } from '@supabase/supabase-js';
@@ -11,30 +11,30 @@ export const SUPABASE_ANON_KEY =
   import.meta.env.VITE_SUPABASE_ANON_KEY ||
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtueGlrZXR0dGl1a3J6dnJxaHN2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MjgwODYsImV4cCI6MjEwODMwNDA4Nn0.2zFbR2aGKi_c688G3EqbtYaAQIs3nb4dLvD04UKLVUM';
 
-export const TABLE_NAME = 'mossoro_study_progress';
+export const TABLE_NAME = 'petrolina_study_progress';
 
 // Single Supabase client instance
 export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-const LOCAL_STORAGE_PREFIX = 'mossoro_study_progress_';
-const FINANCE_STORAGE_PREFIX = 'mossoro_finance_plan_';
+const LOCAL_STORAGE_PREFIX = 'petrolina_study_progress_';
+const FINANCE_STORAGE_PREFIX = 'petrolina_finance_plan_';
 
 /**
  * SQL script needed to create the table and public access in Supabase SQL Editor
  */
 export const SUPABASE_SETUP_SQL = `-- Cole e execute este script no SQL Editor do Supabase (1 clique em Run):
-CREATE TABLE IF NOT EXISTS public.mossoro_study_progress (
+CREATE TABLE IF NOT EXISTS public.petrolina_study_progress (
   username text PRIMARY KEY,
   data jsonb NOT NULL,
   updated_at timestamp with time zone DEFAULT timezone('utc'::text, now())
 );
 
 -- Habilitar Row Level Security (RLS)
-ALTER TABLE public.mossoro_study_progress ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.petrolina_study_progress ENABLE ROW LEVEL SECURITY;
 
 -- Permitir leitura e escrita para o app
 CREATE POLICY "Acesso publico ao progresso do concurso"
-ON public.mossoro_study_progress
+ON public.petrolina_study_progress
 FOR ALL
 USING (true)
 WITH CHECK (true);
@@ -145,8 +145,8 @@ export async function loadFinancePlan(username) {
 
     if (!error && data?.data?.finance) {
       const fin = { ...data.data.finance };
-      if (!fin.roundTripDistanceKm || fin.roundTripDistanceKm === 560) {
-        fin.roundTripDistanceKm = 1578;
+      if (!fin.roundTripDistanceKm) {
+        fin.roundTripDistanceKm = 1274;
       }
       localStorage.setItem(`${FINANCE_STORAGE_PREFIX}${username}`, JSON.stringify(fin));
       return fin;
@@ -165,8 +165,8 @@ export async function loadFinancePlan(username) {
     if (cached) {
       const parsed = JSON.parse(cached);
       if (parsed) {
-        if (!parsed.roundTripDistanceKm || parsed.roundTripDistanceKm === 560) {
-          parsed.roundTripDistanceKm = 1578;
+        if (!parsed.roundTripDistanceKm) {
+          parsed.roundTripDistanceKm = 1274;
         }
         return parsed;
       }

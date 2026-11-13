@@ -2,13 +2,11 @@
   "users": {
     "lucas": {
       "completedTopics": [],
-      "notes": {
-        "lp_1_1": "Teste de persistência"
-      },
+      "notes": {},
       "finance": {
-        "registrationFee": 100,
+        "registrationFee": 140,
         "vehicleType": "fox",
-        "roundTripDistanceKm": 1578,
+        "roundTripDistanceKm": 1274,
         "fuelPricePerLiter": 6.29,
         "vehicleConsumptionKmPerL": 11.5,
         "fuelCostManual": 0,
@@ -19,15 +17,15 @@
         "foodPerDay": 75,
         "extraEmergency": 80
       },
-      "updatedAt": "2026-10-23T12:45:00.000Z"
+      "updatedAt": "2026-11-13T18:00:00.000Z"
     },
     "ana": {
       "completedTopics": [],
       "notes": {},
       "finance": {
-        "registrationFee": 100,
+        "registrationFee": 120,
         "vehicleType": "fox",
-        "roundTripDistanceKm": 1578,
+        "roundTripDistanceKm": 1274,
         "fuelPricePerLiter": 6.29,
         "vehicleConsumptionKmPerL": 11.5,
         "fuelCostManual": 0,
@@ -38,7 +36,7 @@
         "foodPerDay": 75,
         "extraEmergency": 80
       },
-      "updatedAt": "2026-10-23T12:45:00.000Z"
+      "updatedAt": "2026-11-13T18:00:00.000Z"
     }
   }
 }

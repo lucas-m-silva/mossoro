@@ -1,17 +1,17 @@
 {
   "concurso": {
-    "titulo": "Concurso Público - Câmara Municipal de Mossoró/RN",
-    "edital": "Edital nº 001/2026 (Retificado em 22/10/2026)",
-    "banca": "COMPERVE (UFRN)",
+    "titulo": "Concurso Público - Câmara Municipal de Petrolina/PE",
+    "edital": "Edital nº 01/2026, de 06 de novembro de 2026",
+    "banca": "IDECAN",
     "periodo_inscricao": {
-      "inicio": "2026-10-13",
-      "fim": "2026-11-12",
-      "pagamento_ate": "2026-11-13",
-      "texto": "13 de outubro a 12 de novembro de 2026"
+      "inicio": "2026-11-06",
+      "fim": "2026-12-05",
+      "pagamento_ate": "2026-12-07",
+      "texto": "06 de novembro a 05 de dezembro de 2026"
     },
-    "data_prova": "2026-12-06",
-    "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/informacoes.php",
-    "cidade_prova": "Mossoró/RN"
+    "data_prova": "2027-01-17",
+    "link_oficial": "https://www.idecan.org.br",
+    "cidade_prova": "Petrolina/PE"
   },
   "usuarios_mock": [
     {
@@ -19,2447 +19,768 @@
       "nome": "Lucas Silva",
       "perfil": "TI",
       "cargos_permitidos": [
-        "tecnico_informatica",
         "analista_ti"
       ],
-      "descricao": "Acesso a Técnico em Informática e Analista de TI"
+      "descricao": "Acesso a Analista Legislativo - Tecnologia da Informação (Cód. 04)"
     },
     {
       "login": "ana",
       "nome": "Ana Dias",
       "perfil": "Administrativo",
       "cargos_permitidos": [
-        "agente_administrativo"
+        "tecnico_administrativa",
+        "tecnico_legislativa"
       ],
-      "descricao": "Acesso a Agente Administrativo"
+      "descricao": "Acesso a Técnico Legislativo - Administrativa (Cód. 07) e Legislativa (Cód. 08)"
     }
   ],
   "disciplinas_comuns": {
-    "lingua_portuguesa": {
-      "id": "lingua_portuguesa",
-      "nome": "Língua Portuguesa",
+    "lingua_portuguesa_superior": {
+      "id": "lingua_portuguesa_superior",
+      "nome": "Língua Portuguesa (Nível Superior)",
       "questoes": 10,
       "topicos": [
         {
-          "id": "lp_1",
-          "titulo": "1. Organização do texto",
-          "subtopicos": [
-            {
-              "id": "lp_1_1",
-              "texto": "1.1. Propósito comunicativo."
-            },
-            {
-              "id": "lp_1_2",
-              "texto": "1.2. Tipos de texto (dialogal, descritivo, narrativo, injuntivo, explicativo e argumentativo)."
-            },
-            {
-              "id": "lp_1_3",
-              "texto": "1.3. Gêneros discursivos."
-            },
-            {
-              "id": "lp_1_4",
-              "texto": "1.4. Mecanismos coesivos (referenciação e sequenciação)."
-            },
-            {
-              "id": "lp_1_5",
-              "texto": "1.5. Fatores de coerência textual."
-            },
-            {
-              "id": "lp_1_6",
-              "texto": "1.6. Progressão temática."
-            },
-            {
-              "id": "lp_1_7",
-              "texto": "1.7. Paragrafação."
-            },
-            {
-              "id": "lp_1_8",
-              "texto": "1.8. Citação do discurso alheio (discurso direto, indireto e indireto livre)."
-            },
-            {
-              "id": "lp_1_9",
-              "texto": "1.9. Informações implícitas (pressupostos e subentendidos)."
-            },
-            {
-              "id": "lp_1_10",
-              "texto": "1.10. Linguagem denotativa e linguagem conotativa."
-            }
-          ]
+          "id": "lps_1",
+          "titulo": "1. Leitura, Compreensão e Interpretação de Textos",
+          "descricao": "Gêneros variados, incluindo textos argumentativos, normativos, científicos e jornalísticos; análise crítica e inferencial."
         },
         {
-          "id": "lp_2",
-          "titulo": "2. Conhecimento linguístico",
-          "subtopicos": [
-            {
-              "id": "lp_2_1",
-              "texto": "2.1. Variação linguística."
-            },
-            {
-              "id": "lp_2_2",
-              "texto": "2.2. Classes de palavras: usos e adequações."
-            },
-            {
-              "id": "lp_2_3",
-              "texto": "2.3. Convenções da norma-padrão (no âmbito da concordância, da regência [incluindo crase], da ortografia e da acentuação gráfica)."
-            },
-            {
-              "id": "lp_2_4",
-              "texto": "2.4. Organização do período simples e do período composto."
-            },
-            {
-              "id": "lp_2_5",
-              "texto": "2.5. Pontuação."
-            },
-            {
-              "id": "lp_2_6",
-              "texto": "2.6. Relações semânticas entre palavras (sinonímia, antonímia, hiponímia e hiperonímia)."
-            }
-          ]
+          "id": "lps_2",
+          "titulo": "2. Estruturação do Texto e Articulação Textual",
+          "descricao": "Organização, progressão e hierarquia das ideias; pronomes e expressões referenciais, nexos, operadores sequenciais e conectivos."
+        },
+        {
+          "id": "lps_3",
+          "titulo": "3. Coesão, Coerência e Reescrita de Frases",
+          "descricao": "Mecanismos de coesão referencial, lexical e sequencial; equivalência e transformação de estruturas; paralelismo sintático e semântico."
+        },
+        {
+          "id": "lps_4",
+          "titulo": "4. Significação Contextual de Palavras e Expressões",
+          "descricao": "Sinonímia, antonímia, polissemia, ambiguidade e denotação/conotação."
+        },
+        {
+          "id": "lps_5",
+          "titulo": "5. Norma-Padrão, Ortografia, Acentuação e Pontuação",
+          "descricao": "Ortografia oficial, acentuação gráfica e pontuação."
+        },
+        {
+          "id": "lps_6",
+          "titulo": "6. Morfologia e Classes de Palavras",
+          "descricao": "Morfologia, estrutura e formação de palavras; emprego das classes de palavras."
+        },
+        {
+          "id": "lps_7",
+          "titulo": "7. Sintaxe e Construção Frasal",
+          "descricao": "Análise sintática dos termos da oração e do período simples e composto (coordenação e subordinação)."
+        },
+        {
+          "id": "lps_8",
+          "titulo": "8. Concordância, Regência, Colocação Pronominal e Crase",
+          "descricao": "Concordância verbal e nominal; regência verbal e nominal; colocação pronominal; crase."
+        },
+        {
+          "id": "lps_9",
+          "titulo": "9. Variação Linguística, Figuras de Linguagem e Tecnologia",
+          "descricao": "Variação linguística e adequação da linguagem; figuras de linguagem; linguagem e tecnologia: gêneros digitais, comunicação em ambientes virtuais e inteligência artificial aplicada à linguagem."
         }
       ]
     },
-    "legislacao": {
-      "id": "legislacao",
-      "nome": "Legislação",
+    "lingua_portuguesa_medio": {
+      "id": "lingua_portuguesa_medio",
+      "nome": "Língua Portuguesa (Nível Médio)",
       "questoes": 10,
       "topicos": [
         {
-          "id": "leg_1",
-          "titulo": "1. Regimento Interno da Câmara Municipal de Mossoró/RN",
-          "descricao": "Resolução nº 25/2025 e suas alterações.",
-          "subtopicos": [
-            {
-              "id": "leg_1_1",
-              "texto": "1.1. Estrutura, órgãos, Mesa Diretora e Presidência."
-            },
-            {
-              "id": "leg_1_2",
-              "texto": "1.2. Comissões Permanentes e Temporárias."
-            },
-            {
-              "id": "leg_1_3",
-              "texto": "1.3. Vereadores (exercício, licenças, vacância, decoro)."
-            },
-            {
-              "id": "leg_1_4",
-              "texto": "1.4. Sessões da Câmara, Processo Legislativo e Participação da Sociedade Civil."
-            }
-          ]
+          "id": "lpm_1",
+          "titulo": "1. Leitura, Compreensão e Interpretação de Textos",
+          "descricao": "Gêneros variados, com ênfase em inferência, ideia central e argumentação."
         },
         {
-          "id": "leg_2",
-          "titulo": "2. Lei Orgânica do Município de Mossoró/RN e suas alterações",
-          "descricao": "Lei Orgânica do Município de Mossoró/RN e suas alterações.",
-          "subtopicos": [
-            {
-              "id": "leg_2_1",
-              "texto": "2.1. Disposições fundamentais e competências municipais."
-            },
-            {
-              "id": "leg_2_2",
-              "texto": "2.2. Organização dos Poderes (Legislativo e Executivo) e Processo Legislativo."
-            },
-            {
-              "id": "leg_2_3",
-              "texto": "2.3. Fiscalização Contábil, Financeira e Orçamentária."
-            },
-            {
-              "id": "leg_2_4",
-              "texto": "2.4. Administração Pública Municipal, Servidores, Bens e Políticas Municipais."
-            }
-          ]
+          "id": "lpm_2",
+          "titulo": "2. Estruturação, Coesão e Coerência Textual",
+          "descricao": "Organização textual e progressão temática; mecanismos de referenciação, substituição, repetição e conectivos; pronomes e expressões referenciais, nexos e operadores sequenciais."
         },
         {
-          "id": "leg_3",
-          "titulo": "3. Lei de Improbidade Administrativa",
-          "descricao": "Lei nº 8.429/1992 e alterações da Lei nº 14.230/2021.",
-          "subtopicos": [
-            {
-              "id": "leg_3_1",
-              "texto": "3.1. Disposições gerais (Arts. 1º a 8º-A: elemento subjetivo/dolo, sujeitos e responsabilidade sucessória)."
-            },
-            {
-              "id": "leg_3_2",
-              "texto": "3.2. Atos de improbidade administrativa (Arts. 9º, 10 e 11)."
-            },
-            {
-              "id": "leg_3_3",
-              "texto": "3.3. Penas/sanções (Art. 12) e Declaração de bens (Art. 13)."
-            },
-            {
-              "id": "leg_3_4",
-              "texto": "3.4. Procedimento administrativo, processo judicial, Acordo de Não Persecução Civil (Art. 17-B), prescrição (Art. 23) e disposições penais."
-            }
-          ]
+          "id": "lpm_3",
+          "titulo": "3. Reescrita de Frases e Significação Contextual",
+          "descricao": "Equivalência e transformação de estruturas; sinonímia, antonímia e ambiguidade."
+        },
+        {
+          "id": "lpm_4",
+          "titulo": "4. Ortografia, Acentuação Gráfica e Pontuação",
+          "descricao": "Ortografia oficial conforme o Acordo Ortográfico vigente; acentuação gráfica; emprego da vírgula, ponto e vírgula, dois-pontos, travessão, parênteses e aspas."
+        },
+        {
+          "id": "lpm_5",
+          "titulo": "5. Morfologia e Emprego das Classes de Palavras",
+          "descricao": "Substantivo, artigo, adjetivo, numeral, pronome, verbo, advérbio, preposição, conjunção e interjeição."
+        },
+        {
+          "id": "lpm_6",
+          "titulo": "6. Sintaxe e Vozes Verbais",
+          "descricao": "Análise sintática (termos essenciais, integrantes e acessórios da oração; período composto por coordenação e subordinação); vozes verbais: ativa, passiva e reflexiva."
+        },
+        {
+          "id": "lpm_7",
+          "titulo": "7. Concordância, Regência, Colocação Pronominal e Crase",
+          "descricao": "Concordância verbal e nominal; regência verbal e nominal; colocação pronominal; crase."
+        },
+        {
+          "id": "lpm_8",
+          "titulo": "8. Variação Linguística e Figuras de Linguagem",
+          "descricao": "Variação linguística e adequação da linguagem; figuras de linguagem: noções básicas."
         }
       ]
     },
     "informatica_geral": {
       "id": "informatica_geral",
-      "nome": "Informática (Conhecimento Geral)",
-      "questoes": 10,
+      "nome": "Noções de Informática",
+      "questoes": 5,
       "topicos": [
         {
-          "id": "inf_g_1",
-          "titulo": "1. Sistemas Operacionais e Arquivos",
-          "descricao": "Conhecimentos básicos de SO; gerenciamento de arquivos e pastas; tipos de arquivos e extensões; armazenamento em nuvem; backup."
+          "id": "inf_1",
+          "titulo": "1. Fundamentos de Sistemas Computacionais",
+          "descricao": "Hardware, software e formatos de arquivo; formatos abertos e proprietários; interoperabilidade; armazenamento local, remoto e em nuvem; sincronização e controle de versões; software livre, licenciamento e acessibilidade digital."
         },
         {
-          "id": "inf_g_2",
-          "titulo": "2. Google Workspace",
-          "descricao": "Conceitos e funcionalidades; Google Drive; criação, organização, compartilhamento e colaboração em arquivos; permissões de acesso e histórico de versões."
+          "id": "inf_2",
+          "titulo": "2. Sistemas Operacionais (Windows 11 e Linux Ubuntu)",
+          "descricao": "Arquivos, pastas e permissões; contas de usuário e perfis de acesso; histórico de versões e recuperação de arquivos; atualizações, privacidade e segurança."
         },
         {
-          "id": "inf_g_3",
-          "titulo": "3. LibreOffice Writer",
-          "descricao": "Criação, edição e formatação de documentos; fontes, parágrafos, listas e tabelas; configuração de página; inserção de imagens e links; revisão e comentários; atalhos; impressão e exportação."
+          "id": "inf_3",
+          "titulo": "3. Editores de Texto (Microsoft Word e LibreOffice Writer)",
+          "descricao": "Estilos e estruturação de documentos extensos; sumário automático, notas, legendas e referências cruzadas; mala direta e modelos; comentários, controle de alterações e comparação de documentos; proteção de documentos e exportação para PDF."
         },
         {
-          "id": "inf_g_4",
-          "titulo": "4. LibreOffice Calc",
-          "descricao": "Criação, edição e formatação de planilhas; células, linhas, colunas e intervalos; organização e classificação de dados; fórmulas e funções básicas; referências de células; gráficos; atalhos; configuração e impressão."
+          "id": "inf_4",
+          "titulo": "4. Planilhas Eletrônicas (Microsoft Excel e LibreOffice Calc)",
+          "descricao": "Fórmulas, referências e funções matemáticas, estatísticas, lógicas, de texto, de data/hora e de pesquisa; classificação, filtros e validação de dados; formatação condicional, tabelas dinâmicas e gráficos; proteção de dados e identificação de erros."
         },
         {
-          "id": "inf_g_5",
-          "titulo": "5. LibreOffice Impress",
-          "descricao": "Criação, edição e organização de apresentações; slides, temas e layouts; formatação de textos; inserção de imagens, tabelas, gráficos e links; transições e animações; apresentação e exportação."
+          "id": "inf_5",
+          "titulo": "5. Apresentações e Integração entre Aplicativos",
+          "descricao": "Slide mestre, temas, transições, animações e modo apresentador (PowerPoint e Impress); transferência de dados entre texto, planilha e apresentação; incorporação e vinculação de objetos; compatibilidade entre pacotes e versões; conversão para PDF."
         },
         {
-          "id": "inf_g_6",
-          "titulo": "6. Internet e Correio Eletrônico",
-          "descricao": "Conceitos básicos de Internet; navegadores; mecanismos de busca; abas, favoritos, histórico e downloads; correio eletrônico; envio, recebimento e anexos."
+          "id": "inf_6",
+          "titulo": "6. Internet, Intranet e Pesquisa (Chrome, Edge e Firefox)",
+          "descricao": "Internet, intranet, extranet e protocolos básicos; HTTPS e certificados digitais; estratégias e operadores de busca; avaliação de fontes; desinformação e conteúdos manipulados."
         },
         {
-          "id": "inf_g_7",
-          "titulo": "7. Redes e Segurança da Informação",
-          "descricao": "Conceitos básicos de redes; Internet, intranet e Wi-Fi; dispositivos de rede; senhas e autenticação; vírus, worms, trojans, ransomware, spyware e phishing; proteção de dados e boas práticas de segurança."
+          "id": "inf_7",
+          "titulo": "7. Correio Eletrônico Corporativo (Outlook, Thunderbird e Gmail)",
+          "descricao": "Protocolos SMTP, POP3 e IMAP; webmail e clientes de e-mail; listas de distribuição, regras, calendários e convites; phishing e variações, falsificação de remetente e cuidados com dados sigilosos."
         },
         {
-          "id": "inf_g_8",
-          "titulo": "8. Inteligência Artificial",
-          "descricao": "Conceitos básicos de IA e IA Generativa; uso de ferramentas de IA no ambiente de trabalho; elaboração de prompts; verificação e revisão das informações geradas; limitações e possibilidade de erros; privacidade, proteção de dados, direitos autorais, ética e uso responsável da IA."
+          "id": "inf_8",
+          "titulo": "8. Computação em Nuvem e Trabalho Colaborativo",
+          "descricao": "Microsoft 365, Google Workspace, Teams, Meet e Zoom: compartilhamento por usuários, grupos e links; permissões, coautoria e histórico de versões; transferência e revogação de acesso; riscos de links públicos e permissões excessivas."
+        },
+        {
+          "id": "inf_9",
+          "titulo": "9. Fundamentos de Sistemas de Informação e Administração Pública",
+          "descricao": "Dado, informação e conhecimento; conceitos básicos de banco de dados e qualidade dos dados; autenticação, autorização e auditoria; segregação de funções, princípio do menor privilégio, trilhas de auditoria e disponibilidade; publicidade e transparência ativa e passiva; proteção de dados pessoais em documentos públicos."
+        }
+      ]
+    },
+    "raciocinio_logico": {
+      "id": "raciocinio_logico",
+      "nome": "Raciocínio Lógico-Matemático",
+      "questoes": 5,
+      "topicos": [
+        {
+          "id": "rlm_1",
+          "titulo": "1. Raciocínio Lógico e Proposições",
+          "descricao": "Proposições, conectivos, negação, tabela verdade, equivalência e implicação lógica, diagramas lógicos, calendários."
+        },
+        {
+          "id": "rlm_2",
+          "titulo": "2. Números Reais, Proporcionalidade e Matemática Financeira",
+          "descricao": "Resolução de problemas envolvendo números reais; numeração; razões especiais; grandezas diretamente e inversamente proporcionais; regra de três simples e composta; divisão proporcional; porcentagem; juros simples e compostos."
+        },
+        {
+          "id": "rlm_3",
+          "titulo": "3. Conjuntos, Divisibilidade e Sequências",
+          "descricao": "Conjuntos; múltiplos e divisores; regras de divisibilidade; MDC e MMC; sequências e padrões (números, figuras, letras ou palavras); progressões aritméticas e geométricas; equações e sistemas do 1º e 2º graus."
+        },
+        {
+          "id": "rlm_4",
+          "titulo": "4. Análise Combinatória e Probabilidade",
+          "descricao": "Problemas de contagem: Princípio Aditivo e Princípio Multiplicativo; arranjos, combinações e permutações; probabilidade da união de dois eventos, probabilidade condicional e probabilidade de eventos independentes."
+        },
+        {
+          "id": "rlm_5",
+          "titulo": "5. Estatística Básica, Geometria e Medidas",
+          "descricao": "Média aritmética simples e ponderada; perímetro e área de figuras planas; Sistema Legal de Medidas (comprimento, área, volume, massa, capacidade e tempo); interpretação de gráficos e tabelas."
+        }
+      ]
+    },
+    "legislacao": {
+      "id": "legislacao",
+      "nome": "Legislação e Ética no Serviço Público",
+      "questoes": 5,
+      "topicos": [
+        {
+          "id": "leg_1",
+          "titulo": "1. Legislação Aplicada ao Serviço Público (LGPD e LAI)",
+          "subtopicos": [
+            {
+              "id": "leg_1_1",
+              "texto": "1.1. Lei Federal nº 13.709/2018 – Lei Geral de Proteção de Dados Pessoais (LGPD)."
+            },
+            {
+              "id": "leg_1_2",
+              "texto": "1.2. Lei Federal nº 12.527/2011 – Lei de Acesso à Informação (LAI)."
+            }
+          ]
+        },
+        {
+          "id": "leg_2",
+          "titulo": "2. Ética no Serviço Público e Princípios da Administração Pública",
+          "subtopicos": [
+            {
+              "id": "leg_2_1",
+              "texto": "2.1. Ética e função pública; ética e moral (definição e distinção); valores, virtude, honestidade, integridade, decoro e zelo; ética, democracia, cidadania e o papel do servidor público."
+            },
+            {
+              "id": "leg_2_2",
+              "texto": "2.2. Princípios da Administração Pública aplicados à ética: legalidade, impessoalidade, moralidade, publicidade e eficiência."
+            }
+          ]
+        },
+        {
+          "id": "leg_3",
+          "titulo": "3. Legislação Interna de Petrolina/PE",
+          "subtopicos": [
+            {
+              "id": "leg_3_1",
+              "texto": "3.1. Lei Orgânica do Município de Petrolina."
+            },
+            {
+              "id": "leg_3_2",
+              "texto": "3.2. Regimento Interno da Câmara Municipal de Petrolina (com alterações posteriores)."
+            },
+            {
+              "id": "leg_3_3",
+              "texto": "3.3. Lei Municipal nº 301/1991 (Estatuto dos Funcionários Públicos do Município de Petrolina): provimento, vacância, direitos e vantagens, deveres, proibições, responsabilidades e regime disciplinar."
+            },
+            {
+              "id": "leg_3_4",
+              "texto": "3.4. Lei Municipal nº 3.960/2026 (Plano de Cargos, Carreira e Vencimentos da Câmara Municipal de Petrolina): provimento, estágio probatório, progressão funcional, deveres, proibições e penalidades."
+            },
+            {
+              "id": "leg_3_5",
+              "texto": "3.5. Lei Municipal nº 3.937/2026 (Transformação e extinção de cargos do quadro permanente do Poder Legislativo Municipal)."
+            }
+          ]
         }
       ]
     }
   },
   "cargos": {
-    "agente_administrativo": {
-      "id": "agente_administrativo",
-      "nome": "Agente Administrativo",
-      "codigo": "101",
-      "nivel": "Médio",
-      "jornada": "30 horas",
-      "remuneracao": "R$ 4.921,08",
-      "taxa_inscricao": 100,
-      "turno": "Manhã (Portões fecham às 08h • Duração: 4h)",
-      "vagas": {
-        "total": 15,
-        "ampla": 10,
-        "ppp": 3,
-        "pcd": 2
-      },
-      "pdf_edital": "CONHECIMENTO ESPECÍFICO - Agente Administrativo (retificado em 07 de outubro de 2026).pdf",
-      "link_pdf": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_Agente_Administrativo_(retificado_em_07_de_outubro_de_2026).pdf",
-      "disciplinas": [
-        "lingua_portuguesa",
-        "legislacao",
-        "informatica_geral",
-        "especifica_agente_administrativo"
-      ],
-      "especifica": {
-        "id": "especifica_agente_administrativo",
-        "nome": "Conhecimentos Específicos - Agente Administrativo",
-        "questoes": 30,
-        "topicos": [
-          {
-            "id": "adm_1",
-            "titulo": "1. Conhecimentos Básicos em Administração",
-            "descricao": "Funções do processo administrativo (planejamento, organização, direção e controle); níveis de planejamento; habilidades administrativas; estruturas organizacionais; departamentalização; centralização e descentralização; eficiência, eficácia e efetividade."
-          },
-          {
-            "id": "adm_2",
-            "titulo": "2. Relações Humanas, Comunicação e Liderança",
-            "descricao": "Relações interpessoais no ambiente de trabalho; comunicação organizacional; comunicação verbal e não verbal; trabalho em equipe; liderança e estilos de liderança; motivação e teorias motivacionais; gestão de conflitos; negociação; comportamento organizacional."
-          },
-          {
-            "id": "adm_3",
-            "titulo": "3. Gestão de Processos e Projetos",
-            "descricao": "Conceitos de processos, atividades e tarefas; gestão e mapeamento de processos; conceitos básicos de gestão de projetos; ciclo de vida dos projetos; planejamento, execução, monitoramento e encerramento de projetos."
-          },
-          {
-            "id": "adm_4",
-            "titulo": "4. Noções de Direito Constitucional",
-            "descricao": "Constituição Federal: princípios fundamentais e direitos e garantias fundamentais. Organização do Estado: organização político-administrativa; União, Estados, Distrito Federal e Municípios; competências municipais. Poder Legislativo: organização, atribuições e competências das Câmaras Municipais; fiscalização do Município. Processo legislativo: iniciativa, proposições, emendas, discussão, votação, sanção, veto, promulgação e publicação."
-          },
-          {
-            "id": "adm_5",
-            "titulo": "5. Noções de Direito Administrativo",
-            "descricao": "Art. 37 da Constituição Federal; princípios da Administração Pública; atos administrativos."
-          },
-          {
-            "id": "adm_6",
-            "titulo": "6. Administração de Materiais, Patrimônio e Logística",
-            "descricao": "Conceitos básicos de administração de materiais; gestão e controle de estoques; armazenamento e distribuição; inventário; patrimônio público; tombamento, registro, movimentação e baixa de bens; conservação e controle de bens patrimoniais; logística; Lei nº 14.133/2021 (Licitações e Contratos Administrativos)."
-          },
-          {
-            "id": "adm_7",
-            "titulo": "7. Administração Financeira e Orçamentária",
-            "descricao": "Noções de orçamento público; princípios orçamentários; receitas e despesas públicas; fases da receita e da despesa; créditos adicionais; matemática básica aplicada à administração: razão, proporção, porcentagem, juros simples, juros compostos e interpretação de dados."
-          },
-          {
-            "id": "adm_8",
-            "titulo": "8. Redação Oficial",
-            "descricao": "Características da redação oficial; clareza, precisão, concisão, objetividade, impessoalidade, formalidade e padronização; correspondência oficial; pronomes de tratamento; estrutura e elaboração de documentos oficiais."
-          }
-        ]
-      }
-    },
-    "tecnico_informatica": {
-      "id": "tecnico_informatica",
-      "nome": "Técnico em Informática",
-      "codigo": "102",
-      "nivel": "Médio/Técnico",
-      "jornada": "30 horas",
-      "remuneracao": "R$ 4.921,08",
-      "taxa_inscricao": 100,
-      "turno": "Manhã (Portões fecham às 08h • Duração: 4h)",
-      "pdf_edital": "CONHECIMENTO ESPECÍFICO - Técnico em informática.pdf",
-      "link_pdf": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_T%C3%A9cnico_em_inform%C3%A1tica.pdf",
-      "disciplinas": [
-        "lingua_portuguesa",
-        "legislacao",
-        "especifica_tecnico_informatica"
-      ],
-      "especifica": {
-        "id": "especifica_tecnico_informatica",
-        "nome": "Conhecimentos Específicos - Técnico em Informática",
-        "questoes": 40,
-        "topicos": [
-          {
-            "id": "tec_1",
-            "titulo": "1. Legislação em Segurança da Informação",
-            "subtopicos": [
-              {
-                "id": "tec_1_1",
-                "texto": "1.1. GDPR (General Data Protection Regulation)."
-              },
-              {
-                "id": "tec_1_2",
-                "texto": "1.2. Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)."
-              },
-              {
-                "id": "tec_1_3",
-                "texto": "1.3. Marco Civil da Internet (Lei nº 12.965/2014)."
-              },
-              {
-                "id": "tec_1_4",
-                "texto": "1.4. Normas de gestão de segurança da informação (NBR ISO/IEC 27001 e 27002)."
-              },
-              {
-                "id": "tec_1_5",
-                "texto": "1.5. Gestão de riscos e continuidade de negócio (NBR ISO/IEC 27005 e 15999)."
-              }
-            ]
-          },
-          {
-            "id": "tec_2",
-            "titulo": "2. Organização de Computadores",
-            "descricao": "Processadores, memórias, discos rígidos e SSDs (incluindo NVMe), padrão IDE e SATA, placas-mães, placas de vídeo (GPUs), monitores, unidades externas de armazenamento, portas serial, paralela e USB, notebooks, impressoras, scanners e outros equipamentos periféricos."
-          },
-          {
-            "id": "tec_3",
-            "titulo": "3. Sistemas Operacionais (Linux Ubuntu Desktop 20.04 LTS e posteriores, e Windows 10 e posteriores)",
-            "subtopicos": [
-              {
-                "id": "tec_3_1",
-                "texto": "3.1. Criação e gerenciamento de usuários, permissões sobre arquivos e diretórios, tratamento de processos; inicialização/encerramento da execução de serviços, manutenção de programas, controle remoto de estações, sistema de arquivos (NTFS, Ext4, Btrfs)."
-              },
-              {
-                "id": "tec_3_2",
-                "texto": "3.2. Configurações de rede; configuração de serviços; configuração de periféricos; backup e restore."
-              }
-            ]
-          },
-          {
-            "id": "tec_4",
-            "titulo": "4. Banco de Dados",
-            "subtopicos": [
-              {
-                "id": "tec_4_1",
-                "texto": "4.1. Modelo Entidade-Relacionamento."
-              },
-              {
-                "id": "tec_4_2",
-                "texto": "4.2. SQL (DDL, consultas, inserções, atualizações e exclusões)."
-              },
-              {
-                "id": "tec_4_3",
-                "texto": "4.3. Propriedades de um SGBD (ACID)."
-              },
-              {
-                "id": "tec_4_4",
-                "texto": "4.4. Visões, índices, otimização de consultas, triggers e transações em PostgreSQL 9.x."
-              },
-              {
-                "id": "tec_4_5",
-                "texto": "4.5. Linguagem procedural PL/pgSQL."
-              }
-            ]
-          },
-          {
-            "id": "tec_5",
-            "titulo": "5. Lógica de Programação de Computadores (Python 3.x, Java 12 ou superior, PHP 7.x)",
-            "subtopicos": [
-              {
-                "id": "tec_5_1",
-                "texto": "5.1. Construção de algoritmos, tipos de dados e operações primitivas, variáveis e expressões, comando de atribuição, avaliação de expressões, comandos de entrada e saída."
-              },
-              {
-                "id": "tec_5_2",
-                "texto": "5.2. Estruturas sequenciais, estrutura de seleção, estruturas de repetição."
-              },
-              {
-                "id": "tec_5_3",
-                "texto": "5.3. Arrays, listas encadeadas (simples e duplas), modularização, recursividade, programação estruturada."
-              }
-            ]
-          },
-          {
-            "id": "tec_6",
-            "titulo": "6. Framework Scrum",
-            "descricao": "Papéis, eventos/cerimônias, artefatos e regras do guia Scrum."
-          },
-          {
-            "id": "tec_7",
-            "titulo": "7. Linguagem de Modelagem UML 2",
-            "descricao": "Caso de uso, diagrama de atividades, diagrama de sequência, diagrama de classes, diagrama de pacotes, diagrama de componentes."
-          },
-          {
-            "id": "tec_8",
-            "titulo": "8. Testes de Software",
-            "descricao": "Testes unitários automatizados, funcionais, não funcionais e outros (JUnit 5 e superiores)."
-          },
-          {
-            "id": "tec_9",
-            "titulo": "9. Padrões e Tecnologias Web",
-            "descricao": "HTML5, CSS3, JavaScript (ECMAScript 6), jQuery 1.8.x, JSON."
-          },
-          {
-            "id": "tec_10",
-            "titulo": "10. Programação Web",
-            "descricao": "PHP 7.x e JavaServer Faces (JSF) 2.2 ou superior."
-          },
-          {
-            "id": "tec_11",
-            "titulo": "11. Padrões de Projeto",
-            "descricao": "Padrão MVC e Padrões \"Gang of Four\" (criacionais, estruturais e comportamentais)."
-          },
-          {
-            "id": "tec_12",
-            "titulo": "12. Controle de Versões",
-            "descricao": "Git 2.x."
-          },
-          {
-            "id": "tec_13",
-            "titulo": "13. Conhecimentos em Ubuntu Server",
-            "descricao": "Administração, linha de comando (Bash), pacotes, usuários, permissões, logs e serviços de rede."
-          }
-        ]
-      }
-    },
     "analista_ti": {
       "id": "analista_ti",
-      "nome": "Analista de Tecnologia da Informação",
-      "codigo": "205",
+      "nome": "Analista Legislativo – Tecnologia da Informação",
+      "codigo": "04",
       "nivel": "Superior",
-      "jornada": "30 horas",
-      "remuneracao": "R$ 8.810,69",
-      "taxa_inscricao": 150,
-      "turno": "Tarde (Portões fecham às 14h • Duração: 4h)",
+      "jornada": "30h semanais",
+      "remuneracao": "R$ 4.553,94",
+      "taxa_inscricao": 140,
+      "turno": "Tarde (Portões fecham às 14h00 • Duração: 4h)",
       "vagas": {
-        "imediata": 1,
-        "cadastro_reserva": 2,
-        "total": 3,
-        "descricao": "1 vaga imediata + 2 de cadastro de reserva"
+        "total": 1,
+        "ampla": 1,
+        "cr": 3
       },
-      "pdf_edital": "CONHECIMENTO ESPECÍFICO - Analista de TI.pdf",
-      "link_pdf": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_Analista_de_TI.pdf",
+      "pdf_edital": "edital_n_01_2026_1707176.pdf",
+      "link_pdf": "https://www.idecan.org.br",
       "disciplinas": [
-        "lingua_portuguesa",
+        "lingua_portuguesa_superior",
+        "informatica_geral",
         "legislacao",
         "especifica_analista_ti"
       ],
       "especifica": {
         "id": "especifica_analista_ti",
-        "nome": "Conhecimentos Específicos - Analista de Tecnologia da Informação",
-        "questoes": 40,
+        "nome": "Conhecimentos Específicos - Analista Legislativo / TI",
+        "questoes": 20,
         "topicos": [
           {
-            "id": "ana_ti_1",
-            "titulo": "1. Conceitos Básicos de Software e Hardware",
-            "descricao": "Definição, tipos, funções e características.",
-            "videos": [
+            "id": "ati_1",
+            "titulo": "1. Infraestrutura de TI e Informática Legislativa",
+            "subtopicos": [
               {
-                "titulo": "Curso de Hardware - Introdução e Fundamentos",
-                "canal": "Curso em Vídeo",
-                "tipo": "video",
-                "url": "https://www.youtube.com/watch?v=iT6E92Kt38o",
-                "descricao": "Vídeo introdutório sobre arquitetura e conceitos fundamentais de hardware e software."
+                "id": "ati_1_1",
+                "texto": "1.1. Arquitetura e componentes de computadores; hardware e periféricos."
               },
               {
-                "titulo": "Curso de Hardware Grátis (Playlist Completa)",
-                "canal": "Gustavo Guanabara",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLHz_AreHm4dn1JHgN9wpbIUhzZmycYQXW",
-                "descricao": "Playlist completa cobrindo arquitetura de computadores, memórias, barramentos e periféricos."
-              }
-            ],
-            "questoes": [
-              {
-                "id": "ana_ti_1_q1",
-                "numero": 1,
-                "enunciado": "Em relação às características de hardware e software, assinale a alternativa correta:",
-                "alternativas": {
-                  "A": "O hardware compreende os programas lógicos, enquanto o software refere-se aos circuitos físicos.",
-                  "B": "O hardware é a parte física e tangível do equipamento; o software é o conjunto lógico de instruções e dados processados pelo hardware.",
-                  "C": "O software de sistema independe de hardware para armazenar e executar código binário.",
-                  "D": "O firmware é classificado exclusivamente como um periférico mecânico de entrada de dados."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_1_2",
+                "texto": "1.2. Instalação, configuração, manutenção e suporte de hardware e software."
               },
               {
-                "id": "ana_ti_1_q2",
-                "numero": 2,
-                "enunciado": "Os softwares são classificados conforme sua finalidade no sistema computacional. Assinale a opção que representa um software básico (ou de sistema):",
-                "alternativas": {
-                  "A": "LibreOffice Calc.",
-                  "B": "Kernel do Sistema Operacional e drivers de dispositivos.",
-                  "C": "Navegador Google Chrome.",
-                  "D": "Sistema de Folha de Pagamento em nuvem."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_1_3",
+                "texto": "1.3. Sistemas operacionais Windows e Linux: instalação, configuração, administração e principais comandos."
               },
               {
-                "id": "ana_ti_1_q3",
-                "numero": 3,
-                "enunciado": "Na arquitetura de von Neumann, qual componente interno da CPU é diretamente responsável por executar operações matemáticas e testes lógicos entre valores?",
-                "alternativas": {
-                  "A": "Unidade de Controle (U\nC) .",
-                  "B": "C) .\nB)",
-                  "C": "B)  Unidade Lógica e Aritmética (UL\nA) .\nC)  Barramento de Endereços.",
-                  "D": "Memória ROM-BIOS."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_1_4",
+                "texto": "1.4. Administração de servidores; virtualização; computação em nuvem (IaaS, PaaS e SaaS)."
               },
               {
-                "id": "ana_ti_1_q4",
-                "numero": 4,
-                "enunciado": "A memória Cache (L1, L2, L3) possui como característica e função principal:",
-                "alternativas": {
-                  "A": "Armazenar permanentemente arquivos do usuário quando o computador é desligado.",
-                  "B": "Substituir o disco rígido ou SSD na guarda de arquivos multimídia pesados.",
-                  "C": "Reduzir o tempo médio de acesso do processador às instruções e dados mais requisitados da RAM.",
-                  "D": "Operar com tecnologia magnética sequencial de baixo custo e alta latência."
-                },
-                "gabarito": "C",
-                "explicacao": ""
+                "id": "ati_1_5",
+                "texto": "1.5. Gestão e suporte de serviços de TI: noções de ITIL e COBIT."
               },
               {
-                "id": "ana_ti_1_q5",
-                "numero": 5,
-                "enunciado": "Sobre memórias voláteis e não voláteis, assinale a alternativa correta:",
-                "alternativas": {
-                  "A": "A memória DRAM é volátil e perde seu conteúdo na ausência de alimentação elétrica.",
-                  "B": "A memória SRAM é utilizada para armazenamento secundário de longo prazo em servidores.",
-                  "C": "O SSD NVMe é uma memória volátil que requer bateria dedicada na placa-mãe.",
-                  "D": "A memória ROM é volátil e regravada a cada ciclo de clock da CPU."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_1_q6",
-                "numero": 6,
-                "enunciado": "Na comunicação entre a CPU, a memória principal e os dispositivos de E/S, o barramento que define a capacidade máxima de memória RAM endereçável diretamente pelo processador é o:",
-                "alternativas": {
-                  "A": "Barramento de Dados.",
-                  "B": "Barramento de Endereços.",
-                  "C": "Barramento de Controle.",
-                  "D": "Barramento USB Serial."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_1_q7",
-                "numero": 7,
-                "enunciado": "Comparando unidades de armazenamento SSD NVMe e SSD SATA, é correto afirmar que:",
-                "alternativas": {
-                  "A": "Ambos utilizam o mesmo protocolo AHCI limitado a 600 MB/s.",
-                  "B": "O SSD NVMe comunica-se através do barramento PCI Express (PCIe), atingindo taxas superiores e menor latência que o padrão SATA.",
-                  "C": "O SSD SATA possui discos magnéticos móveis, ao contrário do NVMe.",
-                  "D": "O padrão NVMe é exclusivo para dispositivos externos conectados via porta paralela."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_1_q8",
-                "numero": 8,
-                "enunciado": "O software gravado em memória não volátil na placa-mãe, responsável pelo autoteste de inicialização (POST) e pela localização do carregador de boot do sistema operacional, denomina-se:",
-                "alternativas": {
-                  "A": "BIOS / UEFI (Firmware).",
-                  "B": "Compilador C++.",
-                  "C": "Hypervisor Tipo 2.",
-                  "D": "Spooler de impressão."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_1_q9",
-                "numero": 9,
-                "enunciado": "Em relação aos tipos de licença de software, o Software Livre (Free Software) caracteriza-se essencialmente por:",
-                "alternativas": {
-                  "A": "Ser distribuído gratuitamente, porém com código-fonte fechado e criptografado.",
-                  "B": "Conceder ao usuário as liberdades de executar, estudar, modificar e redistribuir o código-fonte.",
-                  "C": "Proibir o uso em órgãos públicos ou empresas com fins lucrativos.",
-                  "D": "Não possuir proteção de direitos autorais ou licenças jurídicas (como GPL ou MIT)."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_1_q10",
-                "numero": 10,
-                "enunciado": "Qual periférico listado abaixo atua simultaneamente como dispositivo de Entrada e de Saída (E/S)?",
-                "alternativas": {
-                  "A": "Teclado ABNT2.",
-                  "B": "Mouse óptico.",
-                  "C": "Monitor touchscreen (tela sensível ao toque).",
-                  "D": "Caixa de som acústica."
-                },
-                "gabarito": "C",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_1_q11",
-                "numero": 11,
-                "enunciado": "Sobre tradutores de linguagem de programação (compiladores e interpretadores), assinale a afirmativa correta:",
-                "alternativas": {
-                  "A": "O compilador traduz o programa-fonte inteiro para código objeto/máquina antes da execução.",
-                  "B": "O interpretador gera um arquivo executável binário independente na primeira linha lida.",
-                  "C": "Linguagens híbridas como Java dispensam tanto compilação quanto máquina virtual (JVM).",
-                  "D": "O montador (Assembler) converte código binário diretamente em diagramas UML."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_1_q12",
-                "numero": 12,
-                "enunciado": "A técnica em que o processador divide a execução de instruções em múltiplos estágios sequenciais, permitindo que várias instruções sejam processadas em paralelo em diferentes etapas, chama-se:",
-                "alternativas": {
-                  "A": "Swapping.",
-                  "B": "Pipelining.",
-                  "C": "Underclocking.",
-                  "D": "Formatação física."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_1_q13",
-                "numero": 13,
-                "enunciado": "Acerca das memórias RAM e ROM, analise as afirmativas:I. Os registradores ficam no interior da CPU e estão no topo da hierarquia de velocidade de memória.II. A memória EEPROM permite apagamento e reprogramação por meio de pulsos elétricos.III. A memória virtual utiliza espaço do armazenamento secundário (SSD/H\nD)  como extensão lógica da RAM.Estão corretas:",
-                "alternativas": {
-                  "A": "I e II, apenas.",
-                  "B": "II e III, apenas.",
-                  "C": "D)  como extensão lógica da RAM.Estão corretas:\nA)  I e II, apenas.\nB)  II e III, apenas.\nC)",
-                  "D": "como extensão lógica da RAM.Estão corretas:\nA)  I e II, apenas.\nB)  II e III, apenas.\nC)  I e III, apenas.\nD)  I, II e III."
-                },
-                "gabarito": "D",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_1_q14",
-                "numero": 14,
-                "enunciado": "Os softwares utilitários têm como função principal:",
-                "alternativas": {
-                  "A": "Auxiliar na manutenção, diagnóstico, compressão, backup e otimização do sistema computacional.",
-                  "B": "Substituir o núcleo do sistema operacional no escalonamento de threads.",
-                  "C": "Prover modelagem financeira e contábil para departamentos de recursos humanos.",
-                  "D": "Controlar a tensão elétrica das fontes chaveadas sem intervenção de hardware."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_1_q15",
-                "numero": 15,
-                "enunciado": "O recurso de hardware pelo qual um controlador de dispositivo transfere dados diretamente para a memória principal (RAM) sem ocupar o processador durante toda a transferência é denominado:",
-                "alternativas": {
-                  "A": "IRQ (Interrupt Request).",
-                  "B": "DMA (Direct Memory Access).",
-                  "C": "ALU (Arithmetic Logic Unit).",
-                  "D": "FSB (Front Side Bus)."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_1_6",
+                "texto": "1.6. Teleprocessamento, operação e monitoramento de sistemas; controle de qualidade: noções."
               }
             ]
           },
           {
-            "id": "ana_ti_2",
-            "titulo": "2. Algoritmos",
-            "descricao": "Complexidade de algoritmos e métodos de ordenação.",
-            "videos": [
+            "id": "ati_2",
+            "titulo": "2. Redes de Computadores",
+            "subtopicos": [
               {
-                "titulo": "Introdução a Algoritmos - Curso de Algoritmos #01",
-                "canal": "Curso em Vídeo",
-                "tipo": "video",
-                "url": "https://www.youtube.com/watch?v=8mei6uVttho",
-                "descricao": "Conceitos iniciais de algoritmos, lógica de programação e raciocínio computacional."
+                "id": "ati_2_1",
+                "texto": "2.1. Modelo OSI e arquitetura TCP/IP."
               },
               {
-                "titulo": "Estruturas de Dados e Algoritmos de Ordenação",
-                "canal": "UNIVESP",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLxI8Can9yAHf8k8LrUePyj0y3lLpigGcl",
-                "descricao": "Aulas universitárias detalhadas sobre complexidade assintótica (Big-O) e métodos de ordenação."
+                "id": "ati_2_2",
+                "texto": "2.2. Endereçamento IPv4 e IPv6."
               },
               {
-                "titulo": "Curso de Algoritmos e Lógica de Programação (Playlist Completa)",
-                "canal": "Curso em Vídeo",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfXV",
-                "descricao": "Treinamento completo passo a passo com exercícios práticos e estruturas de controle."
-              }
-            ],
-            "questoes": [
-              {
-                "id": "ana_ti_2_q1",
-                "numero": 1,
-                "enunciado": "A notação assintótica que representa o limite superior do tempo de execução de um algoritmo (garantindo que ele não crescerá mais rápido que determinada função no pior caso) é a:",
-                "alternativas": {
-                  "A": "Notação Ômega ($\\Omega$).",
-                  "B": "Notação Big-O ($O$).",
-                  "C": "Notação Teta ($\\Theta$) restrita ao melhor caso.",
-                  "D": "Notação Linear Constante."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_2_3",
+                "texto": "2.3. Principais protocolos e serviços: DNS, DHCP, HTTP/HTTPS, SMTP, IMAP, LDAP, SNMP."
               },
               {
-                "id": "ana_ti_2_q2",
-                "numero": 2,
-                "enunciado": "Considere um algoritmo cuja quantidade de operações básicas em função da entrada $n$ seja $T(n) = 7n^3 + 40n^2 + 120n + 500$. Sua complexidade assintótica na notação Big-O é:",
-                "alternativas": {
-                  "A": "$O(n)$",
-                  "B": "$O(n^2)$",
-                  "C": "$O(n^3)$",
-                  "D": "$O(3^n)$"
-                },
-                "gabarito": "C",
-                "explicacao": ""
+                "id": "ati_2_4",
+                "texto": "2.4. Cabeamento estruturado e redes sem fio."
               },
               {
-                "id": "ana_ti_2_q3",
-                "numero": 3,
-                "enunciado": "Qual é a complexidade de tempo de pior caso dos algoritmos Bubble Sort, Insertion Sort e Selection Sort?",
-                "alternativas": {
-                  "A": "$O(n \\log n)$ para todos.",
-                  "B": "$O(n^2)$ para todos.",
-                  "C": "$O(n)$ para o Insertion Sort e $O(n \\log n)$ para os demais.",
-                  "D": "$O(\\log n)$ para o Selection Sort e $O(n^2)$ para os demais."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_2_5",
+                "texto": "2.5. Equipamentos de rede: switches, roteadores, firewalls e pontos de acesso; VLAN e VPN."
               },
               {
-                "id": "ana_ti_2_q4",
-                "numero": 4,
-                "enunciado": "Dentre os algoritmos de ordenação abaixo, qual possui complexidade de tempo $O(n)$ no melhor caso (quando o vetor de entrada já está ordenado ou quase ordenado)?",
-                "alternativas": {
-                  "A": "Selection Sort.",
-                  "B": "Insertion Sort (e Bubble Sort otimizado com flag de parada).",
-                  "C": "Merge Sort.",
-                  "D": "Heap Sort."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_2_q5",
-                "numero": 5,
-                "enunciado": "O algoritmo Merge Sort baseia-se no paradigma de Divisão e Conquista. Sobre ele, é correto afirmar que:",
-                "alternativas": {
-                  "A": "Possui complexidade $O(n \\log n)$ no melhor, médio e pior casos, mas exige espaço auxiliar $O(n)$.",
-                  "B": "Possui complexidade $O(n^2)$ no pior caso e ordena in-place com memória $O(1)$.",
-                  "C": "É um método instável que altera a ordem relativa de chaves iguais.",
-                  "D": "Realiza menos trocas que o Insertion Sort em vetores de 3 elementos já ordenados."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_2_q6",
-                "numero": 6,
-                "enunciado": "Sobre o algoritmo Quick Sort, assinale a alternativa correta:",
-                "alternativas": {
-                  "A": "Seu pior caso é $O(n \\log n)$, independentemente da escolha do elemento pivô.",
-                  "B": "Seu caso médio é $O(n \\log n)$, mas seu pior caso degrada para $O(n^2)$ dependendo da escolha do pivô.",
-                  "C": "É um algoritmo de ordenação estável por definição padrão.",
-                  "D": "Não utiliza recursão nem particionamento de vetores."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_2_q7",
-                "numero": 7,
-                "enunciado": "Um método de ordenação é considerado estável (stable) quando:",
-                "alternativas": {
-                  "A": "Mantém a ordem relativa original dos registros que possuem chaves de ordenação iguais.",
-                  "B": "Consome exatamente a mesma quantidade de memória RAM em qualquer sistema operacional.",
-                  "C": "Nunca apresenta complexidade superior a $O(n)$.",
-                  "D": "Não utiliza ponteiros ou chamadas recursivas em sua implementação."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_2_q8",
-                "numero": 8,
-                "enunciado": "Assinale a opção que contém apenas algoritmos de ordenação que garantem complexidade temporal $O(n \\log n)$ mesmo no pior caso:",
-                "alternativas": {
-                  "A": "Quick Sort e Bubble Sort.",
-                  "B": "Merge Sort e Heap Sort.",
-                  "C": "Insertion Sort e Selection Sort.",
-                  "D": "Quick Sort e Insertion Sort."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_2_q9",
-                "numero": 9,
-                "enunciado": "Qual método de ordenação percorre o vetor repetidamente procurando o menor elemento do subvetor não ordenado para colocá-lo diretamente em sua posição final correta, realizando no máximo $O(n)$ trocas (swaps) no total?",
-                "alternativas": {
-                  "A": "Bubble Sort.",
-                  "B": "Selection Sort.",
-                  "C": "Merge Sort.",
-                  "D": "Quick Sort."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_2_q10",
-                "numero": 10,
-                "enunciado": "Analise o trecho de código abaixo:Javafor (int i = 1; i < n; i = i * 2) {\n    soma += i;\n}\nA complexidade de tempo desse laço em função de $n$ é:",
-                "alternativas": {
-                  "A": "$O(1)$",
-                  "B": "$O(\\log n)$",
-                  "C": "$O(n)$",
-                  "D": "$O(n^2)$"
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_2_q11",
-                "numero": 11,
-                "enunciado": "Sobre o algoritmo Heap Sort, analise as afirmativas:I. Utiliza uma estrutura de dados denominada Heap binário (tipicamente Max-Heap para ordenação crescente).II. É um algoritmo de ordenação in-place (complexidade de espaço auxiliar $O(1)$).III. É um algoritmo estável.Estão corretas:",
-                "alternativas": {
-                  "A": "I e II, apenas.",
-                  "B": "II e III, apenas.",
-                  "C": "I e III, apenas.",
-                  "D": "I, II e III."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_2_q12",
-                "numero": 12,
-                "enunciado": "Se aplicarmos a Busca Binária em um vetor ordenado de $1.024$ elementos ($2^{10}$), o número máximo de comparações de chaves necessárias no pior caso é da ordem de:",
-                "alternativas": {
-                  "A": "1.024.",
-                  "B": "512.",
-                  "C": "10 a 11 comparações ($\\log_2 1024$).",
-                  "D": "100."
-                },
-                "gabarito": "C",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_2_q13",
-                "numero": 13,
-                "enunciado": "A ordenação das classes de complexidade assintótica da mais eficiente (menor crescimento) para a menos eficiente (maior crescimento) para grandes valores de $n$ é:",
-                "alternativas": {
-                  "A": "$O(1) < O(\\log n) < O(n) < O(n \\log n) < O(n^2) < O(2^n)$",
-                  "B": "$O(1) < O(n) < O(\\log n) < O(n^2) < O(n \\log n) < O(2^n)$",
-                  "C": "$O(\\log n) < O(1) < O(n \\log n) < O(n) < O(2^n) < O(n^2)$",
-                  "D": "$O(1) < O(\\log n) < O(n^2) < O(n \\log n) < O(n) < O(2^n)$"
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_2_q14",
-                "numero": 14,
-                "enunciado": "Considere o vetor [8, 3, 5, 2]. Após a primeira passagem completa do algoritmo Selection Sort (ordenação crescente), o estado do vetor será:",
-                "alternativas": {
-                  "A": "[2, 3, 5, 8]",
-                  "B": "[3, 5, 2, 8]",
-                  "C": "[2, 8, 5, 3] (ou [2, 3, 5, 8] se trocado o menor 2 da posição 3 com o 8 da posição 0: [2, 3, 5, 8]).",
-                  "D": "[8, 5, 3, 2]"
-                },
-                "gabarito": "A",
-                "explicacao": "(O menor elemento é 2, no índice 3; ao trocar com o índice 0 que contém 8, o vetor passa diretamente para [2, 3, 5, 8])"
-              },
-              {
-                "id": "ana_ti_2_q15",
-                "numero": 15,
-                "enunciado": "Os algoritmos de ordenação baseados exclusivamente em comparação entre chaves possuem um limite inferior teórico de complexidade no pior caso dado por:",
-                "alternativas": {
-                  "A": "$\\Omega(n)$",
-                  "B": "$\\Omega(n \\log n)$",
-                  "C": "$\\Omega(\\log n)$",
-                  "D": "$\\Omega(n^2)$"
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_2_6",
+                "texto": "2.6. Monitoramento e documentação de redes."
               }
             ]
           },
           {
-            "id": "ana_ti_3",
-            "titulo": "3. Estruturas de Dados",
-            "descricao": "Representação e manipulação de matrizes, arrays, listas, pilhas, filas e árvores.",
-            "videos": [
+            "id": "ati_3",
+            "titulo": "3. Segurança da Informação",
+            "subtopicos": [
               {
-                "titulo": "Curso Estrutura de Dados e Algoritmos em Java",
-                "canal": "Loiane Groner",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBrgumpzz-l8kFMw2DLERdxi",
-                "descricao": "Aulas aprofundadas sobre vetores, listas encadeadas, pilhas, filas e árvores binárias."
+                "id": "ati_3_1",
+                "texto": "3.1. Princípios: confidencialidade, integridade, disponibilidade e autenticidade."
               },
               {
-                "titulo": "Engenharia de Computação - Estrutura de Dados",
-                "canal": "UNIVESP",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLxI8Can9yAHf8k8LrUePyj0y3lLpigGcl",
-                "descricao": "Playlist acadêmica focada na teoria e análise matemática de estruturas de dados lineares e não lineares."
-              }
-            ],
-            "questoes": [
-              {
-                "id": "ana_ti_3_q1",
-                "numero": 1,
-                "enunciado": "Sobre a manipulação de arrays (vetores) e listas encadeadas, assinale a alternativa correta:",
-                "alternativas": {
-                  "A": "O acesso a um elemento de índice $k$ em um array estático tem custo $O(1)$, enquanto em uma lista encadeada simples tem custo $O(n)$.",
-                  "B": "A inserção no início de um array estático sem espaços livres tem custo $O(1)$, e na lista encadeada tem custo $O(n^2)$.",
-                  "C": "Listas encadeadas ocupam menos memória por elemento do que arrays primitivos, pois não utilizam ponteiros.",
-                  "D": "Arrays alocam seus elementos em endereços fisicamente dispersos e aleatórios na memória RAM."
-                },
-                "gabarito": "A",
-                "explicacao": ""
+                "id": "ati_3_2",
+                "texto": "3.2. Malwares, ataques e engenharia social."
               },
               {
-                "id": "ana_ti_3_q2",
-                "numero": 2,
-                "enunciado": "Considere uma Pilha (Stack) inicialmente vazia. Executam-se na ordem as operações: push(10), push(20), pop(), push(30), push(40), pop(). O elemento que estará no topo da pilha ao final é:",
-                "alternativas": {
-                  "A": "10",
-                  "B": "20",
-                  "C": "30",
-                  "D": "40"
-                },
-                "gabarito": "C",
-                "explicacao": ""
+                "id": "ati_3_3",
+                "texto": "3.3. Criptografia, certificação e assinatura digital."
               },
               {
-                "id": "ana_ti_3_q3",
-                "numero": 3,
-                "enunciado": "Considere uma Fila (Queue) inicialmente vazia. Executam-se na ordem as operações: enqueue(5), enqueue(8), dequeue(), enqueue(12), enqueue(15), dequeue(). Qual elemento estará no início (frente) da fila ao final?",
-                "alternativas": {
-                  "A": "5",
-                  "B": "8",
-                  "C": "12",
-                  "D": "15"
-                },
-                "gabarito": "C",
-                "explicacao": ""
+                "id": "ati_3_4",
+                "texto": "3.4. Gestão de identidades e acessos; autenticação multifator; hardening."
               },
               {
-                "id": "ana_ti_3_q4",
-                "numero": 4,
-                "enunciado": "Em uma Lista Duplamente Encadeada com $n$ nós (possuindo ponteiros head para o início e tail para o fim), a remoção do último nó da lista possui complexidade temporal:",
-                "alternativas": {
-                  "A": "$O(1)$",
-                  "B": "$O(\\log n)$",
-                  "C": "$O(n)$",
-                  "D": "$O(n^2)$"
-                },
-                "gabarito": "A",
-                "explicacao": ""
+                "id": "ati_3_5",
+                "texto": "3.5. Cópias de segurança (backup e restore), plano de continuidade e recuperação de desastres."
               },
               {
-                "id": "ana_ti_3_q5",
-                "numero": 5,
-                "enunciado": "Seja uma matriz bidimensional $M[10][20]$ (10 linhas e 20 colunas, com índices iniciando em 0) armazenada em memória linear na ordem linha-maior (row-major order). Se cada elemento ocupa 4 bytes e o endereço base $M[0][0]$ é 1000, qual é o endereço do elemento $M[2][5]$?",
-                "alternativas": {
-                  "A": "1100",
-                  "B": "1180",
-                  "C": "1220",
-                  "D": "1420"
-                },
-                "gabarito": "B",
-                "explicacao": "(Posição linear = $2 \\times 20 + 5 = 45$; deslocamento em bytes = $45 \\times 4 = 180$; endereço = $1000 + 180 = 1180$)"
+                "id": "ati_3_6",
+                "texto": "3.6. Gestão de vulnerabilidades, registros de eventos (logs) e resposta a incidentes."
               },
               {
-                "id": "ana_ti_3_q6",
-                "numero": 6,
-                "enunciado": "Em uma Árvore Binária de Busca (BST), inserem-se sequencialmente as chaves: 50, 30, 70, 20, 40, 60, 80. O percurso em Pré-Ordem (Pre-order) dessa árvore resultará na sequência:",
-                "alternativas": {
-                  "A": "20, 30, 40, 50, 60, 70, 80",
-                  "B": "50, 30, 20, 40, 70, 60, 80",
-                  "C": "20, 40, 30, 60, 80, 70, 50",
-                  "D": "50, 70, 80, 60, 30, 40, 20"
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_3_q7",
-                "numero": 7,
-                "enunciado": "Utilizando a mesma Árvore Binária de Busca da questão anterior (50, 30, 70, 20, 40, 60, 80), o percurso em Ordem Simétrica (In-order) produzirá:",
-                "alternativas": {
-                  "A": "Os elementos ordenados em ordem crescente: 20, 30, 40, 50, 60, 70, 80.",
-                  "B": "Os elementos ordenados em ordem decrescente: 80, 70, 60, 50, 40, 30, 20.",
-                  "C": "As folhas antes da raiz: 20, 40, 60, 80, 30, 70, 50.",
-                  "D": "A visita por nível: 50, 30, 70, 20, 40, 60, 80."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_3_q8",
-                "numero": 8,
-                "enunciado": "Qual é o número máximo de nós em uma árvore binária de altura $h$ (considerando a árvore com apenas a raiz como tendo $k = 1$ nível, e $L$ níveis no total)?",
-                "alternativas": {
-                  "A": "$2^L - 1$",
-                  "B": "$2L$",
-                  "C": "$L^2$",
-                  "D": "$\\log_2(L)$"
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_3_q9",
-                "numero": 9,
-                "enunciado": "Em uma Árvore AVL, o Fator de Balanceamento (F\nB)  de cada nó é monitorado a cada inserção ou remoção. Caso o FB de um nó atinja valor igual a $+2$ ou $-2$, a propriedade da árvore é restaurada por meio de:",
-                "alternativas": {
-                  "A": "B)  de cada nó é monitorado a cada inserção ou remoção. Caso o FB de um nó atinja valor igual a $+2$ ou $-2$, a propriedade da árvore é restaurada por meio de:\nA)",
-                  "B": "de cada nó é monitorado a cada inserção ou remoção. Caso o FB de um nó atinja valor igual a $+2$ ou $-2$, a propriedade da árvore é restaurada por meio de:\nA)  Rehash completo da tabela em disco.\nB)  Rotações simples ou duplas (à esquerda ou à direita).",
-                  "C": "Duplicação da altura de todas as folhas nulas.",
-                  "D": "Conversão automática da árvore em uma pilha sequencial."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_3_q10",
-                "numero": 10,
-                "enunciado": "Qual estrutura de dados é naturalmente empregada pelo sistema de execução de uma linguagem de programação para controlar chamadas recursivas de funções e variáveis locais?",
-                "alternativas": {
-                  "A": "Fila Circular.",
-                  "B": "Pilha de Execução (Call Stack).",
-                  "C": "Árvore B+.",
-                  "D": "Matriz Esparsa."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_3_q11",
-                "numero": 11,
-                "enunciado": "Uma Fila Circular implementada sobre um array de tamanho fixo resolve qual limitação clássica das filas sequenciais simples em arrays?",
-                "alternativas": {
-                  "A": "Elimina a necessidade de índices de início (front) e fim (rear).",
-                  "B": "Permite reaproveitar as posições vazias deixadas no início do vetor após operações de remoção (dequeue), sem precisar deslocar todos os elementos.",
-                  "C": "Transforma a complexidade de busca por valor arbitrário em $O(1)$.",
-                  "D": "Aumenta automaticamente a memória física instalada no servidor."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_3_q12",
-                "numero": 12,
-                "enunciado": "Ao remover um nó que possui dois filhos em uma Árvore Binária de Busca (BST), o procedimento padrão para manter a propriedade de ordenação da árvore consiste em substituí-lo pelo:",
-                "alternativas": {
-                  "A": "Nó raiz da árvore principal.",
-                  "B": "Seu antecessor in-order (maior elemento da subárvore esquerda) ou seu sucessor in-order (menor elemento da subárvore direita).",
-                  "C": "Primeiro nó folha encontrado à esquerda da raiz.",
-                  "D": "Ponteiro nulo sem reconectar as subárvores filhas."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_3_q13",
-                "numero": 13,
-                "enunciado": "As Árvores B (B-Trees) são amplamente utilizadas na implementação de sistemas de arquivos e índices de bancos de dados porque:",
-                "alternativas": {
-                  "A": "São árvores estritamente binárias otimizadas apenas para registradores de CPU.",
-                  "B": "São árvores balanceadas multi-caminhos que minimizam a quantidade de operações de leitura/escrita em blocos de disco.",
-                  "C": "Não mantêm as chaves ordenadas dentro de cada página.",
-                  "D": "Permitem que folhas fiquem em níveis diferentes da árvore."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_3_q14",
-                "numero": 14,
-                "enunciado": "Sobre Matrizes Esparsas, é correto afirmar que:",
-                "alternativas": {
-                  "A": "São matrizes em que a grande maioria dos elementos possui valor diferente de zero.",
-                  "B": "Podem ser representadas eficientemente por listas encadeadas ou listas de coordenadas (linha, coluna, valor) para economizar memória, omitindo os zeros.",
-                  "C": "Só podem ser alocadas em linguagens funcionais puras.",
-                  "D": "Exigem o dobro de memória de uma matriz densa tradicional de mesma dimensão."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_3_q15",
-                "numero": 15,
-                "enunciado": "Deseja-se avaliar a expressão pós-fixa (Notação Polonesa Reversa) 4 5 + 3 * utilizando uma Pilha. O resultado final no topo da pilha após processar toda a expressão será:",
-                "alternativas": {
-                  "A": "19",
-                  "B": "27",
-                  "C": "23",
-                  "D": "12"
-                },
-                "gabarito": "B",
-                "explicacao": "($4 + 5 = 9$; em seguida $9 \\times 3 = 27$)."
+                "id": "ati_3_7",
+                "texto": "3.7. ABNT NBR ISO/IEC 27001 e 27002: noções."
               }
             ]
           },
           {
-            "id": "ana_ti_4",
-            "titulo": "4. Banco de Dados",
-            "descricao": "Conceitos, modelos, projeto conceitual, lógico e físico, linguagens de consulta, banco de dados distribuídos, sistemas gerenciadores de banco de dados (SGBDs) e SQL.",
-            "videos": [
+            "id": "ati_4",
+            "titulo": "4. Desenvolvimento de Sistemas",
+            "subtopicos": [
               {
-                "titulo": "Curso MySQL #01 - O que é um Banco de Dados?",
-                "canal": "Curso em Vídeo",
-                "tipo": "video",
-                "url": "https://www.youtube.com/watch?v=Ofktsne-utM",
-                "descricao": "Visão geral e introdução aos Sistemas Gerenciadores de Bancos de Dados (SGBD)."
+                "id": "ati_4_1",
+                "texto": "4.1. Lógica de programação e algoritmos; estruturas de dados."
               },
               {
-                "titulo": "Curso de Modelagem de Dados - Conceitual e Lógico",
-                "canal": "Bóson Treinamentos",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLucm8g_ezqNoNHU8tjVeHmRGBFnjDIlxD",
-                "descricao": "Projeto conceitual (MER), mapeamento para esquema relacional, normalização (1FN, 2FN, 3FN)."
+                "id": "ati_4_2",
+                "texto": "4.2. Programação estruturada e orientada a objetos."
               },
               {
-                "titulo": "Curso de Banco de Dados MySQL Completo",
-                "canal": "Curso em Vídeo",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLHz_AreHm4dkBs-795Dsgvau_ekxg8g1r",
-                "descricao": "Aulas práticas de SQL (DDL, DML, DQL), joins, agrupamentos, integridade e transações."
-              }
-            ],
-            "questoes": [
-              {
-                "id": "ana_ti_4_q1",
-                "numero": 1,
-                "enunciado": "Na arquitetura de três esquemas (ANSI/SPAR\nC)  para SGBDs, a independência de dados lógica é a capacidade de alterar:",
-                "alternativas": {
-                  "A": "O esquema interno (físico) sem precisar alterar o esquema conceitual.",
-                  "B": "C)  para SGBDs, a independência de dados lógica é a capacidade de alterar:\nA)  O esquema interno (físico) sem precisar alterar o esquema conceitual.\nB)",
-                  "C": "para SGBDs, a independência de dados lógica é a capacidade de alterar:\nA)  O esquema interno (físico) sem precisar alterar o esquema conceitual.\nB)  O esquema conceitual sem precisar alterar os esquemas externos ou as aplicações dos usuários.\nC)  Os discos rígidos do servidor sem desligar o banco de dados.",
-                  "D": "O endereço IP do servidor SGBD sem alterar as triggers."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_4_3",
+                "texto": "4.3. Linguagens Python, JavaScript e Java: fundamentos."
               },
               {
-                "id": "ana_ti_4_q2",
-                "numero": 2,
-                "enunciado": "Na transformação de um Projeto Conceitual (MER) para um Projeto Lógico Relacional, um relacionamento binário com cardinalidade N:N (muitos-para-muitos) é mapeado preferencialmente através de:",
-                "alternativas": {
-                  "A": "Fusão das duas entidades em uma única tabela sem chaves primárias.",
-                  "B": "Criação de uma nova tabela associativa contendo chaves estrangeiras que referenciam as chaves primárias das duas entidades participantes.",
-                  "C": "Adição de um vetor multivalorado dentro de uma coluna texto.",
-                  "D": "Exclusão do relacionamento, pois o modelo relacional não suporta relações N:N."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_4_4",
+                "texto": "4.4. Desenvolvimento web: HTML5, CSS3 e APIs REST."
               },
               {
-                "id": "ana_ti_4_q3",
-                "numero": 3,
-                "enunciado": "Sobre as restrições de integridade do modelo relacional, a Integridade de Entidade estabelece que:",
-                "alternativas": {
-                  "A": "Toda chave estrangeira deve conter apenas valores nulos.",
-                  "B": "Nenhum atributo que componha a chave primária (PK) de uma relação pode assumir valor nulo (NULL).",
-                  "C": "Uma tabela não pode ter mais de três colunas do tipo inteiro.",
-                  "D": "Os dados de uma coluna texto devem estar sempre em letras maiúsculas."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_4_5",
+                "texto": "4.5. Engenharia de requisitos e UML: noções."
               },
               {
-                "id": "ana_ti_4_q4",
-                "numero": 4,
-                "enunciado": "Considere uma tabela Pedido(id_pedido, id_cliente, nome_cliente, valor), onde id_pedido é a única chave primária, mas nome_cliente depende funcionalmente apenas de id_cliente (que não é chave). Essa tabela viola a:",
-                "alternativas": {
-                  "A": "Primeira Forma Normal (1FN), por possuir atributos compostos.",
-                  "B": "Segunda Forma Normal (2FN), por possuir dependência parcial.",
-                  "C": "Terceira Forma Normal (3FN), por possuir dependência funcional transitiva (id_pedido -> id_cliente -> nome_cliente).",
-                  "D": "Propriedade de Atomicidade transacional."
-                },
-                "gabarito": "C",
-                "explicacao": ""
+                "id": "ati_4_6",
+                "texto": "4.6. Metodologias ágeis (Scrum e Kanban) e controle de versão (Git)."
               },
               {
-                "id": "ana_ti_4_q5",
-                "numero": 5,
-                "enunciado": "Analise a consulta SQL abaixo:   SQLSELECT departamento, COUNT(*) AS total_func, AVG(salario) AS media_sal\nFROM funcionarios\nWHERE ativo = TRUE\nGROUP BY departamento\nHAVING COUNT(*) > 5;\nSobre essa consulta, é correto afirmar que:",
-                "alternativas": {
-                  "A": "A cláusula WHERE filtra os grupos após a agregação GROUP BY.",
-                  "B": "A cláusula HAVING filtra os grupos formados pelo GROUP BY, exibindo apenas departamentos com mais de 5 funcionários ativos.",
-                  "C": "O comando gerará erro de sintaxe porque COUNT e AVG não podem ser usados juntos.",
-                  "D": "A cláusula HAVING é executada antes da cláusula WHERE."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_4_q6",
-                "numero": 6,
-                "enunciado": "Em Álgebra Relacional, as operações de Seleção ($\\sigma$) e Projeção ($\\pi$) correspondem, respectivamente, a:",
-                "alternativas": {
-                  "A": "Filtrar linhas (tuplas) que satisfazem uma condição; e escolher colunas (atributos) específicas de uma relação.",
-                  "B": "Escolher colunas de uma tabela; e unir duas tabelas disjuntas.",
-                  "C": "Realizar o produto cartesiano; e renomear tabelas.",
-                  "D": "Ordenar registros em disco; e criar índices secundários."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_4_q7",
-                "numero": 7,
-                "enunciado": "Sobre Bancos de Dados Distribuídos, o protocolo utilizado para garantir a atomicidade de transações globais que modificam dados em múltiplos nós distintos da rede é o:",
-                "alternativas": {
-                  "A": "DHCP (Dynamic Host Configuration Protocol).",
-                  "B": "Two-Phase Commit (2PC - Efetivação em Duas Fases).",
-                  "C": "Round-Robin DNS.",
-                  "D": "Algoritmo de Dijkstra."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_4_q8",
-                "numero": 8,
-                "enunciado": "Em bancos de dados distribuídos, a propriedade de Transparência de Fragmentação garante que:",
-                "alternativas": {
-                  "A": "O usuário ou programador escreva consultas sobre as relações globais sem precisar saber se as tabelas foram divididas horizontal ou verticalmente em diferentes locais.",
-                  "B": "O banco de dados nunca realize backups físicos.",
-                  "C": "As senhas dos usuários fiquem visíveis em texto claro no catálogo do sistema.",
-                  "D": "O SGBD opere exclusivamente em memória volátil sem persistência em disco."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_4_q9",
-                "numero": 9,
-                "enunciado": "Qual é a diferença fundamental entre os comandos SQL DELETE, TRUNCATE e DROP em uma tabela?",
-                "alternativas": {
-                  "A": "DELETE apaga a estrutura da tabela; DROP apaga apenas uma linha com WHERE.",
-                  "B": "DELETE é um comando DML que remove linhas (podendo usar WHERE); TRUNCATE esvazia rapidamente todos os registros da tabela mantendo sua estrutura; e DROP (DDL) exclui a própria definição/estrutura da tabela do banco.",
-                  "C": "TRUNCATE permite cláusula WHERE complexa com subconsultas correlacionadas.",
-                  "D": "DROP não remove os índices nem as constraints associadas à tabela."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_4_q10",
-                "numero": 10,
-                "enunciado": "Dadas as tabelas A (com 4 linhas) e B (com 5 linhas), uma consulta SQL SELECT * FROM A CROSS JOIN B; retornará quantas linhas?",
-                "alternativas": {
-                  "A": "4",
-                  "B": "5",
-                  "C": "9",
-                  "D": "20"
-                },
-                "gabarito": "D",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_4_q11",
-                "numero": 11,
-                "enunciado": "Sobre as propriedades ACID das transações, assinale a associação correta:",
-                "alternativas": {
-                  "A": "Durabilidade: garante que, após o COMMIT, os efeitos da transação persistam no banco mesmo em caso de queda de energia ou falha de sistema.",
-                  "B": "Isolamento: impede que uma tabela tenha mais de uma chave estrangeira.",
-                  "C": "Consistência: obriga toda transação a ser executada em menos de 10 milissegundos.",
-                  "D": "Atomicidade: divide uma tabela em colunas atômicas durante a 1FN."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_4_q12",
-                "numero": 12,
-                "enunciado": "Considere a necessidade de retornar todos os funcionários cujo salário seja maior do que o salário de todos os funcionários do departamento 10. Qual operador de subconsulta SQL atende diretamente a essa lógica?",
-                "alternativas": {
-                  "A": "WHERE salario > ANY (SELECT salario FROM func WHERE depto = 10)",
-                  "B": "WHERE salario > ALL (SELECT salario FROM func WHERE depto = 10)",
-                  "C": "WHERE salario IN (SELECT salario FROM func WHERE depto = 10)",
-                  "D": "WHERE EXISTS (SELECT 1 FROM func)"
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_4_q13",
-                "numero": 13,
-                "enunciado": "Nos níveis de isolamento definidos pelo padrão SQL ANSI, qual é o nível mais restritivo (que evita Dirty Read, Non-repeatable Read e Phantom Read)?",
-                "alternativas": {
-                  "A": "Read Uncommitted.",
-                  "B": "Read Committed.",
-                  "C": "Repeatable Read.",
-                  "D": "Serializable."
-                },
-                "gabarito": "D",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_4_q14",
-                "numero": 14,
-                "enunciado": "Em relação às Visões (Views) e Visões Materializadas (Materialized Views) em SGBDs como o PostgreSQL:",
-                "alternativas": {
-                  "A": "Uma View padrão armazena fisicamente os dados duplicados em disco a cada SELECT.",
-                  "B": "Uma Materialized View armazena fisicamente o resultado da consulta em disco, podendo ser atualizada sob demanda (REFRESH), enquanto a View comum reexecuta a query subjacente a cada acesso.",
-                  "C": "Nenhuma View pode conter cláusulas JOIN ou GROUP BY.",
-                  "D": "Views temporárias permanecem gravadas permanentemente após o encerramento da sessão."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_4_q15",
-                "numero": 15,
-                "enunciado": "O componente do SGBD responsável por analisar diferentes planos de execução possíveis para uma instrução SQL (avaliando estatísticas de tabelas e índices) e escolher o de menor custo estimado é o:",
-                "alternativas": {
-                  "A": "Gerenciador de Buffer.",
-                  "B": "Otimizador de Consultas (Query Optimizer).",
-                  "C": "Pré-compilador de Linguagem Hospedeira.",
-                  "D": "Gerenciador de Criptografia SSL."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_4_7",
+                "texto": "4.7. Testes de software e desenvolvimento seguro (OWASP Top 10)."
               }
             ]
           },
           {
-            "id": "ana_ti_5",
-            "titulo": "5. Engenharia de Software",
-            "descricao": "Padrões de Projetos (GoF); conceitos, tipos de sistemas, modelos de ciclo de vida, metodologia de desenvolvimento de software, métodos e técnicas de desenvolvimento de software estruturado e orientado a objetos. Planejamento, análise de requisitos, análise, projeto, gestão de configuração, testes, qualidade de software, manutenção de software, desenvolvimento baseado em componentes, ferramentas CASE, gestão de projetos, SCRUM e UML 2.0.",
-            "videos": [
+            "id": "ati_5",
+            "titulo": "5. Banco de Dados",
+            "subtopicos": [
               {
-                "titulo": "Padrões de Projeto - Design Patterns GoF",
-                "canal": "Otávio Miranda",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H",
-                "descricao": "Playlist completa explicando padrões criacionais, estruturais e comportamentais do Gang of Four."
+                "id": "ati_5_1",
+                "texto": "5.1. Modelagem entidade-relacionamento e modelo relacional."
               },
               {
-                "titulo": "Curso de POO Java - Programação Orientada a Objetos",
-                "canal": "Curso em Vídeo",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY",
-                "descricao": "Fundamentos de engenharia orientada a objetos: encapsulamento, herança, polimorfismo e UML."
-              }
-            ],
-            "questoes": [
-              {
-                "id": "ana_ti_5_q1",
-                "numero": 1,
-                "enunciado": "Segundo o catálogo GoF (Gang of Four), qual padrão de projeto estrutural converte a interface de uma classe em outra interface esperada pelos clientes, permitindo que classes com interfaces incompatíveis trabalhem em conjunto?",
-                "alternativas": {
-                  "A": "Adapter.",
-                  "B": "Observer.",
-                  "C": "Abstract Factory.",
-                  "D": "Command."
-                },
-                "gabarito": "A",
-                "explicacao": ""
+                "id": "ati_5_2",
+                "texto": "5.2. Normalização."
               },
               {
-                "id": "ana_ti_5_q2",
-                "numero": 2,
-                "enunciado": "Ainda sobre Padrões de Projeto GoF, associe corretamente o padrão à sua categoria:",
-                "alternativas": {
-                  "A": "Builder: Comportamental / Strategy: Criacional / Composite: Estrutural.",
-                  "B": "Factory Method: Criacional / Decorator: Estrutural / Observer: Comportamental.",
-                  "C": "Singleton: Estrutural / Facade: Criacional / Iterator: Comportamental.",
-                  "D": "Bridge: Criacional / Proxy: Comportamental / State: Estrutural."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_5_3",
+                "texto": "5.3. Linguagem SQL."
               },
               {
-                "id": "ana_ti_5_q3",
-                "numero": 3,
-                "enunciado": "No modelo de ciclo de vida Espiral proposto por Barry Boehm, o elemento central que diferencia esse modelo dos modelos sequenciais tradicionais é:",
-                "alternativas": {
-                  "A": "A proibição total de uso de protótipos.",
-                  "B": "A avaliação e análise explícita de riscos a cada iteração (volta da espiral).",
-                  "C": "A entrega do sistema inteiro apenas após 5 anos sem validação intermediária.",
-                  "D": "A ausência de fases de planejamento e engenharia."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_5_q4",
-                "numero": 4,
-                "enunciado": "No Framework Scrum, quem é o único responsável por gerenciar o Product Backlog, incluindo a definição e ordenação clara de seus itens para maximizar o valor do produto?",
-                "alternativas": {
-                  "A": "Scrum Master.",
-                  "B": "Product Owner (PO).",
-                  "C": "Gerente de Infraestrutura.",
-                  "D": "Toda a diretoria executiva em votação."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_5_q5",
-                "numero": 5,
-                "enunciado": "Sobre os eventos do Scrum, assinale a alternativa que diferencia corretamente a Sprint Review da Sprint Retrospective:",
-                "alternativas": {
-                  "A": "A Sprint Review inspeciona o incremento do produto com os stakeholders para adaptar o Product Backlog; a Sprint Retrospective foca na inspeção da própria equipe quanto a processos, interações e ferramentas para planejar melhorias na próxima Sprint.",
-                  "B": "A Sprint Retrospective ocorre antes da Sprint Review.",
-                  "C": "A Sprint Review é uma reunião diária de 15 minutos exclusiva para programadores.",
-                  "D": "A Sprint Retrospective serve para demitir membros que entregaram menos pontos de função."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_5_q6",
-                "numero": 6,
-                "enunciado": "Na modelagem UML 2.0, em um Diagrama de Casos de Uso, a relação que indica que um caso de uso base incorpora obrigatoriamente o comportamento de outro caso de uso sempre que é executado é estereotipada como:",
-                "alternativas": {
-                  "A": "<<extend>>",
-                  "B": "<<include>>",
-                  "C": "<<realize>>",
-                  "D": "<<package>>"
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_5_q7",
-                "numero": 7,
-                "enunciado": "Em um Diagrama de Classes da UML 2.0, os símbolos de visibilidade +, - e # antes de atributos e métodos indicam, respectivamente:",
-                "alternativas": {
-                  "A": "Privado, Público e Protegido.",
-                  "B": "Público (public), Privado (private) e Protegido (protected).",
-                  "C": "Pacote, Estático e Abstrato.",
-                  "D": "Herança, Composição e Agregação."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_5_q8",
-                "numero": 8,
-                "enunciado": "Ainda na UML 2.0, a relação de Composição (losango preenchido/preto) difere da Agregação (losango vazio/branco) porque, na Composição:",
-                "alternativas": {
-                  "A": "O objeto \"parte\" pode pertencer a vários objetos \"todo\" simultaneamente e sobrevive sem eles.",
-                  "B": "Existe um vínculo forte de ciclo de vida: a \"parte\" tem existência dependente do \"todo\" (se o todo for destruído, suas partes também o são).",
-                  "C": "Representa herança múltipla entre interfaces estáticas.",
-                  "D": "É utilizada apenas em diagramas de tempo e nunca em diagramas de classes."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_5_q9",
-                "numero": 9,
-                "enunciado": "Em relação aos tipos de Manutenção de Software (classificação de Lientz e Swanson / ISO/IEC 14764), a modificação realizada em um software após a entrega para manter o produto utilizável diante de mudanças no ambiente externo (como novo sistema operacional, nova legislação fiscal ou mudança de hardware) é a manutenção:",
-                "alternativas": {
-                  "A": "Corretiva.",
-                  "B": "Adaptativa.",
-                  "C": "Perfectiva.",
-                  "D": "Preventiva de regressão física."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_5_q10",
-                "numero": 10,
-                "enunciado": "Na Engenharia de Requisitos, a afirmação \"O sistema deve responder às consultas de saldo em até 2 segundos para 95% das requisições simultâneas\" classifica-se como um:",
-                "alternativas": {
-                  "A": "Requisito Funcional.",
-                  "B": "Requisito Não Funcional (de desempenho/eficiência).",
-                  "C": "Caso de teste unitário de caixa-branca.",
-                  "D": "Diagrama de implantação."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_5_q11",
-                "numero": 11,
-                "enunciado": "Sobre Testes de Software, assinale a alternativa correta:",
-                "alternativas": {
-                  "A": "Testes de Caixa-Preta (Black-box) baseiam-se na estrutura interna do código-fonte e nos desvios condicionais (if/else).",
-                  "B": "Testes de Regressão visam garantir que modificações ou correções recentes não tenham introduzido novos defeitos em funcionalidades que antes operavam corretamente.",
-                  "C": "Testes Unitários testam exclusivamente o sistema completo em ambiente de produção final pelo usuário.",
-                  "D": "Testes Não Funcionais verificam apenas regras de cálculo de impostos, ignorando carga e estresse."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_5_q12",
-                "numero": 12,
-                "enunciado": "No contexto de Projeto Orientado a Objetos e Qualidade de Software, uma arquitetura modular bem projetada busca alcançar:",
-                "alternativas": {
-                  "A": "Alto acoplamento e baixa coesão.",
-                  "B": "Baixo acoplamento e alta coesão.",
-                  "C": "Alto acoplamento e alta coesão.",
-                  "D": "Baixo acoplamento e baixa coesão."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_5_q13",
-                "numero": 13,
-                "enunciado": "As ferramentas CASE (Computer-Aided Software Engineering) classificadas como Upper CASE apoiam prioritariamente as atividades de:",
-                "alternativas": {
-                  "A": "Planejamento estratégico, levantamento de requisitos, análise e modelagem de projeto (design).",
-                  "B": "Geração de código binário, depuração em baixo nível e testes de integração física.",
-                  "C": "Manutenção de hardware e troca de fontes em servidores.",
-                  "D": "Instalação de cabos de par trançado em redes locais."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_5_q14",
-                "numero": 14,
-                "enunciado": "A disciplina de Gerência de Configuração de Software (GCS) envolve um conjunto de atividades destinadas a controlar as mudanças ao longo do ciclo de vida do software. São atividades clássicas da GCS:",
-                "alternativas": {
-                  "A": "Identificação de itens de configuração, controle de versão/mudança, auditoria de configuração e geração de relatórios de status.",
-                  "B": "Contratação de fornecedores de mobiliário e limpeza predial.",
-                  "C": "Substituição de testes automatizados por testes exclusivamente manuais ad-hoc.",
-                  "D": "Eliminação de repositórios Git para evitar ramificações de código."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_5_q15",
-                "numero": 15,
-                "enunciado": "No Desenvolvimento Baseado em Componentes (CB\nD) , um componente de software independente caracteriza-se por:",
-                "alternativas": {
-                  "A": "Expor sua implementação interna através de variáveis globais públicas sem interfaces definidas.",
-                  "B": "Encapsular sua implementação e interagir com outros componentes exclusivamente por meio de interfaces bem definidas (providas e requeridas), favorecendo o reúso.",
-                  "C": "D) , um componente de software independente caracteriza-se por:\nA) Expor sua implementação interna através de variáveis globais públicas sem interfaces definidas.\nB) Encapsular sua implementação e interagir com outros componentes exclusivamente por meio de interfaces bem definidas (providas e requeridas), favorecendo o reúso.\nC)",
-                  "D": ", um componente de software independente caracteriza-se por:\nA) Expor sua implementação interna através de variáveis globais públicas sem interfaces definidas.\nB) Encapsular sua implementação e interagir com outros componentes exclusivamente por meio de interfaces bem definidas (providas e requeridas), favorecendo o reúso.\nC) Impedir a substituição do módulo sem recompilar o sistema operacional inteiro.\nD) Ser aplicável apenas na programação estruturada em Assembly dos anos 1970."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "ati_5_4",
+                "texto": "5.4. Sistemas gerenciadores de banco de dados; bancos NoSQL: noções."
               }
             ]
           },
           {
-            "id": "ana_ti_6",
-            "titulo": "6. Redes de Computadores",
-            "descricao": "Conceitos básicos, tipos de redes e protocolos de comunicação (estritamente: HTTP, SSH, IMAP, SMTP, TCP/IP, UDP).",
-            "videos": [
+            "id": "ati_6",
+            "titulo": "6. Governança, Legislação e Tecnologias Emergentes",
+            "subtopicos": [
               {
-                "titulo": "Curso de Redes de Computadores Grátis e Protocolos TCP/IP",
-                "canal": "Curso em Vídeo",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLHz_AreHm4dkd4lr9G0Up-W-YaHYdTDuP",
-                "descricao": "Playlist completa sobre modelo OSI, pilha TCP/IP, protocolos de aplicação (HTTP, SSH, SMTP, IMAP) e transporte (TCP, UDP)."
+                "id": "ati_6_1",
+                "texto": "6.1. Lei Federal nº 13.709/2018 (LGPD) aplicada à TI: segurança, incidentes e privacidade desde a concepção."
+              },
+              {
+                "id": "ati_6_2",
+                "texto": "6.2. Lei Federal nº 12.965/2014 (Marco Civil da Internet)."
+              },
+              {
+                "id": "ati_6_3",
+                "texto": "6.3. Lei Federal nº 14.129/2021 (Governo Digital) e interoperabilidade."
+              },
+              {
+                "id": "ati_6_4",
+                "texto": "6.4. Acessibilidade digital: eMAG e WCAG."
+              },
+              {
+                "id": "ati_6_5",
+                "texto": "6.5. Contratação de soluções de TIC na Lei Federal nº 14.133/2021: noções."
+              },
+              {
+                "id": "ati_6_6",
+                "texto": "6.6. Inteligência artificial: fundamentos, IA generativa, riscos, vieses e uso responsável no setor público."
               }
-            ],
-            "questoes": [
+            ]
+          }
+        ]
+      }
+    },
+    "tecnico_administrativa": {
+      "id": "tecnico_administrativa",
+      "nome": "Técnico Legislativo – Administrativa",
+      "codigo": "07",
+      "nivel": "Médio",
+      "jornada": "30h semanais",
+      "remuneracao": "R$ 3.512,00",
+      "taxa_inscricao": 120,
+      "turno": "Manhã (Portões fecham às 08h00 • Duração: 4h)",
+      "vagas": {
+        "total": 5,
+        "ampla": 3,
+        "pcd": 1,
+        "pp": 1,
+        "cr": 15
+      },
+      "pdf_edital": "edital_n_01_2026_1707176.pdf",
+      "link_pdf": "https://www.idecan.org.br",
+      "disciplinas": [
+        "lingua_portuguesa_medio",
+        "raciocinio_logico",
+        "legislacao",
+        "especifica_tecnico_administrativa"
+      ],
+      "especifica": {
+        "id": "especifica_tecnico_administrativa",
+        "nome": "Conhecimentos Específicos - Técnico Legislativo / Administrativa",
+        "questoes": 20,
+        "topicos": [
+          {
+            "id": "tadm_1",
+            "titulo": "1. Noções de Administração",
+            "subtopicos": [
               {
-                "id": "ana_ti_6_q1",
-                "numero": 1,
-                "enunciado": "Quanto à abrangência geográfica e estrutura, as redes de computadores são classificadas em diferentes tipos. Uma rede restrita a um escritório, edifício ou campus universitário local é denominada:",
-                "alternativas": {
-                  "A": "WAN (Wide Area Network).",
-                  "B": "LAN (Local Area Network).",
-                  "C": "MAN (Metropolitan Area Network).",
-                  "D": "PAN (Personal Area Network)."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "tadm_1_1",
+                "texto": "1.1. Funções administrativas: planejamento, organização, direção e controle."
               },
               {
-                "id": "ana_ti_6_q2",
-                "numero": 2,
-                "enunciado": "Na arquitetura TCP/IP, qual é a principal diferença entre os protocolos da camada de transporte TCP e UDP?",
-                "alternativas": {
-                  "A": "O TCP é orientado à conexão, garante entrega ordenada e controle de fluxo/congestionamento; o UDP é não orientado à conexão (connectionless) e opera em regime de melhor esforço, com menor overhead.",
-                  "B": "O UDP realiza o Three-Way Handshake antes de transmitir qualquer datagrama.",
-                  "C": "O TCP não utiliza portas lógicas de origem e destino, apenas endereços MAC.",
-                  "D": "O UDP retransmite automaticamente pacotes perdidos e reordena segmentos fora de sequência."
-                },
-                "gabarito": "A",
-                "explicacao": ""
+                "id": "tadm_1_2",
+                "texto": "1.2. Estrutura organizacional, organogramas e fluxogramas."
               },
               {
-                "id": "ana_ti_6_q3",
-                "numero": 3,
-                "enunciado": "O estabelecimento de uma conexão TCP confiável utiliza o mecanismo de apresentação em três vias (Three-Way Handshake). A sequência correta de flags trocadas entre cliente e servidor é:",
-                "alternativas": {
-                  "A": "ACK -> SYN -> FIN",
-                  "B": "SYN -> SYN-ACK -> ACK",
-                  "C": "SYN -> RST -> ACK",
-                  "D": "GET -> POST -> 200 OK"
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "tadm_1_3",
+                "texto": "1.3. Noções de gestão de processos e de qualidade no serviço público."
               },
               {
-                "id": "ana_ti_6_q4",
-                "numero": 4,
-                "enunciado": "O protocolo SSH (Secure Shell) é utilizado na administração remota segura de servidores. Por padrão, ele opera sobre qual protocolo de transporte e porta padrão?",
-                "alternativas": {
-                  "A": "UDP, porta 21.",
-                  "B": "TCP, porta 22.",
-                  "C": "TCP, porta 23 (sem criptografia).",
-                  "D": "UDP, porta 161."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_6_q5",
-                "numero": 5,
-                "enunciado": "No protocolo HTTP, os métodos (verbos) possuem propriedades de idempotência (múltiplas requisições idênticas produzem o mesmo efeito no estado do servidor que uma única requisição). Assinale a alternativa que apresenta um método HTTP que NÃO é idempotente por definição padrão:",
-                "alternativas": {
-                  "A": "GET",
-                  "B": "PUT",
-                  "C": "DELETE",
-                  "D": "POST"
-                },
-                "gabarito": "D",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_6_q6",
-                "numero": 6,
-                "enunciado": "Em uma comunicação via protocolo HTTP, as faixas de códigos de status de resposta indicam o resultado do processamento. Os códigos 200, 301, 404 e 500 representam, respectivamente:",
-                "alternativas": {
-                  "A": "Sucesso (OK), Redirecionamento Permanente, Recurso Não Encontrado (Erro do Cliente) e Erro Interno do Servidor.",
-                  "B": "Erro do Servidor, Sucesso, Não Autorizado e Redirecionamento.",
-                  "C": "Sucesso, Proibido, Tempo Esgotado e Criado.",
-                  "D": "Informação, Sucesso, Erro de Sintaxe e Serviço Indisponível."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_6_q7",
-                "numero": 7,
-                "enunciado": "Sobre os protocolos de correio eletrônico SMTP e IMAP exigidos no edital, assinale a afirmativa correta:",
-                "alternativas": {
-                  "A": "O SMTP é um protocolo exclusivo para leitura de e-mails armazenados localmente no celular, e o IMAP serve apenas para envio entre servidores.",
-                  "B": "O SMTP é utilizado para o envio/transferência de mensagens de e-mail (push), enquanto o IMAP permite o acesso, leitura e gerenciamento de mensagens diretamente nas pastas do servidor de correio, mantendo-as sincronizadas entre múltiplos dispositivos.",
-                  "C": "O IMAP apaga obrigatoriamente todas as mensagens do servidor no instante em que o usuário abre a caixa de entrada.",
-                  "D": "Ambos operam exclusivamente sobre o protocolo de transporte UDP."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_6_q8",
-                "numero": 8,
-                "enunciado": "Na pilha TCP/IP, em qual camada atua o protocolo IP (Internet Protocol) e qual é sua principal responsabilidade?",
-                "alternativas": {
-                  "A": "Camada de Aplicação; renderizar páginas HTML.",
-                  "B": "Camada de Internet (ou Rede); realizar o endereçamento lógico e o roteamento de pacotes entre redes distintas.",
-                  "C": "Camada de Transporte; garantir a entrega sem erros por meio de janelas deslizantes.",
-                  "D": "Camada de Acesso à Rede (Enlace); converter bits em sinais ópticos no cabo."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_6_q9",
-                "numero": 9,
-                "enunciado": "O cabeçalho de um datagrama UDP é enxuto (8 bytes fixos) e contém apenas quatro campos de 16 bits cada. Quais são esses quatro campos?",
-                "alternativas": {
-                  "A": "Endereço IP de Origem, Endereço IP de Destino, TTL e Protocolo.",
-                  "B": "Porta de Origem, Porta de Destino, Comprimento Total (Length) e Soma de Verificação (Checksum).",
-                  "C": "Número de Sequência, Número de Confirmação, Janela de Recepção e Ponteiro de Urgência.",
-                  "D": "Endereço MAC de Origem, Endereço MAC de Destino, VLAN Tag e CRC."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_6_q10",
-                "numero": 10,
-                "enunciado": "Para autenticar um usuário em um servidor Linux remoto via SSH sem necessidade de digitar senha a cada conexão e com alta segurança criptográfica, utiliza-se:",
-                "alternativas": {
-                  "A": "Criptografia assimétrica por par de chaves (adicionando a chave pública do cliente no arquivo ~/.ssh/authorized_keys do servidor e mantendo a chave privada protegida no cliente).",
-                  "B": "Envio da senha em texto claro via cabeçalho HTTP GET.",
-                  "C": "Desativação do firewall e abertura da porta 23 do Telnet.",
-                  "D": "Compartilhamento da chave privada do servidor no repositório público."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_6_q11",
-                "numero": 11,
-                "enunciado": "Sobre o protocolo HTTP/1.1, assinale a característica correta:",
-                "alternativas": {
-                  "A": "É um protocolo stateless (sem estado por padrão), utilizando mecanismos como Cookies, Sessions ou Tokens (ex.: JWT) para manter contexto de sessão entre requisições.",
-                  "B": "Mantém o estado completo das variáveis de memória do navegador gravado nativamente no cabeçalho TCP.",
-                  "C": "Fecha obrigatoriamente a conexão TCP a cada imagem carregada, pois não suporta conexões persistentes (Keep-Alive).",
-                  "D": "Só permite transferência de arquivos de texto puro de até 64 KB."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_6_q12",
-                "numero": 12,
-                "enunciado": "Quais são as portas padrão tradicionais (sem TLS e com TLS/SSL, ou portas padrão de serviço) associadas aos protocolos HTTP, SSH, SMTP e IMAP?",
-                "alternativas": {
-                  "A": "HTTP: 80 | SSH: 22 | SMTP: 25 (ou 587 para submissão) | IMAP: 143 (ou 993 para IMAPS).",
-                  "B": "HTTP: 21 | SSH: 23 | SMTP: 110 | IMAP: 8080.",
-                  "C": "HTTP: 443 | SSH: 3389 | SMTP: 143 | IMAP: 25.",
-                  "D": "HTTP: 53 | SSH: 22 | SMTP: 80 | IMAP: 20."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_6_q13",
-                "numero": 13,
-                "enunciado": "Na arquitetura TCP/IP, um endereço IPv4 classe C com máscara /24 (255.255.255.0), como 192.168.10.0/24, disponibiliza quantos endereços IP válidos para atribuição a hosts (descontando os endereços de rede e de broadcast)?",
-                "alternativas": {
-                  "A": "256",
-                  "B": "254",
-                  "C": "255",
-                  "D": "128"
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_6_q14",
-                "numero": 14,
-                "enunciado": "No controle de fluxo do protocolo TCP, o mecanismo que permite ao receptor informar ao transmissor quantos bytes ele ainda suporta receber em seu buffer antes de ficar sobrecarregado é chamado de:",
-                "alternativas": {
-                  "A": "Janela Deslizante (Sliding Window / Receive Window).",
-                  "B": "Time to Live (TTL).",
-                  "C": "ARP Spoofing.",
-                  "D": "Fragmentação de quadro Ethernet."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_6_q15",
-                "numero": 15,
-                "enunciado": "Além do acesso a terminal remoto por linha de comando, o protocolo SSH permite a transferência segura de arquivos e o redirecionamento seguro de conexões de rede por meio dos recursos:",
-                "alternativas": {
-                  "A": "SCP / SFTP e Tunelamento SSH (Port Forwarding).",
-                  "B": "SMTP Relay e IMAP Sync.",
-                  "C": "UDP Broadcast e ICMP Echo.",
-                  "D": "Telnet Puro e TFTP."
-                },
-                "gabarito": "A",
-                "explicacao": ""
+                "id": "tadm_1_4",
+                "texto": "1.4. Atendimento ao público presencial e a distância; direitos dos usuários dos serviços públicos (Lei Federal nº 13.460/2017)."
               }
             ]
           },
           {
-            "id": "ana_ti_7",
-            "titulo": "7. Sistemas Operacionais",
-            "descricao": "Utilização e configuração de sistemas Windows, Unix e Linux (e suas distribuições).",
-            "videos": [
+            "id": "tadm_2",
+            "titulo": "2. Rotinas Administrativas",
+            "subtopicos": [
               {
-                "titulo": "Curso de Linux - Primeiros Passos",
-                "canal": "Curso em Vídeo",
-                "tipo": "video",
-                "url": "https://www.youtube.com/watch?v=6nN2EglOqCM",
-                "descricao": "Introdução prática ao ecossistema Linux, comandos essenciais e ambiente de terminal."
+                "id": "tadm_2_1",
+                "texto": "2.1. Protocolo: recebimento, registro, distribuição, tramitação e expedição de documentos e correspondências."
               },
               {
-                "titulo": "Curso de Linux - Primeiros Passos e Administração",
-                "canal": "Curso em Vídeo",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLHz_AreHm4dlIXleu20uwPWFOSswqLYbV",
-                "descricao": "Playlist completa sobre permissões, sistema de arquivos, processos, serviços e administração de SO."
-              }
-            ],
-            "questoes": [
-              {
-                "id": "ana_ti_7_q1",
-                "numero": 1,
-                "enunciado": "Em sistemas operacionais Linux e Unix, qual comando é utilizado para alterar as permissões de acesso (leitura, escrita e execução) de arquivos e diretórios, e qual representação octal define permissão total para o dono, leitura e execução para o grupo, e nenhuma permissão para outros (rwxr-x---)?",
-                "alternativas": {
-                  "A": "chown 750 arquivo.sh",
-                  "B": "chmod 750 arquivo.sh",
-                  "C": "chmod 777 arquivo.sh",
-                  "D": "umask 644 arquivo.sh"
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "tadm_2_2",
+                "texto": "2.2. Arquivo e gestão documental (Lei Federal nº 8.159/1991): classificação, temporalidade e métodos de arquivamento."
               },
               {
-                "id": "ana_ti_7_q2",
-                "numero": 2,
-                "enunciado": "Para alterar simultaneamente o usuário proprietário para analista e o grupo proprietário para ti de um diretório /var/www/app e de todo o seu conteúdo recursivamente no Linux, o administrador deve executar:",
-                "alternativas": {
-                  "A": "chmod -R analista:ti /var/www/app",
-                  "B": "chown -R analista:ti /var/www/app",
-                  "C": "usermod -G analista:ti /var/www/app",
-                  "D": "chgrp -u analista /var/www/app"
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "tadm_2_3",
+                "texto": "2.3. Redação oficial (Manual de Redação da Presidência da República): ofício, memorando, requerimento, despacho e certidão."
               },
               {
-                "id": "ana_ti_7_q3",
-                "numero": 3,
-                "enunciado": "Nas distribuições modernas do Linux baseadas em systemd (como Ubuntu, Debian e Red Hat), qual comando permite iniciar imediatamente o serviço do servidor web nginx e qual comando o configura para iniciar automaticamente no boot do sistema?",
-                "alternativas": {
-                  "A": "systemctl start nginx e systemctl enable nginx",
-                  "B": "service run nginx e chkconfig --add nginx",
-                  "C": "systemd init nginx e systemd boot nginx",
-                  "D": "apt start nginx e apt enable nginx"
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_7_q4",
-                "numero": 4,
-                "enunciado": "Na hierarquia padrão de diretórios do sistema de arquivos Linux/Unix (FHS), os arquivos de configuração globais do sistema e os arquivos de log variáveis ficam localizados, respectivamente, em:",
-                "alternativas": {
-                  "A": "/bin e /usr",
-                  "B": "/etc e /var/log",
-                  "C": "/home e /opt",
-                  "D": "/proc e /dev"
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_7_q5",
-                "numero": 5,
-                "enunciado": "Em distribuições Linux derivadas do Debian (como o Ubuntu), para atualizar a lista de índices dos repositórios de pacotes e, em seguida, instalar as atualizações disponíveis dos pacotes instalados via terminal, utiliza-se:",
-                "alternativas": {
-                  "A": "yum check && yum install",
-                  "B": "apt update && apt upgrade",
-                  "C": "dpkg -i update && dpkg -r upgrade",
-                  "D": "pacman -Syu"
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_7_q6",
-                "numero": 6,
-                "enunciado": "No sistema operacional Windows (10/11 e Server), o sistema de arquivos padrão que oferece suporte a permissões granulares de segurança (ACLs), criptografia (EFS), cotas de disco e journaling é o:",
-                "alternativas": {
-                  "A": "FAT32.",
-                  "B": "exFAT.",
-                  "C": "NTFS.",
-                  "D": "Ext4."
-                },
-                "gabarito": "C",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_7_q7",
-                "numero": 7,
-                "enunciado": "Para diagnosticar configurações de adaptadores de rede via linha de comando no Windows e nas distribuições Linux modernas, os comandos utilizados para exibir os endereços IP das interfaces e para limpar/renovar configurações são, respectivamente:",
-                "alternativas": {
-                  "A": "No Windows: ipconfig | No Linux moderno (iproute2): ip addr (ou ip a).",
-                  "B": "No Windows: ifconfig | No Linux: winipcfg.",
-                  "C": "No Windows: netstat -r | No Linux: nslookup.",
-                  "D": "No Windows: tracert | No Linux: chmod."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_7_q8",
-                "numero": 8,
-                "enunciado": "No ambiente Unix/Linux, um administrador deseja localizar em tempo real todas as linhas que contenham a palavra \"ERROR\" dentro do arquivo /var/log/syslog e redirecionar a saída filtrada para um novo arquivo erros.txt (sobrescrevendo-o). O comando adequado no Bash é:",
-                "alternativas": {
-                  "A": "cat /var/log/syslog | find \"ERROR\" >> erros.txt",
-                  "B": "grep \"ERROR\" /var/log/syslog > erros.txt",
-                  "C": "tail -f /var/log/syslog < \"ERROR\" | erros.txt",
-                  "D": "ls -la /var/log/syslog | grep \"ERROR\" > erros.txt"
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_7_q9",
-                "numero": 9,
-                "enunciado": "Em sistemas Unix/Linux, para agendar a execução periódica e automatizada de scripts (como uma rotina de backup todo dia às 02h00 da manhã), utiliza-se o serviço cron editando a tabela de agendamentos por meio do comando:",
-                "alternativas": {
-                  "A": "crontab -e",
-                  "B": "atq -l",
-                  "C": "systemctl timer-edit",
-                  "D": "jobs -r"
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_7_q10",
-                "numero": 10,
-                "enunciado": "Sobre o gerenciamento de processos no Linux/Unix, qual comando encerra forçosamente e imediatamente um processo travado de PID 4512 sem permitir que o processo capture ou ignore o sinal?",
-                "alternativas": {
-                  "A": "kill -15 4512 (SIGTERM)",
-                  "B": "kill -9 4512 (SIGKILL)",
-                  "C": "ps aux 4512",
-                  "D": "top -k 1 4512"
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_7_q11",
-                "numero": 11,
-                "enunciado": "No Windows, a ferramenta administrativa utilizada para aplicar políticas centralizadas ou locais de configuração de segurança, restrições de painel de controle, scripts de logon e configurações de ambiente para usuários e computadores é o:",
-                "alternativas": {
-                  "A": "Editor de Política de Grupo (gpedit.msc / GPO).",
-                  "B": "Desfragmentador e Otimizador de Unidades (dfrgui.exe).",
-                  "C": "Visualizador de Fontes (charmap.exe).",
-                  "D": "Limpeza de Disco (cleanmgr.exe)."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_7_q12",
-                "numero": 12,
-                "enunciado": "Em sistemas Linux, o arquivo /etc/fstab tem como finalidade:",
-                "alternativas": {
-                  "A": "Armazenar os hashes das senhas dos usuários locais do sistema.",
-                  "B": "Definir estaticamente como as partições de disco, sistemas de arquivos e volumes de rede devem ser montados automaticamente durante a inicialização do sistema.",
-                  "C": "Listar os servidores DNS utilizados para resolução de nomes.",
-                  "D": "Configurar as regras de bloqueio de portas do firewall iptables."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_7_q13",
-                "numero": 13,
-                "enunciado": "No Windows PowerShell, os comandos nativos seguem a convenção de nomenclatura Verbo-Substantivo (cmdlets). Qual cmdlet abaixo lista todos os serviços do Windows instalados na máquina e seu status atual (Running / Stopped)?",
-                "alternativas": {
-                  "A": "List-AllServices",
-                  "B": "Get-Service",
-                  "C": "Show-Process",
-                  "D": "Select-Daemon"
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_7_q14",
-                "numero": 14,
-                "enunciado": "Em um terminal Linux/Unix, qual é a diferença entre criar um link físico (hard link) com ln origem destino e um link simbólico (soft link) com ln -s origem destino?",
-                "alternativas": {
-                  "A": "O link simbólico aponta para o nome/caminho do arquivo original (possuindo um inode próprio) e pode apontar para diretórios ou partições diferentes; o hard link compartilha o mesmo inode do arquivo original na mesma partição.",
-                  "B": "O hard link quebra imediatamente se o arquivo original for renomeado no mesmo diretório.",
-                  "C": "O link simbólico duplica o espaço ocupado pelos dados do arquivo no disco rígido.",
-                  "D": "Não existe diferença; a flag -s serve apenas para exibir mensagens na tela."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_7_q15",
-                "numero": 15,
-                "enunciado": "Para empacotar e comprimir o diretório /var/www/html em um arquivo compactado chamado backup.tar.gz no Linux, utiliza-se o comando:",
-                "alternativas": {
-                  "A": "tar -czvf backup.tar.gz /var/www/html",
-                  "B": "tar -xzvf backup.tar.gz /var/www/html",
-                  "C": "zip -d backup.tar.gz /var/www/html",
-                  "D": "gzip -r /var/www/html backup.tar.gz"
-                },
-                "gabarito": "A",
-                "explicacao": ""
+                "id": "tadm_2_4",
+                "texto": "2.4. Controle de prazos administrativos."
               }
             ]
           },
           {
-            "id": "ana_ti_8",
-            "titulo": "8. Linguagens de Programação e Frameworks",
-            "descricao": "Java, JavaScript (ECMAScript 2020), TypeScript (5.4), Node.js (v20.14), React (v18), React Native (0.74), NestJS (v10.3.9).",
-            "videos": [
+            "id": "tadm_3",
+            "titulo": "3. Noções de Administração Financeira e Orçamentária",
+            "subtopicos": [
               {
-                "titulo": "Maratona Java Virado no Jiraya Completo",
-                "canal": "DevDojo",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW",
-                "descricao": "Treinamento mais completo e aprofundado de Java moderno, collections, streams e lambdas."
+                "id": "tadm_3_1",
+                "texto": "3.1. Orçamento público: PPA, LDO e LOA."
               },
               {
-                "titulo": "Curso de Java Básico Gratuito",
-                "canal": "Loiane Groner",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBq0KXHsp5J3PxyFaBIXVs3r",
-                "descricao": "Fundamentos sólidos de sintaxe, tipos, controle de fluxo e boas práticas em Java."
+                "id": "tadm_3_2",
+                "texto": "3.2. Receita e despesa públicas; estágios da despesa: empenho, liquidação e pagamento (Lei Federal nº 4.320/1964)."
               },
               {
-                "titulo": "Curso Grátis de JavaScript e ECMAScript Completo",
-                "canal": "Curso em Vídeo",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1",
-                "descricao": "JavaScript moderno (ES6+, ES2020), manipulação do DOM, funções assíncronas e eventos."
-              }
-            ],
-            "questoes": [
-              {
-                "id": "ana_ti_8_q1",
-                "numero": 1,
-                "enunciado": "Na linguagem Java, sobre classes abstratas, interfaces, herança e polimorfismo, assinale a alternativa correta:",
-                "alternativas": {
-                  "A": "Uma classe em Java pode estender (extends) múltiplas classes concretas simultaneamente.",
-                  "B": "O modificador final aplicado a um método impede que ele seja sobrescrito (overridden) pelas subclasses.",
-                  "C": "Um método declarado como abstract deve conter obrigatoriamente um corpo { ... } com código implementado na superclasse.",
-                  "D": "O bloco finally no tratamento de exceções só é executado quando ocorre um erro no bloco try."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "tadm_3_3",
+                "texto": "3.3. Restos a pagar e suprimento de fundos."
               },
               {
-                "id": "ana_ti_8_q2",
-                "numero": 2,
-                "enunciado": "Em Java (a partir do Java 8+), considere uma lista List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);. Qual expressão utilizando a API de Streams filtra apenas os números pares, multiplica cada um por 10 e soma o total resultante?",
-                "alternativas": {
-                  "A": "numeros.stream().filter(n -> n % 2 == 0).mapToInt(n -> n * 10).sum();",
-                  "B": "numeros.filter(n -> n % 2 == 0).map(n * 10).reduce();",
-                  "C": "Arrays.toStream(numeros).where(n % 2 == 0).sumAll();",
-                  "D": "numeros.stream().map(n -> n % 2 == 0).filter(n -> n * 10).count();"
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_8_q3",
-                "numero": 3,
-                "enunciado": "O JavaScript (ECMAScript 2020 / ES11) introduziu os operadores de Encadeamento Opcional (?.) e Coalescência Nula (??). Analise o código abaixo:   JavaScriptconst config = { timeout: 0, texto: \"\" };\nconst t = config.timeout ?? 5000;\nconst m = config.texto || \"Padrão\";\nconst porta = config.servidor?.porta ?? 8080;\nAo final da execução, os valores das constantes t, m e porta serão, respectivamente:",
-                "alternativas": {
-                  "A": "5000, \"\" e undefined",
-                  "B": "0, \"Padrão\" e 8080",
-                  "C": "5000, \"Padrão\" e 8080",
-                  "D": "0, \"\" e 0"
-                },
-                "gabarito": "B",
-                "explicacao": "(O operador ?? só retorna o lado direito se o esquerdo for null ou undefined, mantendo 0; já o operador lógico || trata \"\" como falsy e retorna \"Padrão\"; config.servidor?.porta avalia como undefined, e ?? 8080 resulta em 8080)"
-              },
-              {
-                "id": "ana_ti_8_q4",
-                "numero": 4,
-                "enunciado": "Ainda no ECMAScript 2020, qual método de Promise foi introduzido para aguardar que todas as promessas de um array sejam concluídas (sejam elas resolvidas com sucesso ou rejeitadas com erro), retornando um array de objetos descrevendo o status (\"fulfilled\" ou \"rejected\") de cada uma sem interromper no primeiro erro?",
-                "alternativas": {
-                  "A": "Promise.all()",
-                  "B": "Promise.race()",
-                  "C": "Promise.allSettled()",
-                  "D": "Promise.anySync()"
-                },
-                "gabarito": "C",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_8_q5",
-                "numero": 5,
-                "enunciado": "No TypeScript (v5.x), os Utility Types facilitam a transformação de tipos existentes. Dados uma interface Usuario, os tipos utilitários Partial<Usuario>, Pick<Usuario, 'id' 'nome' |> e Omit<Usuario, 'senha'> criam, respectivamente:",
-                "alternativas": {
-                  "A": "Um tipo com todas as propriedades opcionais; um tipo contendo apenas id e nome; e um tipo com todas as propriedades de Usuario exceto senha.",
-                  "B": "Um tipo somente leitura; uma união de strings; e uma classe abstrata.",
-                  "C": "Um tipo com propriedades obrigatórias; uma tupla; e um tipo nulo.",
-                  "D": "Uma interface privada em tempo de execução no navegador."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_8_q6",
-                "numero": 6,
-                "enunciado": "No TypeScript (v5.4), qual é a diferença fundamental entre os tipos especiais any e unknown?",
-                "alternativas": {
-                  "A": "Não há diferença; ambos desativam o verificador de tipos do compilador.",
-                  "B": "O tipo unknown é a contraparte type-safe do any: qualquer valor pode ser atribuído a uma variável unknown, mas não é permitido acessar propriedades ou invocá-la sem antes realizar estreitamento de tipo (type narrowing ou type assertion).",
-                  "C": "Variáveis do tipo unknown só aceitam valores numéricos inteiros.",
-                  "D": "O tipo any impede que a variável receba valores null ou undefined."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_8_q7",
-                "numero": 7,
-                "enunciado": "Sobre o funcionamento do Node.js (v20.x), assinale a alternativa correta:",
-                "alternativas": {
-                  "A": "O Node.js cria uma nova thread pesada do sistema operacional para cada requisição HTTP recebida, bloqueando a CPU até o término do I/O de banco de dados.",
-                  "B": "O Node.js baseia-se na engine V8 e em uma arquitetura orientada a eventos com Event Loop single-threaded para execução do código JavaScript e operações de E/S não bloqueantes (non-blocking I/O).",
-                  "C": "A versão 20 do Node.js exige obrigatoriamente a instalação de bibliotecas externas para realizar requisições fetch() ou executar testes básicos, pois não possui fetch nem test runner nativos.",
-                  "D": "O Node.js compila arquivos .js diretamente em binários .exe sem uso de máquina virtual."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_8_q8",
-                "numero": 8,
-                "enunciado": "No React (v18), sobre o funcionamento dos Hooks useState e useEffect, analise as afirmativas:\nI. Quando um useEffect recebe um array de dependências vazio [], seu efeito é executado após a montagem inicial do componente.\nII. O React 18 introduziu o Automatic Batching, agrupando múltiplas atualizações de estado (setState) até mesmo dentro de promises, setTimeout e manipuladores de eventos nativos para evitar re-renderizações desnecessárias.\nIII. A função retornada (cleanup function) dentro de um useEffect serve para limpar assinaturas, timers ou listeners quando o componente é desmontado ou antes de reexecutar o efeito.\nEstão corretas:",
-                "alternativas": {
-                  "A": "I e II, apenas.",
-                  "B": "II e III, apenas.",
-                  "C": "I e III, apenas.",
-                  "D": "I, II e III."
-                },
-                "gabarito": "D",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_8_q9",
-                "numero": 9,
-                "enunciado": "No React (v18), qual Hook é utilizado para memorizar o resultado calculado de uma função custosa entre renderizações (recalculando apenas se suas dependências mudarem), e qual Hook permite marcar uma atualização de estado como não urgente (transição concorrente) para manter a interface responsiva?",
-                "alternativas": {
-                  "A": "useMemo e useTransition.",
-                  "B": "useRef e useContext.",
-                  "C": "useReducer e useLayoutEffect.",
-                  "D": "useState e useId."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_8_q10",
-                "numero": 10,
-                "enunciado": "No desenvolvimento mobile com React Native (v0.74), para renderizar listas longas de dados com alta performance (renderizando apenas os itens visíveis na tela — lazy rendering/virtualização), deve-se utilizar o componente nativo:",
-                "alternativas": {
-                  "A": "<ScrollView> simples com .map().",
-                  "B": "<FlatList> (ou <SectionList>).",
-                  "C": "<View> estática.",
-                  "D": "<div> com overflow-scroll."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_8_q11",
-                "numero": 11,
-                "enunciado": "Sobre a estilização e componentes no React Native (v0.74), assinale a alternativa correta:",
-                "alternativas": {
-                  "A": "Utiliza tags HTML tradicionais como <p>, <h1> e <button> diretamente no JSX.",
-                  "B": "Utiliza componentes nativos como <View>, <Text>, <Image> e <Pressable>, e o layout baseia-se por padrão no Flexbox (com flexDirection: 'column' como padrão).",
-                  "C": "A Nova Arquitetura do React Native (Fabric e TurboModules via JSI) foi removida na versão 0.74 em favor da antiga Bridge assíncrona serializada em JSON.",
-                  "D": "Arquivos .css externos com seletores de cascata globais são obrigatórios em todos os componentes."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_8_q12",
-                "numero": 12,
-                "enunciado": "No framework backend NestJS (v10.x), qual decorator é utilizado para marcar uma classe como um serviço passível de ser gerenciado pelo contêiner de Injeção de Dependência (Io\nC) , e qual decorator define uma classe responsável por receber requisições HTTP em rotas específicas?",
-                "alternativas": {
-                  "A": "@Injectable() e @Controller().",
-                  "B": "C) , e qual decorator define uma classe responsável por receber requisições HTTP em rotas específicas?\nA) @Injectable() e @Controller().\nB)",
-                  "C": ", e qual decorator define uma classe responsável por receber requisições HTTP em rotas específicas?\nA) @Injectable() e @Controller().\nB) @Service() e @RestController().\nC) @Component() e @Router().",
-                  "D": "@Module() e @Entity()."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_8_q13",
-                "numero": 13,
-                "enunciado": "No ciclo de vida de uma requisição no NestJS (v10.x), qual artefato tem a responsabilidade específica de validar ou transformar os dados de entrada (como converter um parâmetro de rota de string para inteiro com ParseIntPipe ou validar um DTO com ValidationPipe) antes que atinjam o método do Controller?",
-                "alternativas": {
-                  "A": "Guard.",
-                  "B": "Pipe.",
-                  "C": "Exception Filter.",
-                  "D": "Module."
-                },
-                "gabarito": "B",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_8_q14",
-                "numero": 14,
-                "enunciado": "Ainda no NestJS (v10.x), para controlar a autorização de acesso a uma rota (verificando, por exemplo, se a requisição possui um token JWT válido ou se o usuário possui a role necessária, retornando true ou false no método canActivate), utiliza-se um:",
-                "alternativas": {
-                  "A": "Guard (@UseGuards()).",
-                  "B": "Pipe (@UsePipes()).",
-                  "C": "Provider estático de banco.",
-                  "D": "Decorator @Body()."
-                },
-                "gabarito": "A",
-                "explicacao": ""
-              },
-              {
-                "id": "ana_ti_8_q15",
-                "numero": 15,
-                "enunciado": "Em um módulo do NestJS decorado com @Module({}), as quatro propriedades padrão do objeto de metadados usadas para organizar a arquitetura da aplicação são:",
-                "alternativas": {
-                  "A": "models, views, templates e scripts.",
-                  "B": "imports, controllers, providers e exports.",
-                  "C": "get, post, put e delete.",
-                  "D": "public, private, protected e static."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "tadm_3_4",
+                "texto": "3.4. Noções da Lei Complementar Federal nº 101/2000 (Lei de Responsabilidade Fiscal)."
               }
             ]
           },
           {
-            "id": "ana_ti_9",
-            "titulo": "9. Segurança de Dados",
-            "descricao": "Lei Geral de Proteção de Dados Pessoais — LGPD (Lei nº 13.709/2018).",
-            "videos": [
+            "id": "tadm_4",
+            "titulo": "4. Noções de Licitações, Compras e Patrimônio",
+            "subtopicos": [
               {
-                "titulo": "Curso de Segurança da Informação e LGPD",
-                "canal": "Curso em Vídeo",
-                "tipo": "playlist",
-                "url": "https://www.youtube.com/playlist?list=PLHz_AreHm4dlaTyjolzCFC6IjLzO8O0XV",
-                "descricao": "Playlist cobrindo segurança defensiva, confidencialidade, integridade e conformidade com a LGPD."
+                "id": "tadm_4_1",
+                "texto": "4.1. Lei Federal nº 14.133/2021: princípios, modalidades, contratação direta e fases do processo."
+              },
+              {
+                "id": "tadm_4_2",
+                "texto": "4.2. Gestão de materiais e almoxarifado: recebimento, armazenamento, controle de estoque e inventário."
+              },
+              {
+                "id": "tadm_4_3",
+                "texto": "4.3. Controle patrimonial: tombamento, movimentação e baixa de bens."
               }
-            ],
-            "questoes": [
+            ]
+          },
+          {
+            "id": "tadm_5",
+            "titulo": "5. Noções de Gestão de Pessoas",
+            "subtopicos": [
               {
-                "id": "ana_ti_9_q1",
-                "numero": 1,
-                "enunciado": "Nos termos do Art. 5º da Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 - LGP\nD) , considera-se dado pessoal sensível:",
-                "alternativas": {
-                  "A": "Qualquer dado relativo a pessoa jurídica de direito público ou privado, como CNPJ e faturamento bruto.",
-                  "B": "Dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural.",
-                  "C": "D) , considera-se dado pessoal sensível:\nA) Qualquer dado relativo a pessoa jurídica de direito público ou privado, como CNPJ e faturamento bruto.\nB) Dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural.\nC)",
-                  "D": ", considera-se dado pessoal sensível:\nA) Qualquer dado relativo a pessoa jurídica de direito público ou privado, como CNPJ e faturamento bruto.\nB) Dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural.\nC) Exclusivamente a senha bancária e o limite do cartão de crédito do titular.\nD) Qualquer informação já anonimizada de modo irreversível."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "tadm_5_1",
+                "texto": "5.1. Registros funcionais, frequência, férias e licenças."
               },
               {
-                "id": "ana_ti_9_q2",
-                "numero": 2,
-                "enunciado": "Segundo a LGPD, os Agentes de Tratamento de dados pessoais são:",
-                "alternativas": {
-                  "A": "O Controlador e o Operador.",
-                  "B": "O Controlador, o Operador e o Encarregado (DPO).",
-                  "C": "O Titular, a ANPD e o Juiz de Direito.",
-                  "D": "Apenas os administradores de banco de dados (DBAs)."
-                },
-                "gabarito": "A",
-                "explicacao": "(Atenção à pegadinha clássica de prova: segundo o Art. 5º, IX, os agentes de tratamento são apenas o Controlador e o Operador; o Encarregado é a pessoa indicada para atuar como canal de comunicação)"
+                "id": "tadm_5_2",
+                "texto": "5.2. Lei Municipal nº 301/1991: direitos, deveres, proibições e regime disciplinar."
+              }
+            ]
+          },
+          {
+            "id": "tadm_6",
+            "titulo": "6. Matemática Aplicada às Rotinas Administrativas",
+            "subtopicos": [
+              {
+                "id": "tadm_6_1",
+                "texto": "6.1. Razão, proporção, regra de três e porcentagem."
               },
               {
-                "id": "ana_ti_9_q3",
-                "numero": 3,
-                "enunciado": "Na definição da LGPD, a pessoa natural ou jurídica, de direito público ou privado, a quem competem as decisões referentes ao tratamento de dados pessoais é o:",
-                "alternativas": {
-                  "A": "Operador.",
-                  "B": "Controlador.",
-                  "C": "Encarregado.",
-                  "D": "Titular."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "tadm_6_2",
+                "texto": "6.2. Juros simples."
               },
               {
-                "id": "ana_ti_9_q4",
-                "numero": 4,
-                "enunciado": "De acordo com o Art. 4º da LGPD, a lei NÃO se aplica ao tratamento de dados pessoais realizado:",
-                "alternativas": {
-                  "A": "Por pessoa jurídica de direito público (como Câmaras Municipais e Tribunais).",
-                  "B": "Por pessoa natural para fins exclusivamente particulares e não econômicos, ou para fins exclusivamente jornalísticos, artísticos, acadêmicos (observados os arts. 7º e 11) ou de segurança pública e defesa nacional.",
-                  "C": "Em meios físicos (papel), pois a lei restringe-se a bancos de dados em nuvem.",
-                  "D": "Por empresas estrangeiras que coletam dados de titulares localizados no Brasil."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "tadm_6_3",
+                "texto": "6.3. Leitura e interpretação de tabelas e gráficos."
+              }
+            ]
+          },
+          {
+            "id": "tadm_7",
+            "titulo": "7. Noções de Informática",
+            "subtopicos": [
+              {
+                "id": "tadm_7_1",
+                "texto": "7.1. Sistemas operacionais Windows e Linux (pastas, arquivos e atalhos); MS Office M365 (Word, Excel, PowerPoint, OneDrive e SharePoint)."
               },
               {
-                "id": "ana_ti_9_q5",
-                "numero": 5,
-                "enunciado": "O princípio da LGPD (Art. 6º) que garante a \"compatibilidade do tratamento com as finalidades informadas ao titular, de acordo com o contexto do tratamento\" e o princípio que determina a \"limitação do tratamento ao mínimo necessário para a realização de suas finalidades, com abrangência dos dados pertinentes, proporcionais e não excessivos\" são, respectivamente:",
-                "alternativas": {
-                  "A": "Adequação e Necessidade.",
-                  "B": "Prevenção e Livre Acesso.",
-                  "C": "Transparência e Não Discriminação.",
-                  "D": "Qualidade dos Dados e Segurança."
-                },
-                "gabarito": "A",
-                "explicacao": ""
+                "id": "tadm_7_2",
+                "texto": "7.2. Correio eletrônico; internet e navegadores; ferramentas de reuniões on-line."
               },
               {
-                "id": "ana_ti_9_q6",
-                "numero": 6,
-                "enunciado": "Conforme o Art. 7º da LGPD, são hipóteses legais que autorizam o tratamento de dados pessoais comuns, EXCETO:",
-                "alternativas": {
-                  "A": "Mediante o fornecimento de consentimento pelo titular.",
-                  "B": "Para o cumprimento de obrigação legal ou regulatória pelo controlador.",
-                  "C": "Para a proteção do crédito, inclusive quanto ao disposto na legislação pertinente.",
-                  "D": "Para comercialização irrestrita de listas de dados sigilosos sem base contratual ou ciência do titular."
-                },
-                "gabarito": "D",
-                "explicacao": ""
+                "id": "tadm_7_3",
+                "texto": "7.3. Segurança da informação (senhas, autenticação em dois fatores, phishing e cópias de segurança); noções de ferramentas de inteligência artificial generativa: usos, limites e uso responsável."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "tecnico_legislativa": {
+      "id": "tecnico_legislativa",
+      "nome": "Técnico Legislativo – Legislativa",
+      "codigo": "08",
+      "nivel": "Médio",
+      "jornada": "30h semanais",
+      "remuneracao": "R$ 3.512,00",
+      "taxa_inscricao": 120,
+      "turno": "Manhã (Portões fecham às 08h00 • Duração: 4h)",
+      "vagas": {
+        "total": 5,
+        "ampla": 3,
+        "pcd": 1,
+        "pp": 1,
+        "cr": 15
+      },
+      "pdf_edital": "edital_n_01_2026_1707176.pdf",
+      "link_pdf": "https://www.idecan.org.br",
+      "disciplinas": [
+        "lingua_portuguesa_medio",
+        "raciocinio_logico",
+        "legislacao",
+        "especifica_tecnico_legislativa"
+      ],
+      "especifica": {
+        "id": "especifica_tecnico_legislativa",
+        "nome": "Conhecimentos Específicos - Técnico Legislativo / Legislativa",
+        "questoes": 20,
+        "topicos": [
+          {
+            "id": "tleg_1",
+            "titulo": "1. Organização do Poder Legislativo Municipal",
+            "subtopicos": [
+              {
+                "id": "tleg_1_1",
+                "texto": "1.1. O Município na Constituição Federal (arts. 29 a 31)."
               },
               {
-                "id": "ana_ti_9_q7",
-                "numero": 7,
-                "enunciado": "Em relação ao tratamento de dados pessoais sensíveis (Art. 11 da LGP\nD) , a base legal de Legítimo Interesse do Controlador:",
-                "alternativas": {
-                  "A": "É a principal hipótese autorizativa para dados sensíveis sem consentimento.",
-                  "B": "Não está prevista como hipótese legal para o tratamento de dados pessoais sensíveis.",
-                  "C": "D) , a base legal de Legítimo Interesse do Controlador:\nA) É a principal hipótese autorizativa para dados sensíveis sem consentimento.\nB) Não está prevista como hipótese legal para o tratamento de dados pessoais sensíveis.\nC)",
-                  "D": ", a base legal de Legítimo Interesse do Controlador:\nA) É a principal hipótese autorizativa para dados sensíveis sem consentimento.\nB) Não está prevista como hipótese legal para o tratamento de dados pessoais sensíveis.\nC) Pode ser utilizada livremente por empresas privadas para compartilhar dados de saúde com fins lucrativos.\nD) Dispensa medidas de segurança técnica e administrativa."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "tleg_1_2",
+                "texto": "1.2. Lei Orgânica do Município de Petrolina: competências e funcionamento da Câmara Municipal; atribuições da Mesa Diretora; prerrogativas e vedações dos Vereadores."
+              }
+            ]
+          },
+          {
+            "id": "tleg_2",
+            "titulo": "2. Processo Legislativo Municipal",
+            "subtopicos": [
+              {
+                "id": "tleg_2_1",
+                "texto": "2.1. Espécies normativas: emendas à Lei Orgânica, leis complementares, leis ordinárias, decretos legislativos e resoluções."
               },
               {
-                "id": "ana_ti_9_q8",
-                "numero": 8,
-                "enunciado": "Sobre o tratamento de dados pessoais de crianças e de adolescentes (Art. 14 da LGP\nD) , assinale a alternativa correta:",
-                "alternativas": {
-                  "A": "Os dados pessoais de crianças podem ser coletados sem o consentimento dos pais uma única vez, quando a coleta for necessária para contatar os pais ou o responsável legal, e desde que não sejam armazenados nem repassados a terceiros.",
-                  "B": "Os controladores podem condicionar a participação de crianças em jogos e aplicações de internet ao fornecimento de dados pessoais além dos estritamente necessários à atividade.",
-                  "C": "D) , assinale a alternativa correta:\nA) Os dados pessoais de crianças podem ser coletados sem o consentimento dos pais uma única vez, quando a coleta for necessária para contatar os pais ou o responsável legal, e desde que não sejam armazenados nem repassados a terceiros.\nB) Os controladores podem condicionar a participação de crianças em jogos e aplicações de internet ao fornecimento de dados pessoais além dos estritamente necessários à atividade.\nC)",
-                  "D": ", assinale a alternativa correta:\nA) Os dados pessoais de crianças podem ser coletados sem o consentimento dos pais uma única vez, quando a coleta for necessária para contatar os pais ou o responsável legal, e desde que não sejam armazenados nem repassados a terceiros.\nB) Os controladores podem condicionar a participação de crianças em jogos e aplicações de internet ao fornecimento de dados pessoais além dos estritamente necessários à atividade.\nC) A LGPD proíbe qualquer tratamento de dados de menores de 18 anos em escolas e hospitais.\nD) O consentimento para tratamento de dados de crianças pode ser dado pela própria criança a partir dos 8 anos de idade."
-                },
-                "gabarito": "A",
-                "explicacao": ""
+                "id": "tleg_2_2",
+                "texto": "2.2. Proposições: projetos, requerimentos, indicações, moções, emendas, substitutivos e pareceres."
               },
               {
-                "id": "ana_ti_9_q9",
-                "numero": 9,
-                "enunciado": "A utilização de meios técnicos razoáveis e disponíveis no momento do tratamento por meio dos quais um dado perde a possibilidade de associação, direta ou indireta, a um indivíduo, denomina-se na LGPD (Art. 5º, XI):",
-                "alternativas": {
-                  "A": "Anonimização.",
-                  "B": "Pseudonimização reversível por chave simples.",
-                  "C": "Portabilidade.",
-                  "D": "Consentimento expresso."
-                },
-                "gabarito": "A",
-                "explicacao": ""
+                "id": "tleg_2_3",
+                "texto": "2.3. Iniciativa, discussão, votação, quórum, sanção, veto e promulgação."
               },
               {
-                "id": "ana_ti_9_q10",
-                "numero": 10,
-                "enunciado": "De acordo com o Art. 15 e Art. 16 da LGPD, após o término do tratamento de dados pessoais, os dados devem ser eliminados, AUTORIZADA a conservação para as seguintes finalidades:\nI. Cumprimento de obrigação legal ou regulatória pelo controlador.\nII. Estudo por órgão de pesquisa, garantida, sempre que possível, a anonimização dos dados pessoais.\nIII. Uso exclusivo do controlador, vedado seu acesso por terceiro, e desde que anonimizados os dados.\nEstão corretas:",
-                "alternativas": {
-                  "A": "I e II, apenas.",
-                  "B": "II e III, apenas.",
-                  "C": "I e III, apenas.",
-                  "D": "I, II e III."
-                },
-                "gabarito": "D",
-                "explicacao": ""
+                "id": "tleg_2_4",
+                "texto": "2.4. Regimento Interno da Câmara Municipal de Petrolina: sessões e suas fases, comissões permanentes e temporárias, audiências públicas, tramitação e arquivamento de proposições."
+              }
+            ]
+          },
+          {
+            "id": "tleg_3",
+            "titulo": "3. Técnica e Redação Legislativa",
+            "subtopicos": [
+              {
+                "id": "tleg_3_1",
+                "texto": "3.1. Lei Complementar Federal nº 95/1998: estrutura e articulação das leis."
               },
               {
-                "id": "ana_ti_9_q11",
-                "numero": 11,
-                "enunciado": "São direitos do titular dos dados pessoais, exigíveis a qualquer momento mediante requisição ao controlador (Art. 18 da LGP\nD) :",
-                "alternativas": {
-                  "A": "Confirmação da existência de tratamento, acesso aos dados, correção de dados incompletos/inexatos, portabilidade e revogação do consentimento.",
-                  "B": "Acesso ao código-fonte proprietário e aos segredos comerciais e industriais do controlador.",
-                  "C": "D) :\nA) Confirmação da existência de tratamento, acesso aos dados, correção de dados incompletos/inexatos, portabilidade e revogação do consentimento.\nB) Acesso ao código-fonte proprietário e aos segredos comerciais e industriais do controlador.\nC)",
-                  "D": ":\nA) Confirmação da existência de tratamento, acesso aos dados, correção de dados incompletos/inexatos, portabilidade e revogação do consentimento.\nB) Acesso ao código-fonte proprietário e aos segredos comerciais e industriais do controlador.\nC) Exclusão imediata de dados mantidos pelo controlador para cumprimento de obrigação legal tributária.\nD) Indenização automática de 2% do faturamento da empresa a cada consulta de saldo."
-                },
-                "gabarito": "A",
-                "explicacao": ""
+                "id": "tleg_3_2",
+                "texto": "3.2. Redação de proposições, convites, convocações e documentos legislativos."
               },
               {
-                "id": "ana_ti_9_q12",
-                "numero": 12,
-                "enunciado": "Acerca do Relatório de Impacto à Proteção de Dados Pessoais (RIP\nD)  previsto na LGPD, ele consiste na documentação do controlador que contém:",
-                "alternativas": {
-                  "A": "Apenas o currículo profissional dos programadores da equipe.",
-                  "B": "A descrição dos processos de tratamento de dados pessoais que podem gerar riscos às liberdades civis e aos direitos fundamentais, bem como medidas, salvaguardas e mecanismos de mitigação de risco.",
-                  "C": "D)  previsto na LGPD, ele consiste na documentação do controlador que contém:\nA) Apenas o currículo profissional dos programadores da equipe.\nB) A descrição dos processos de tratamento de dados pessoais que podem gerar riscos às liberdades civis e aos direitos fundamentais, bem como medidas, salvaguardas e mecanismos de mitigação de risco.\nC)",
-                  "D": "previsto na LGPD, ele consiste na documentação do controlador que contém:\nA) Apenas o currículo profissional dos programadores da equipe.\nB) A descrição dos processos de tratamento de dados pessoais que podem gerar riscos às liberdades civis e aos direitos fundamentais, bem como medidas, salvaguardas e mecanismos de mitigação de risco.\nC) O balanço patrimonial contábil enviado anualmente à Receita Federal.\nD) A lista de endereços MAC de todos os roteadores domésticos dos clientes."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "tleg_3_3",
+                "texto": "3.3. Redação oficial (Manual de Redação da Presidência da República)."
               },
               {
-                "id": "ana_ti_9_q13",
-                "numero": 13,
-                "enunciado": "Caso ocorra um incidente de segurança que possa acarretar risco ou dano relevante aos titulares (Art. 48 da LGP\nD) , a obrigação de comunicar o fato à Autoridade Nacional de Proteção de Dados (ANP\nD)  e ao titular recai sobre o:",
-                "alternativas": {
-                  "A": "Operador, exclusivamente.",
-                  "B": "Controlador.",
-                  "C": "D) , a obrigação de comunicar o fato à Autoridade Nacional de Proteção de Dados (ANP\nD)  e ao titular recai sobre o:\nA) Operador, exclusivamente.\nB) Controlador.\nC)",
-                  "D": ", a obrigação de comunicar o fato à Autoridade Nacional de Proteção de Dados (ANP\nD)  e ao titular recai sobre o:\nA) Operador, exclusivamente.\nB) Controlador.\nC) Provedor de energia elétrica.\nD) Titular dos dados vazados."
-                },
-                "gabarito": "B",
-                "explicacao": ""
+                "id": "tleg_3_4",
+                "texto": "3.4. Elaboração de atas: conceito, estrutura e requisitos."
+              }
+            ]
+          },
+          {
+            "id": "tleg_4",
+            "titulo": "4. Pesquisa e Documentação Legislativa",
+            "subtopicos": [
+              {
+                "id": "tleg_4_1",
+                "texto": "4.1. Pesquisa de legislação e acompanhamento da tramitação de proposições."
               },
               {
-                "id": "ana_ti_9_q14",
-                "numero": 14,
-                "enunciado": "Sobre as sanções administrativas aplicáveis pela ANPD em razão de infrações à LGPD (Art. 52), a multa simples pode atingir até:",
-                "alternativas": {
-                  "A": "2% (dois por cento) do faturamento da pessoa jurídica de direito privado, grupo ou conglomerado no Brasil no seu último exercício, excluídos os tributos, limitada, no total, a R$ 50.000.000,00 (cinquenta milhões de reais) por infração.",
-                  "B": "20% (vinte por cento) do faturamento global, sem limite de valor.",
-                  "C": "Pena de reclusão de 2 a 8 anos aplicada diretamente pela diretoria da ANPD.",
-                  "D": "R$ 1.000,00 (mil reais) fixos para qualquer porte de empresa."
-                },
-                "gabarito": "A",
-                "explicacao": ""
+                "id": "tleg_4_2",
+                "texto": "4.2. Sistemas eletrônicos de processo legislativo: noções."
               },
               {
-                "id": "ana_ti_9_q15",
-                "numero": 15,
-                "enunciado": "Em relação ao tratamento de dados pessoais pelo Poder Público (Capítulo IV da LGPD, aplicável à Câmara Municipal de Mossoró):",
-                "alternativas": {
-                  "A": "Os órgãos públicos estão isentos de indicar um Encarregado pelo tratamento de dados pessoais.",
-                  "B": "O tratamento deve ser realizado para o atendimento de sua finalidade pública, na persecução do interesse público, com o objetivo de executar as competências legais ou cumprir as atribuições legais do serviço público.",
-                  "C": "As pessoas jurídicas de direito público podem sofrer multa simples de até R$ 50 milhões aplicada pela ANPD da mesma forma que as empresas privadas.",
-                  "D": "O Poder Público pode transferir dados pessoais constantes de bases de dados a entidades privadas livremente, sem previsão legal ou respaldo em contratos/convênios."
-                },
-                "gabarito": "B",
-                "explicacao": "(Nota: órgãos públicos não sofrem as multas pecuniárias do Art. 52, II e III, conforme o § 3º do mesmo artigo, mas estão sujeitos às demais sanções como advertência, publicização da infração, bloqueio e eliminação dos dados)."
+                "id": "tleg_4_3",
+                "texto": "4.3. Arquivo e gestão documental (Lei Federal nº 8.159/1991)."
+              },
+              {
+                "id": "tleg_4_4",
+                "texto": "4.4. Transparência e publicidade dos atos legislativos (Lei Federal nº 12.527/2011)."
+              }
+            ]
+          },
+          {
+            "id": "tleg_5",
+            "titulo": "5. Noções de Informática",
+            "subtopicos": [
+              {
+                "id": "tleg_5_1",
+                "texto": "5.1. Sistemas operacionais Windows e Linux (pastas, arquivos e atalhos); MS Office M365 (Word, Excel, PowerPoint, OneDrive e SharePoint)."
+              },
+              {
+                "id": "tleg_5_2",
+                "texto": "5.2. Correio eletrônico; internet e navegadores; ferramentas de reuniões on-line."
+              },
+              {
+                "id": "tleg_5_3",
+                "texto": "5.3. Segurança da informação (senhas, autenticação em dois fatores, phishing e cópias de segurança); noções de ferramentas de inteligência artificial generativa: usos, limites e uso responsável."
               }
             ]
           }
@@ -2470,75 +791,12 @@
   "documentos_links": [
     {
       "id": "edital_completo",
-      "titulo": "Edital Nº 01/2026 (Retificado em 22/10/2026)",
-      "subtitulo": "Regras gerais, vagas, requisitos e cronograma oficial",
+      "titulo": "Edital Nº 01/2026 - Câmara de Petrolina/PE",
+      "subtitulo": "Edital completo com vagas, requisitos, conteúdo programático (Anexo II) e cronograma (Anexo III)",
       "categoria": "Edital Principal",
-      "arquivo": "/docs/edital_01_2026.pdf",
-      "paginas": 24,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/informacoes.php"
-    },
-    {
-      "id": "edital_retificacao_1",
-      "titulo": "1ª Retificação do Edital Nº 01/2026",
-      "subtitulo": "Alteração do prazo para pagamento da taxa de inscrição (27/10 a 13/11)",
-      "categoria": "Retificação",
-      "arquivo": "/docs/retificacao_01_2026.pdf",
-      "paginas": 2,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/informacoes.php"
-    },
-    {
-      "id": "prog_agente_adm",
-      "titulo": "Programa Específico - Agente Administrativo",
-      "subtitulo": "Conteúdo programático oficial específico (Retificado em 07/10/2026)",
-      "categoria": "Agente Administrativo",
-      "arquivo": "/docs/especifico_agente_administrativo.pdf",
-      "paginas": 1,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_Agente_Administrativo_(retificado_em_07_de_outubro_de_2026).pdf"
-    },
-    {
-      "id": "prog_analista_ti",
-      "titulo": "Programa Específico - Analista de TI",
-      "subtitulo": "Conteúdo programático oficial para Nível Superior em TI",
-      "categoria": "Analista de TI",
-      "arquivo": "/docs/especifico_analista_ti.pdf",
-      "paginas": 1,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_Analista_de_TI.pdf"
-    },
-    {
-      "id": "prog_tec_info",
-      "titulo": "Programa Específico - Técnico em Informática",
-      "subtitulo": "Conteúdo programático oficial para Nível Médio/Técnico em TI",
-      "categoria": "Técnico em Informática",
-      "arquivo": "/docs/especifico_tecnico_informatica.pdf",
-      "paginas": 2,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_T%C3%A9cnico_em_inform%C3%A1tica.pdf"
-    },
-    {
-      "id": "prog_portugues",
-      "titulo": "Programa Geral - Língua Portuguesa",
-      "subtitulo": "Conteúdo comum a todos os cargos do certame",
-      "categoria": "Conhecimentos Gerais",
-      "arquivo": "/docs/geral_lingua_portuguesa.pdf",
-      "paginas": 1,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_GERAL_$%23_L%C3%ADngua_Portuguesa.pdf"
-    },
-    {
-      "id": "prog_legislacao",
-      "titulo": "Programa Geral - Legislação",
-      "subtitulo": "Regimento Interno, Lei Orgânica de Mossoró e Lei 8.429/92",
-      "categoria": "Conhecimentos Gerais",
-      "arquivo": "/docs/geral_legislacao.pdf",
-      "paginas": 1,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_GERAL_$%23_Legisla%C3%A7%C3%A3o.pdf"
-    },
-    {
-      "id": "prog_informatica_geral",
-      "titulo": "Programa Geral - Informática",
-      "subtitulo": "Conhecimento geral para Agente Administrativo e outros cargos de nível médio/superior",
-      "categoria": "Conhecimentos Gerais",
-      "arquivo": "/docs/geral_informatica.pdf",
-      "paginas": 1,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_GERAL_$%23_Inform%C3%A1tica.pdf"
+      "arquivo": "/docs/edital_01_2026_petrolina.pdf",
+      "paginas": 54,
+      "link_oficial": "https://www.idecan.org.br"
     }
   ]
 }

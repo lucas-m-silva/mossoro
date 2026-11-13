@@ -9,8 +9,8 @@ export const PREDEFINED_USERS = {
     password: '12345',
     name: 'Lucas Silva',
     profile: 'TI',
-    roles: ['tecnico_informatica', 'analista_ti'],
-    roleNames: ['Técnico em Informática (Cód. 102)', 'Analista de TI (Cód. 205)'],
+    roles: ['analista_ti'],
+    roleNames: ['Analista Legislativo - TI (Cód. 04)'],
     badgeColor: '#2563eb',
     avatarText: 'LS'
   },
@@ -19,14 +19,14 @@ export const PREDEFINED_USERS = {
     password: '12345',
     name: 'Ana Dias',
     profile: 'Administrativo',
-    roles: ['agente_administrativo'],
-    roleNames: ['Agente Administrativo (Cód. 101)'],
+    roles: ['tecnico_administrativa', 'tecnico_legislativa'],
+    roleNames: ['Técnico Legislativo - Administrativa (Cód. 07)', 'Técnico Legislativo - Legislativa (Cód. 08)'],
     badgeColor: '#059669',
     avatarText: 'AD'
   }
 };
 
-const AUTH_STORAGE_KEY = 'mossoro_auth_user';
+const AUTH_STORAGE_KEY = 'petrolina_auth_user';
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {

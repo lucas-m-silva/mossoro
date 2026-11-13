@@ -37,17 +37,17 @@ export function CloudConfigView() {
   };
 
   const supabaseSql = `-- Script SQL para criar a tabela no Supabase (Cole no SQL Editor do Supabase)
-CREATE TABLE IF NOT EXISTS public.mossoro_study_progress (
+CREATE TABLE IF NOT EXISTS public.petrolina_study_progress (
   username text PRIMARY KEY,
   data jsonb NOT NULL,
   updated_at timestamp with time zone DEFAULT timezone('utc'::text, now())
 );
 
 -- Habilitar leitura e escrita pública para este projeto de estudos
-ALTER TABLE public.mossoro_study_progress ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.petrolina_study_progress ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "Acesso público ao progresso do concurso"
-ON public.mossoro_study_progress
+ON public.petrolina_study_progress
 FOR ALL
 USING (true)
 WITH CHECK (true);`;
@@ -253,7 +253,7 @@ WITH CHECK (true);`;
               <label>Project ID</label>
               <input
                 type="text"
-                placeholder="mossoro-concurso-2026"
+                placeholder="petrolina-concurso-2026"
                 value={config.firebase.projectId}
                 onChange={(e) =>
                   setConfig(p => ({

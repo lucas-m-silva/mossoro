@@ -10,7 +10,7 @@ function MainLayout() {
   const { isAuthenticated } = useAuth();
   const [activeTab, setActiveTab] = useState('dashboard');
   const [isDark, setIsDark] = useState(() => {
-    const saved = localStorage.getItem('mossoro_theme');
+    const saved = localStorage.getItem('petrolina_theme');
     if (saved) return saved === 'dark';
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
@@ -18,10 +18,10 @@ function MainLayout() {
   useEffect(() => {
     if (isDark) {
       document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('mossoro_theme', 'dark');
+      localStorage.setItem('petrolina_theme', 'dark');
     } else {
       document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('mossoro_theme', 'light');
+      localStorage.setItem('petrolina_theme', 'light');
     }
   }, [isDark]);
 
@@ -57,11 +57,11 @@ function MainLayout() {
       <footer className="app-footer">
         <div className="footer-content">
           <div className="footer-left">
-            <strong>Câmara Municipal de Mossoró / RN</strong>
-            <span>Concurso Público • Edital nº 001/2026 • Realização: COMPERVE / UFRN</span>
+            <strong>Câmara Municipal de Petrolina / PE</strong>
+            <span>Concurso Público • Edital nº 01/2026 • Realização: IDECAN</span>
           </div>
           <div className="footer-right">
-            <span>Inscrições: 13/10 a 12/11/2026 • Prova Objetiva: 06/12/2026</span>
+            <span>Inscrições: 06/11 a 05/12/2026 • Prova Objetiva: 17/01/2027</span>
           </div>
         </div>
       </footer>

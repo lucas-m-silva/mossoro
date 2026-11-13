@@ -1,17 +1,17 @@
 {
   "concurso": {
-    "titulo": "Concurso Público - Câmara Municipal de Mossoró/RN",
-    "edital": "Edital nº 001/2026 (Retificado em 22/10/2026)",
-    "banca": "COMPERVE (UFRN)",
+    "titulo": "Concurso Público - Câmara Municipal de Petrolina/PE",
+    "edital": "Edital nº 01/2026, de 06 de novembro de 2026",
+    "banca": "IDECAN",
     "periodo_inscricao": {
-      "inicio": "2026-10-13",
-      "fim": "2026-11-12",
-      "pagamento_ate": "2026-11-13",
-      "texto": "13 de outubro a 12 de novembro de 2026"
+      "inicio": "2026-11-06",
+      "fim": "2026-12-05",
+      "pagamento_ate": "2026-12-07",
+      "texto": "06 de novembro a 05 de dezembro de 2026"
     },
-    "data_prova": "2026-12-06",
-    "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/informacoes.php",
-    "cidade_prova": "Mossoró/RN"
+    "data_prova": "2027-01-17",
+    "link_oficial": "https://www.idecan.org.br",
+    "cidade_prova": "Petrolina/PE"
   },
   "usuarios_mock": [
     {
@@ -19,537 +19,770 @@
       "nome": "Lucas Silva",
       "perfil": "TI",
       "cargos_permitidos": [
-        "tecnico_informatica",
         "analista_ti"
       ],
-      "descricao": "Acesso a Técnico em Informática e Analista de TI"
+      "descricao": "Acesso a Analista Legislativo - Tecnologia da Informação (Cód. 04)"
     },
     {
       "login": "ana",
       "nome": "Ana Dias",
       "perfil": "Administrativo",
       "cargos_permitidos": [
-        "agente_administrativo"
+        "tecnico_administrativa",
+        "tecnico_legislativa"
       ],
-      "descricao": "Acesso a Agente Administrativo"
+      "descricao": "Acesso a Técnico Legislativo - Administrativa (Cód. 07) e Legislativa (Cód. 08)"
     }
   ],
   "disciplinas_comuns": {
-    "lingua_portuguesa": {
-      "id": "lingua_portuguesa",
-      "nome": "Língua Portuguesa",
+    "lingua_portuguesa_superior": {
+      "id": "lingua_portuguesa_superior",
+      "nome": "Língua Portuguesa (Nível Superior)",
       "questoes": 10,
       "topicos": [
         {
-          "id": "lp_1",
-          "titulo": "1. Organização do texto",
-          "subtopicos": [
-            {
-              "id": "lp_1_1",
-              "texto": "1.1. Propósito comunicativo"
-            },
-            {
-              "id": "lp_1_2",
-              "texto": "1.2. Tipos de texto (dialogal, descritivo, narrativo, injuntivo, explicativo e argumentativo)"
-            },
-            {
-              "id": "lp_1_3",
-              "texto": "1.3. Gêneros discursivos"
-            },
-            {
-              "id": "lp_1_4",
-              "texto": "1.4. Mecanismos coesivos"
-            },
-            {
-              "id": "lp_1_5",
-              "texto": "1.5. Fatores de coerência textual"
-            },
-            {
-              "id": "lp_1_6",
-              "texto": "1.6. Progressão temática"
-            },
-            {
-              "id": "lp_1_7",
-              "texto": "1.7. Paragrafação"
-            },
-            {
-              "id": "lp_1_8",
-              "texto": "1.8. Citação do discurso alheio"
-            },
-            {
-              "id": "lp_1_9",
-              "texto": "1.9. Informações implícitas"
-            },
-            {
-              "id": "lp_1_10",
-              "texto": "1.10. Linguagem denotativa e linguagem conotativa"
-            }
-          ]
+          "id": "lps_1",
+          "titulo": "1. Leitura, Compreensão e Interpretação de Textos",
+          "descricao": "Gêneros variados, incluindo textos argumentativos, normativos, científicos e jornalísticos; análise crítica e inferencial."
         },
         {
-          "id": "lp_2",
-          "titulo": "2. Conhecimento linguístico",
-          "subtopicos": [
-            {
-              "id": "lp_2_1",
-              "texto": "2.1. Variação linguística"
-            },
-            {
-              "id": "lp_2_2",
-              "texto": "2.2. Classes de palavras: usos e adequações"
-            },
-            {
-              "id": "lp_2_3",
-              "texto": "2.3. Convenções da norma padrão (concordância, regência, ortografia e acentuação gráfica)"
-            },
-            {
-              "id": "lp_2_4",
-              "texto": "2.4. Organização do período simples e do período composto"
-            },
-            {
-              "id": "lp_2_5",
-              "texto": "2.5. Pontuação"
-            },
-            {
-              "id": "lp_2_6",
-              "texto": "2.6. Relações semânticas entre palavras (sinonímia, antonímia, hiponímia e hiperonímia)"
-            }
-          ]
+          "id": "lps_2",
+          "titulo": "2. Estruturação do Texto e Articulação Textual",
+          "descricao": "Organização, progressão e hierarquia das ideias; pronomes e expressões referenciais, nexos, operadores sequenciais e conectivos."
+        },
+        {
+          "id": "lps_3",
+          "titulo": "3. Coesão, Coerência e Reescrita de Frases",
+          "descricao": "Mecanismos de coesão referencial, lexical e sequencial; equivalência e transformação de estruturas; paralelismo sintático e semântico."
+        },
+        {
+          "id": "lps_4",
+          "titulo": "4. Significação Contextual de Palavras e Expressões",
+          "descricao": "Sinonímia, antonímia, polissemia, ambiguidade e denotação/conotação."
+        },
+        {
+          "id": "lps_5",
+          "titulo": "5. Norma-Padrão, Ortografia, Acentuação e Pontuação",
+          "descricao": "Ortografia oficial, acentuação gráfica e pontuação."
+        },
+        {
+          "id": "lps_6",
+          "titulo": "6. Morfologia e Classes de Palavras",
+          "descricao": "Morfologia, estrutura e formação de palavras; emprego das classes de palavras."
+        },
+        {
+          "id": "lps_7",
+          "titulo": "7. Sintaxe e Construção Frasal",
+          "descricao": "Análise sintática dos termos da oração e do período simples e composto (coordenação e subordinação)."
+        },
+        {
+          "id": "lps_8",
+          "titulo": "8. Concordância, Regência, Colocação Pronominal e Crase",
+          "descricao": "Concordância verbal e nominal; regência verbal e nominal; colocação pronominal; crase."
+        },
+        {
+          "id": "lps_9",
+          "titulo": "9. Variação Linguística, Figuras de Linguagem e Tecnologia",
+          "descricao": "Variação linguística e adequação da linguagem; figuras de linguagem; linguagem e tecnologia: gêneros digitais, comunicação em ambientes virtuais e inteligência artificial aplicada à linguagem."
         }
       ]
     },
-    "legislacao": {
-      "id": "legislacao",
-      "nome": "Legislação",
+    "lingua_portuguesa_medio": {
+      "id": "lingua_portuguesa_medio",
+      "nome": "Língua Portuguesa (Nível Médio)",
       "questoes": 10,
       "topicos": [
         {
-          "id": "leg_1",
-          "titulo": "Regimento Interno da Câmara Municipal de Mossoró/RN",
-          "descricao": "Resolução nº 25/2025 e suas alterações.",
-          "subtopicos": [
-            {
-              "id": "leg_1_1",
-              "texto": "Estrutura, competências e funcionamento da Câmara Municipal"
-            },
-            {
-              "id": "leg_1_2",
-              "texto": "Mesa Diretora, Comissões e Sessões Legislativas"
-            },
-            {
-              "id": "leg_1_3",
-              "texto": "Processo Legislativo e deliberações em plenário"
-            }
-          ]
+          "id": "lpm_1",
+          "titulo": "1. Leitura, Compreensão e Interpretação de Textos",
+          "descricao": "Gêneros variados, com ênfase em inferência, ideia central e argumentação."
         },
         {
-          "id": "leg_2",
-          "titulo": "Lei Orgânica do Município de Mossoró/RN",
-          "descricao": "Lei Orgânica do Município de Mossoró/RN e suas alterações.",
-          "subtopicos": [
-            {
-              "id": "leg_2_1",
-              "texto": "Disposições fundamentais e organização dos poderes municipais"
-            },
-            {
-              "id": "leg_2_2",
-              "texto": "Competências do Município e administração pública municipal"
-            },
-            {
-              "id": "leg_2_3",
-              "texto": "Fiscalização contábil, financeira e orçamentária"
-            }
-          ]
+          "id": "lpm_2",
+          "titulo": "2. Estruturação, Coesão e Coerência Textual",
+          "descricao": "Organização textual e progressão temática; mecanismos de referenciação, substituição, repetição e conectivos; pronomes e expressões referenciais, nexos e operadores sequenciais."
         },
         {
-          "id": "leg_3",
-          "titulo": "Lei de Improbidade Administrativa",
-          "descricao": "Lei nº 8.429/1992 e suas alterações.",
-          "subtopicos": [
-            {
-              "id": "leg_3_1",
-              "texto": "Atos de improbidade que importam enriquecimento ilícito (Art. 9º)"
-            },
-            {
-              "id": "leg_3_2",
-              "texto": "Atos que causam prejuízo ao erário (Art. 10)"
-            },
-            {
-              "id": "leg_3_3",
-              "texto": "Atos que atentam contra os princípios da administração pública (Art. 11)"
-            },
-            {
-              "id": "leg_3_4",
-              "texto": "Sanções, prescrição e processo administrativo/judicial"
-            }
-          ]
+          "id": "lpm_3",
+          "titulo": "3. Reescrita de Frases e Significação Contextual",
+          "descricao": "Equivalência e transformação de estruturas; sinonímia, antonímia e ambiguidade."
+        },
+        {
+          "id": "lpm_4",
+          "titulo": "4. Ortografia, Acentuação Gráfica e Pontuação",
+          "descricao": "Ortografia oficial conforme o Acordo Ortográfico vigente; acentuação gráfica; emprego da vírgula, ponto e vírgula, dois-pontos, travessão, parênteses e aspas."
+        },
+        {
+          "id": "lpm_5",
+          "titulo": "5. Morfologia e Emprego das Classes de Palavras",
+          "descricao": "Substantivo, artigo, adjetivo, numeral, pronome, verbo, advérbio, preposição, conjunção e interjeição."
+        },
+        {
+          "id": "lpm_6",
+          "titulo": "6. Sintaxe e Vozes Verbais",
+          "descricao": "Análise sintática (termos essenciais, integrantes e acessórios da oração; período composto por coordenação e subordinação); vozes verbais: ativa, passiva e reflexiva."
+        },
+        {
+          "id": "lpm_7",
+          "titulo": "7. Concordância, Regência, Colocação Pronominal e Crase",
+          "descricao": "Concordância verbal e nominal; regência verbal e nominal; colocação pronominal; crase."
+        },
+        {
+          "id": "lpm_8",
+          "titulo": "8. Variação Linguística e Figuras de Linguagem",
+          "descricao": "Variação linguística e adequação da linguagem; figuras de linguagem: noções básicas."
         }
       ]
     },
     "informatica_geral": {
       "id": "informatica_geral",
-      "nome": "Informática (Conhecimento Geral)",
-      "questoes": 10,
+      "nome": "Noções de Informática",
+      "questoes": 5,
       "topicos": [
         {
-          "id": "inf_g_1",
-          "titulo": "1. Sistemas operacionais e arquivos",
-          "descricao": "Conhecimentos básicos de sistemas operacionais; gerenciamento de arquivos e pastas; tipos de arquivos e extensões; armazenamento em nuvem; backup."
+          "id": "inf_1",
+          "titulo": "1. Fundamentos de Sistemas Computacionais",
+          "descricao": "Hardware, software e formatos de arquivo; formatos abertos e proprietários; interoperabilidade; armazenamento local, remoto e em nuvem; sincronização e controle de versões; software livre, licenciamento e acessibilidade digital."
         },
         {
-          "id": "inf_g_2",
-          "titulo": "2. Google Workspace",
-          "descricao": "Conceitos e funcionalidades; Google Drive; criação, organização, compartilhamento e colaboração em arquivos; permissões de acesso e histórico de versões."
+          "id": "inf_2",
+          "titulo": "2. Sistemas Operacionais (Windows 11 e Linux Ubuntu)",
+          "descricao": "Arquivos, pastas e permissões; contas de usuário e perfis de acesso; histórico de versões e recuperação de arquivos; atualizações, privacidade e segurança."
         },
         {
-          "id": "inf_g_3",
-          "titulo": "3. LibreOffice Writer",
-          "descricao": "Criação, edição e formatação de documentos; fontes, parágrafos, listas e tabelas; configuração de página; inserção de imagens e links; revisão e comentários; atalhos; impressão e exportação."
+          "id": "inf_3",
+          "titulo": "3. Editores de Texto (Microsoft Word e LibreOffice Writer)",
+          "descricao": "Estilos e estruturação de documentos extensos; sumário automático, notas, legendas e referências cruzadas; mala direta e modelos; comentários, controle de alterações e comparação de documentos; proteção de documentos e exportação para PDF."
         },
         {
-          "id": "inf_g_4",
-          "titulo": "4. LibreOffice Calc",
-          "descricao": "Criação, edição e formatação de planilhas; células, linhas, colunas e intervalos; organização e classificação de dados; fórmulas e funções básicas; referências de células; gráficos; atalhos; configuração e impressão."
+          "id": "inf_4",
+          "titulo": "4. Planilhas Eletrônicas (Microsoft Excel e LibreOffice Calc)",
+          "descricao": "Fórmulas, referências e funções matemáticas, estatísticas, lógicas, de texto, de data/hora e de pesquisa; classificação, filtros e validação de dados; formatação condicional, tabelas dinâmicas e gráficos; proteção de dados e identificação de erros."
         },
         {
-          "id": "inf_g_5",
-          "titulo": "5. LibreOffice Impress",
-          "descricao": "Criação, edição e organização de apresentações; slides, temas e layouts; formatação de textos; inserção de imagens, tabelas, gráficos e links; transições e animações; apresentação e exportação."
+          "id": "inf_5",
+          "titulo": "5. Apresentações e Integração entre Aplicativos",
+          "descricao": "Slide mestre, temas, transições, animações e modo apresentador (PowerPoint e Impress); transferência de dados entre texto, planilha e apresentação; incorporação e vinculação de objetos; compatibilidade entre pacotes e versões; conversão para PDF."
         },
         {
-          "id": "inf_g_6",
-          "titulo": "6. Internet e correio eletrônico",
-          "descricao": "Conceitos básicos de Internet; navegadores; mecanismos de busca; abas, favoritos, histórico e downloads; correio eletrônico; envio, recebimento e anexos."
+          "id": "inf_6",
+          "titulo": "6. Internet, Intranet e Pesquisa (Chrome, Edge e Firefox)",
+          "descricao": "Internet, intranet, extranet e protocolos básicos; HTTPS e certificados digitais; estratégias e operadores de busca; avaliação de fontes; desinformação e conteúdos manipulados."
         },
         {
-          "id": "inf_g_7",
-          "titulo": "7. Redes e segurança da informação",
-          "descricao": "Conceitos básicos de redes; Internet, intranet e Wi-Fi; dispositivos de rede; senhas e autenticação; vírus, worms, trojans, ransomware, spyware e phishing; proteção de dados e boas práticas de segurança."
+          "id": "inf_7",
+          "titulo": "7. Correio Eletrônico Corporativo (Outlook, Thunderbird e Gmail)",
+          "descricao": "Protocolos SMTP, POP3 e IMAP; webmail e clientes de e-mail; listas de distribuição, regras, calendários e convites; phishing e variações, falsificação de remetente e cuidados com dados sigilosos."
         },
         {
-          "id": "inf_g_8",
-          "titulo": "8. Inteligência Artificial",
-          "descricao": "Conceitos básicos de Inteligência Artificial e Inteligência Artificial Generativa; uso de ferramentas de IA no ambiente de trabalho; elaboração de prompts; verificação e revisão das informações geradas; limitações e possibilidade de erros; privacidade, proteção de dados, direitos autorais, ética e uso responsável da IA."
+          "id": "inf_8",
+          "titulo": "8. Computação em Nuvem e Trabalho Colaborativo",
+          "descricao": "Microsoft 365, Google Workspace, Teams, Meet e Zoom: compartilhamento por usuários, grupos e links; permissões, coautoria e histórico de versões; transferência e revogação de acesso; riscos de links públicos e permissões excessivas."
+        },
+        {
+          "id": "inf_9",
+          "titulo": "9. Fundamentos de Sistemas de Informação e Administração Pública",
+          "descricao": "Dado, informação e conhecimento; conceitos básicos de banco de dados e qualidade dos dados; autenticação, autorização e auditoria; segregação de funções, princípio do menor privilégio, trilhas de auditoria e disponibilidade; publicidade e transparência ativa e passiva; proteção de dados pessoais em documentos públicos."
+        }
+      ]
+    },
+    "raciocinio_logico": {
+      "id": "raciocinio_logico",
+      "nome": "Raciocínio Lógico-Matemático",
+      "questoes": 5,
+      "topicos": [
+        {
+          "id": "rlm_1",
+          "titulo": "1. Raciocínio Lógico e Proposições",
+          "descricao": "Proposições, conectivos, negação, tabela verdade, equivalência e implicação lógica, diagramas lógicos, calendários."
+        },
+        {
+          "id": "rlm_2",
+          "titulo": "2. Números Reais, Proporcionalidade e Matemática Financeira",
+          "descricao": "Resolução de problemas envolvendo números reais; numeração; razões especiais; grandezas diretamente e inversamente proporcionais; regra de três simples e composta; divisão proporcional; porcentagem; juros simples e compostos."
+        },
+        {
+          "id": "rlm_3",
+          "titulo": "3. Conjuntos, Divisibilidade e Sequências",
+          "descricao": "Conjuntos; múltiplos e divisores; regras de divisibilidade; MDC e MMC; sequências e padrões (números, figuras, letras ou palavras); progressões aritméticas e geométricas; equações e sistemas do 1º e 2º graus."
+        },
+        {
+          "id": "rlm_4",
+          "titulo": "4. Análise Combinatória e Probabilidade",
+          "descricao": "Problemas de contagem: Princípio Aditivo e Princípio Multiplicativo; arranjos, combinações e permutações; probabilidade da união de dois eventos, probabilidade condicional e probabilidade de eventos independentes."
+        },
+        {
+          "id": "rlm_5",
+          "titulo": "5. Estatística Básica, Geometria e Medidas",
+          "descricao": "Média aritmética simples e ponderada; perímetro e área de figuras planas; Sistema Legal de Medidas (comprimento, área, volume, massa, capacidade e tempo); interpretação de gráficos e tabelas."
+        }
+      ]
+    },
+    "legislacao": {
+      "id": "legislacao",
+      "nome": "Legislação e Ética no Serviço Público",
+      "questoes": 5,
+      "topicos": [
+        {
+          "id": "leg_1",
+          "titulo": "1. Legislação Aplicada ao Serviço Público (LGPD e LAI)",
+          "subtopicos": [
+            {
+              "id": "leg_1_1",
+              "texto": "1.1. Lei Federal nº 13.709/2018 – Lei Geral de Proteção de Dados Pessoais (LGPD)."
+            },
+            {
+              "id": "leg_1_2",
+              "texto": "1.2. Lei Federal nº 12.527/2011 – Lei de Acesso à Informação (LAI)."
+            }
+          ]
+        },
+        {
+          "id": "leg_2",
+          "titulo": "2. Ética no Serviço Público e Princípios da Administração Pública",
+          "subtopicos": [
+            {
+              "id": "leg_2_1",
+              "texto": "2.1. Ética e função pública; ética e moral (definição e distinção); valores, virtude, honestidade, integridade, decoro e zelo; ética, democracia, cidadania e o papel do servidor público."
+            },
+            {
+              "id": "leg_2_2",
+              "texto": "2.2. Princípios da Administração Pública aplicados à ética: legalidade, impessoalidade, moralidade, publicidade e eficiência."
+            }
+          ]
+        },
+        {
+          "id": "leg_3",
+          "titulo": "3. Legislação Interna de Petrolina/PE",
+          "subtopicos": [
+            {
+              "id": "leg_3_1",
+              "texto": "3.1. Lei Orgânica do Município de Petrolina."
+            },
+            {
+              "id": "leg_3_2",
+              "texto": "3.2. Regimento Interno da Câmara Municipal de Petrolina (com alterações posteriores)."
+            },
+            {
+              "id": "leg_3_3",
+              "texto": "3.3. Lei Municipal nº 301/1991 (Estatuto dos Funcionários Públicos do Município de Petrolina): provimento, vacância, direitos e vantagens, deveres, proibições, responsabilidades e regime disciplinar."
+            },
+            {
+              "id": "leg_3_4",
+              "texto": "3.4. Lei Municipal nº 3.960/2026 (Plano de Cargos, Carreira e Vencimentos da Câmara Municipal de Petrolina): provimento, estágio probatório, progressão funcional, deveres, proibições e penalidades."
+            },
+            {
+              "id": "leg_3_5",
+              "texto": "3.5. Lei Municipal nº 3.937/2026 (Transformação e extinção de cargos do quadro permanente do Poder Legislativo Municipal)."
+            }
+          ]
         }
       ]
     }
   },
   "cargos": {
-    "agente_administrativo": {
-      "id": "agente_administrativo",
-      "nome": "Agente Administrativo",
-      "codigo": "101",
-      "nivel": "Médio",
-      "jornada": "30 horas",
-      "remuneracao": "R$ 4.921,08",
-      "taxa_inscricao": 100.0,
-      "vagas": {
-        "total": 15,
-        "ampla": 10,
-        "ppp": 3,
-        "pcd": 2
-      },
-      "pdf_edital": "CONHECIMENTO ESPECÍFICO - Agente Administrativo (retificado em 07 de outubro de 2026).pdf",
-      "link_pdf": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_Agente_Administrativo_(retificado_em_07_de_outubro_de_2026).pdf",
-      "disciplinas": [
-        "lingua_portuguesa",
-        "legislacao",
-        "informatica_geral",
-        "especifica_agente_administrativo"
-      ],
-      "especifica": {
-        "id": "especifica_agente_administrativo",
-        "nome": "Conhecimentos Específicos - Agente Administrativo",
-        "questoes": 30,
-        "topicos": [
-          {
-            "id": "adm_1",
-            "titulo": "1. Conhecimentos básicos em Administração",
-            "descricao": "Funções do processo administrativo: planejamento, organização, direção e controle; níveis de planejamento; habilidades administrativas; estruturas organizacionais; departamentalização; centralização e descentralização; eficiência, eficácia e efetividade."
-          },
-          {
-            "id": "adm_2",
-            "titulo": "2. Relações humanas, comunicação e liderança",
-            "descricao": "Relações interpessoais no ambiente de trabalho; comunicação organizacional; comunicação verbal e não verbal; trabalho em equipe; liderança; estilos de liderança; motivação; teorias motivacionais; gestão de conflitos; negociação; comportamento organizacional."
-          },
-          {
-            "id": "adm_3",
-            "titulo": "3. Gestão de processos e projetos",
-            "descricao": "Conceitos de processos, atividades e tarefas; gestão e mapeamento de processos; conceitos básicos de gestão de projetos; ciclo de vida dos projetos; planejamento, execução, monitoramento e encerramento de projetos."
-          },
-          {
-            "id": "adm_4",
-            "titulo": "4. Noções de Direito Constitucional",
-            "descricao": "Constituição Federal: princípios fundamentais e direitos e garantias fundamentais. Organização do Estado: organização político-administrativa; União, Estados, Distrito Federal e Municípios; competências municipais. Poder Legislativo: organização, atribuições e competências das Câmaras Municipais; fiscalização do Município. Processo legislativo: iniciativa, proposições, emendas, discussão, votação, sanção, veto, promulgação e publicação."
-          },
-          {
-            "id": "adm_5",
-            "titulo": "5. Noções de Direito Administrativo",
-            "descricao": "Art. 37 da Constituição Federal; princípios da Administração Pública; atos administrativos."
-          },
-          {
-            "id": "adm_6",
-            "titulo": "6. Administração de materiais, patrimônio e logística",
-            "descricao": "Conceitos básicos de administração de materiais; gestão e controle de estoques; armazenamento e distribuição; inventário; patrimônio público; tombamento, registro, movimentação e baixa de bens; conservação e controle de bens patrimoniais; logística; Lei nº 14.133/2021 (Licitações e Contratos Administrativos)."
-          },
-          {
-            "id": "adm_7",
-            "titulo": "7. Administração financeira e orçamentária",
-            "descricao": "Noções de orçamento público; princípios orçamentários; receitas e despesas públicas; fases da receita e da despesa; créditos adicionais; matemática básica aplicada à administração: razão, proporção, porcentagem, juros simples, juros compostos e interpretação de dados."
-          },
-          {
-            "id": "adm_8",
-            "titulo": "8. Redação Oficial",
-            "descricao": "Características da redação oficial; clareza, precisão, concisão, objetividade, impessoalidade, formalidade e padronização; correspondência oficial; pronomes de tratamento; estrutura e elaboração de documentos oficiais."
-          }
-        ]
-      }
-    },
-    "tecnico_informatica": {
-      "id": "tecnico_informatica",
-      "nome": "Técnico em Informática",
-      "codigo": "102",
-      "nivel": "Médio/Técnico",
-      "jornada": "30 horas",
-      "remuneracao": "R$ 4.921,08",
-      "taxa_inscricao": 100.0,
-      "pdf_edital": "CONHECIMENTO ESPECÍFICO - Técnico em informática.pdf",
-      "link_pdf": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_T%C3%A9cnico_em_inform%C3%A1tica.pdf",
-      "disciplinas": [
-        "lingua_portuguesa",
-        "legislacao",
-        "especifica_tecnico_informatica"
-      ],
-      "especifica": {
-        "id": "especifica_tecnico_informatica",
-        "nome": "Conhecimentos Específicos - Técnico em Informática",
-        "questoes": 40,
-        "topicos": [
-          {
-            "id": "tec_1",
-            "titulo": "1. Legislação em segurança da informação",
-            "subtopicos": [
-              {
-                "id": "tec_1_1",
-                "texto": "1.1. GDPR (General Data Protection Regulation)"
-              },
-              {
-                "id": "tec_1_2",
-                "texto": "1.2. Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)"
-              },
-              {
-                "id": "tec_1_3",
-                "texto": "1.3. Marco Civil da Internet (Lei Nº 12.965/14)"
-              },
-              {
-                "id": "tec_1_4",
-                "texto": "1.4. Normas de segurança da informação"
-              },
-              {
-                "id": "tec_1_5",
-                "texto": "1.5. Gestão de segurança da informação (Normas NBR ISO/IEC 27001 e 27002)"
-              },
-              {
-                "id": "tec_1_6",
-                "texto": "1.6. Gestão de riscos e continuidade de negócio (Normas NBR ISO/IEC 27005 e 15999)"
-              }
-            ]
-          },
-          {
-            "id": "tec_2",
-            "titulo": "2. Organização de Computadores",
-            "descricao": "Processadores, memórias, discos rígidos e SSDs (incluindo NVMe), padrão IDE e SATA, placas-mães, placas de vídeo (GPUs), monitores, unidades externas de armazenamento, portas serial, paralela e USB, notebooks, impressoras, scanners e outros equipamentos periféricos."
-          },
-          {
-            "id": "tec_3",
-            "titulo": "3. Sistemas Operacionais (Linux Ubuntu Desktop 20.04 LTS e posteriores, e Windows 10 e posteriores)",
-            "subtopicos": [
-              {
-                "id": "tec_3_1",
-                "texto": "3.1. Criação e gerenciamento de usuários, permissões sobre arquivos e diretórios, tratamento de processos; inicialização/encerramento da execução de serviços, manutenção de programas, controle remoto de estações, sistema de arquivos (NTFS, Ext4, Btrfs)"
-              },
-              {
-                "id": "tec_3_2",
-                "texto": "3.2. Configurações de rede; Configuração de serviços; Configuração de periféricos; Backup e restore"
-              }
-            ]
-          },
-          {
-            "id": "tec_4",
-            "titulo": "4. Banco de Dados",
-            "subtopicos": [
-              {
-                "id": "tec_4_1",
-                "texto": "4.1. Modelo Entidade-Relacionamento"
-              },
-              {
-                "id": "tec_4_2",
-                "texto": "4.2. SQL: linguagem de definição de dados (DDL), consultas, inserções, atualizações e exclusões (DML)"
-              },
-              {
-                "id": "tec_4_3",
-                "texto": "4.3. Propriedades de um SGBD (ACID)"
-              },
-              {
-                "id": "tec_4_4",
-                "texto": "4.4. Visões, índices, otimização de consultas, triggers e transações em PostgreSQL 9.x"
-              },
-              {
-                "id": "tec_4_5",
-                "texto": "4.5. Linguagem procedural PL/pgSQL"
-              }
-            ]
-          },
-          {
-            "id": "tec_5",
-            "titulo": "5. Lógica de programação de computadores (Python 3.x, Java 12 ou superior, PHP 7.x)",
-            "subtopicos": [
-              {
-                "id": "tec_5_1",
-                "texto": "5.1. Construção de algoritmos, tipos de dados e operações primitivas, variáveis e expressões, comando de atribuição, avaliação de expressões, comandos de entrada e saída"
-              },
-              {
-                "id": "tec_5_2",
-                "texto": "5.2. Estruturas sequenciais, estrutura de seleção, estruturas de repetição"
-              },
-              {
-                "id": "tec_5_3",
-                "texto": "5.3. Arrays, listas encadeadas (simples e duplas), modularização, recursividade, programação estruturada"
-              }
-            ]
-          },
-          {
-            "id": "tec_6",
-            "titulo": "6. Framework Scrum",
-            "descricao": "Papéis (Product Owner, Scrum Master, Developers), cerimônias (Sprint Planning, Daily, Review, Retrospective) e artefatos (Product Backlog, Sprint Backlog, Increment)."
-          },
-          {
-            "id": "tec_7",
-            "titulo": "7. Linguagem de modelagem UML 2",
-            "descricao": "Diagrama de caso de uso, diagrama de atividades, diagrama de sequência, diagrama de classes, diagrama de pacotes, diagrama de componentes."
-          },
-          {
-            "id": "tec_8",
-            "titulo": "8. Testes automatizados de software",
-            "descricao": "Testes unitários automatizados, funcionais, não funcionais e outros (JUnit 5 e superiores)."
-          },
-          {
-            "id": "tec_9",
-            "titulo": "9. Padrões e tecnologias web",
-            "descricao": "HTML5, CSS3, Javascript (ECMAScript 6), jQuery 1.8.x, JSON."
-          },
-          {
-            "id": "tec_10",
-            "titulo": "10. Programação Web",
-            "subtopicos": [
-              {
-                "id": "tec_10_1",
-                "texto": "10.1. PHP 7.x"
-              },
-              {
-                "id": "tec_10_2",
-                "texto": "10.2. JavaServer Faces (JSF) 2.2 ou superior"
-              }
-            ]
-          },
-          {
-            "id": "tec_11",
-            "titulo": "11. Padrões de projeto",
-            "subtopicos": [
-              {
-                "id": "tec_11_1",
-                "texto": "11.1. Padrão arquitetural MVC (Model-View-Controller)"
-              },
-              {
-                "id": "tec_11_2",
-                "texto": "11.2. Padrões Gang of Four - GoF (criacionais, estruturais e comportamentais)"
-              }
-            ]
-          },
-          {
-            "id": "tec_12",
-            "titulo": "12. Controle de versões: Git 2.x",
-            "descricao": "Conceitos de repositórios, commits, branches, merges, rebases, tags e fluxo de trabalho Git."
-          },
-          {
-            "id": "tec_13",
-            "titulo": "13. Conhecimentos em Ubuntu Server",
-            "descricao": "Administração de servidor Ubuntu, linhas de comando bash, serviços systemd, permissões, logs e gerenciamento de pacotes apt."
-          }
-        ]
-      }
-    },
     "analista_ti": {
       "id": "analista_ti",
-      "nome": "Analista de Tecnologia da Informação",
-      "codigo": "205",
+      "nome": "Analista Legislativo – Tecnologia da Informação",
+      "codigo": "04",
       "nivel": "Superior",
-      "jornada": "30 horas",
-      "remuneracao": "R$ 8.810,69",
-      "taxa_inscricao": 150.0,
-      "turno": "Tarde (Portões fecham às 14h • Duração: 4h)",
+      "jornada": "30h semanais",
+      "remuneracao": "R$ 4.553,94",
+      "taxa_inscricao": 140,
+      "turno": "Tarde (Portões fecham às 14h00 • Duração: 4h)",
       "vagas": {
-        "imediata": 1,
-        "cadastro_reserva": 2,
-        "total": 3,
-        "descricao": "1 vaga imediata + 2 de cadastro de reserva"
+        "total": 1,
+        "ampla": 1,
+        "cr": 3
       },
-      "pdf_edital": "CONHECIMENTO ESPECÍFICO - Analista de TI.pdf",
-      "link_pdf": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_Analista_de_TI.pdf",
+      "pdf_edital": "edital_n_01_2026_1707176.pdf",
+      "link_pdf": "https://www.idecan.org.br",
       "disciplinas": [
-        "lingua_portuguesa",
+        "lingua_portuguesa_superior",
+        "informatica_geral",
         "legislacao",
         "especifica_analista_ti"
       ],
       "especifica": {
         "id": "especifica_analista_ti",
-        "nome": "Conhecimentos Específicos - Analista de Tecnologia da Informação",
-        "questoes": 40,
+        "nome": "Conhecimentos Específicos - Analista Legislativo / TI",
+        "questoes": 20,
         "topicos": [
           {
-            "id": "ana_ti_1",
-            "titulo": "1. Conceitos básicos de software e hardware",
-            "descricao": "Definição, tipos, funções e características."
+            "id": "ati_1",
+            "titulo": "1. Infraestrutura de TI e Informática Legislativa",
+            "subtopicos": [
+              {
+                "id": "ati_1_1",
+                "texto": "1.1. Arquitetura e componentes de computadores; hardware e periféricos."
+              },
+              {
+                "id": "ati_1_2",
+                "texto": "1.2. Instalação, configuração, manutenção e suporte de hardware e software."
+              },
+              {
+                "id": "ati_1_3",
+                "texto": "1.3. Sistemas operacionais Windows e Linux: instalação, configuração, administração e principais comandos."
+              },
+              {
+                "id": "ati_1_4",
+                "texto": "1.4. Administração de servidores; virtualização; computação em nuvem (IaaS, PaaS e SaaS)."
+              },
+              {
+                "id": "ati_1_5",
+                "texto": "1.5. Gestão e suporte de serviços de TI: noções de ITIL e COBIT."
+              },
+              {
+                "id": "ati_1_6",
+                "texto": "1.6. Teleprocessamento, operação e monitoramento de sistemas; controle de qualidade: noções."
+              }
+            ]
           },
           {
-            "id": "ana_ti_2",
-            "titulo": "2. Algoritmos",
-            "descricao": "Complexidade de algoritmos (notação Big-O), métodos de ordenação (Bubble, Insertion, Selection, Merge, Quick, Heap sort)."
+            "id": "ati_2",
+            "titulo": "2. Redes de Computadores",
+            "subtopicos": [
+              {
+                "id": "ati_2_1",
+                "texto": "2.1. Modelo OSI e arquitetura TCP/IP."
+              },
+              {
+                "id": "ati_2_2",
+                "texto": "2.2. Endereçamento IPv4 e IPv6."
+              },
+              {
+                "id": "ati_2_3",
+                "texto": "2.3. Principais protocolos e serviços: DNS, DHCP, HTTP/HTTPS, SMTP, IMAP, LDAP, SNMP."
+              },
+              {
+                "id": "ati_2_4",
+                "texto": "2.4. Cabeamento estruturado e redes sem fio."
+              },
+              {
+                "id": "ati_2_5",
+                "texto": "2.5. Equipamentos de rede: switches, roteadores, firewalls e pontos de acesso; VLAN e VPN."
+              },
+              {
+                "id": "ati_2_6",
+                "texto": "2.6. Monitoramento e documentação de redes."
+              }
+            ]
           },
           {
-            "id": "ana_ti_3",
-            "titulo": "3. Estruturas de dados",
-            "descricao": "Representação e manipulação de matrizes, arrays, listas, pilhas, filas e árvores (binárias, AVL, B-Trees)."
+            "id": "ati_3",
+            "titulo": "3. Segurança da Informação",
+            "subtopicos": [
+              {
+                "id": "ati_3_1",
+                "texto": "3.1. Princípios: confidencialidade, integridade, disponibilidade e autenticidade."
+              },
+              {
+                "id": "ati_3_2",
+                "texto": "3.2. Malwares, ataques e engenharia social."
+              },
+              {
+                "id": "ati_3_3",
+                "texto": "3.3. Criptografia, certificação e assinatura digital."
+              },
+              {
+                "id": "ati_3_4",
+                "texto": "3.4. Gestão de identidades e acessos; autenticação multifator; hardening."
+              },
+              {
+                "id": "ati_3_5",
+                "texto": "3.5. Cópias de segurança (backup e restore), plano de continuidade e recuperação de desastres."
+              },
+              {
+                "id": "ati_3_6",
+                "texto": "3.6. Gestão de vulnerabilidades, registros de eventos (logs) e resposta a incidentes."
+              },
+              {
+                "id": "ati_3_7",
+                "texto": "3.7. ABNT NBR ISO/IEC 27001 e 27002: noções."
+              }
+            ]
           },
           {
-            "id": "ana_ti_4",
-            "titulo": "4. Banco de Dados",
-            "descricao": "Conceitos, modelos, projeto conceitual, lógico e físico, linguagens de consulta, banco de dados distribuídos e sistemas gerenciadores de banco de dados (SGBDs), SQL ANSI."
+            "id": "ati_4",
+            "titulo": "4. Desenvolvimento de Sistemas",
+            "subtopicos": [
+              {
+                "id": "ati_4_1",
+                "texto": "4.1. Lógica de programação e algoritmos; estruturas de dados."
+              },
+              {
+                "id": "ati_4_2",
+                "texto": "4.2. Programação estruturada e orientada a objetos."
+              },
+              {
+                "id": "ati_4_3",
+                "texto": "4.3. Linguagens Python, JavaScript e Java: fundamentos."
+              },
+              {
+                "id": "ati_4_4",
+                "texto": "4.4. Desenvolvimento web: HTML5, CSS3 e APIs REST."
+              },
+              {
+                "id": "ati_4_5",
+                "texto": "4.5. Engenharia de requisitos e UML: noções."
+              },
+              {
+                "id": "ati_4_6",
+                "texto": "4.6. Metodologias ágeis (Scrum e Kanban) e controle de versão (Git)."
+              },
+              {
+                "id": "ati_4_7",
+                "texto": "4.7. Testes de software e desenvolvimento seguro (OWASP Top 10)."
+              }
+            ]
           },
           {
-            "id": "ana_ti_5",
-            "titulo": "5. Engenharia de software",
-            "descricao": "Padrões de Projetos (GoF); conceitos, tipos de sistemas, modelos de ciclo de vida, metodologia de desenvolvimento de software, métodos e técnicas de desenvolvimento estruturado e orientado a objetos. Planejamento, análise de requisitos, análise, projeto, gestão de configuração, testes, qualidade de software, manutenção, desenvolvimento baseado em componentes, ferramentas CASE, gestão de projetos, SCRUM e UML 2.0."
+            "id": "ati_5",
+            "titulo": "5. Banco de Dados",
+            "subtopicos": [
+              {
+                "id": "ati_5_1",
+                "texto": "5.1. Modelagem entidade-relacionamento e modelo relacional."
+              },
+              {
+                "id": "ati_5_2",
+                "texto": "5.2. Normalização."
+              },
+              {
+                "id": "ati_5_3",
+                "texto": "5.3. Linguagem SQL."
+              },
+              {
+                "id": "ati_5_4",
+                "texto": "5.4. Sistemas gerenciadores de banco de dados; bancos NoSQL: noções."
+              }
+            ]
           },
           {
-            "id": "ana_ti_6",
-            "titulo": "6. Redes de Computadores",
-            "descricao": "Conceitos básicos, tipos de redes, arquitetura TCP/IP e modelo OSI, protocolos de comunicação (HTTP, HTTPS, SSH, IMAP, SMTP, TCP, UDP, DNS, DHCP)."
+            "id": "ati_6",
+            "titulo": "6. Governança, Legislação e Tecnologias Emergentes",
+            "subtopicos": [
+              {
+                "id": "ati_6_1",
+                "texto": "6.1. Lei Federal nº 13.709/2018 (LGPD) aplicada à TI: segurança, incidentes e privacidade desde a concepção."
+              },
+              {
+                "id": "ati_6_2",
+                "texto": "6.2. Lei Federal nº 12.965/2014 (Marco Civil da Internet)."
+              },
+              {
+                "id": "ati_6_3",
+                "texto": "6.3. Lei Federal nº 14.129/2021 (Governo Digital) e interoperabilidade."
+              },
+              {
+                "id": "ati_6_4",
+                "texto": "6.4. Acessibilidade digital: eMAG e WCAG."
+              },
+              {
+                "id": "ati_6_5",
+                "texto": "6.5. Contratação de soluções de TIC na Lei Federal nº 14.133/2021: noções."
+              },
+              {
+                "id": "ati_6_6",
+                "texto": "6.6. Inteligência artificial: fundamentos, IA generativa, riscos, vieses e uso responsável no setor público."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "tecnico_administrativa": {
+      "id": "tecnico_administrativa",
+      "nome": "Técnico Legislativo – Administrativa",
+      "codigo": "07",
+      "nivel": "Médio",
+      "jornada": "30h semanais",
+      "remuneracao": "R$ 3.512,00",
+      "taxa_inscricao": 120,
+      "turno": "Manhã (Portões fecham às 08h00 • Duração: 4h)",
+      "vagas": {
+        "total": 5,
+        "ampla": 3,
+        "pcd": 1,
+        "pp": 1,
+        "cr": 15
+      },
+      "pdf_edital": "edital_n_01_2026_1707176.pdf",
+      "link_pdf": "https://www.idecan.org.br",
+      "disciplinas": [
+        "lingua_portuguesa_medio",
+        "raciocinio_logico",
+        "legislacao",
+        "especifica_tecnico_administrativa"
+      ],
+      "especifica": {
+        "id": "especifica_tecnico_administrativa",
+        "nome": "Conhecimentos Específicos - Técnico Legislativo / Administrativa",
+        "questoes": 20,
+        "topicos": [
+          {
+            "id": "tadm_1",
+            "titulo": "1. Noções de Administração",
+            "subtopicos": [
+              {
+                "id": "tadm_1_1",
+                "texto": "1.1. Funções administrativas: planejamento, organização, direção e controle."
+              },
+              {
+                "id": "tadm_1_2",
+                "texto": "1.2. Estrutura organizacional, organogramas e fluxogramas."
+              },
+              {
+                "id": "tadm_1_3",
+                "texto": "1.3. Noções de gestão de processos e de qualidade no serviço público."
+              },
+              {
+                "id": "tadm_1_4",
+                "texto": "1.4. Atendimento ao público presencial e a distância; direitos dos usuários dos serviços públicos (Lei Federal nº 13.460/2017)."
+              }
+            ]
           },
           {
-            "id": "ana_ti_7",
-            "titulo": "7. Sistemas operacionais",
-            "descricao": "Utilização e configuração de sistemas Windows, Unix e distribuições Linux (processos, threads, gerência de memória, sistemas de arquivos e I/O)."
+            "id": "tadm_2",
+            "titulo": "2. Rotinas Administrativas",
+            "subtopicos": [
+              {
+                "id": "tadm_2_1",
+                "texto": "2.1. Protocolo: recebimento, registro, distribuição, tramitação e expedição de documentos e correspondências."
+              },
+              {
+                "id": "tadm_2_2",
+                "texto": "2.2. Arquivo e gestão documental (Lei Federal nº 8.159/1991): classificação, temporalidade e métodos de arquivamento."
+              },
+              {
+                "id": "tadm_2_3",
+                "texto": "2.3. Redação oficial (Manual de Redação da Presidência da República): ofício, memorando, requerimento, despacho e certidão."
+              },
+              {
+                "id": "tadm_2_4",
+                "texto": "2.4. Controle de prazos administrativos."
+              }
+            ]
           },
           {
-            "id": "ana_ti_8",
-            "titulo": "8. Linguagens de Programação e Tecnologias Modernas",
-            "descricao": "Java, JavaScript (ECMAScript 2020), TypeScript (5.4), Node.js (v20.14), React (v18), React Native (0.74), NestJS (v10.3.9)."
+            "id": "tadm_3",
+            "titulo": "3. Noções de Administração Financeira e Orçamentária",
+            "subtopicos": [
+              {
+                "id": "tadm_3_1",
+                "texto": "3.1. Orçamento público: PPA, LDO e LOA."
+              },
+              {
+                "id": "tadm_3_2",
+                "texto": "3.2. Receita e despesa públicas; estágios da despesa: empenho, liquidação e pagamento (Lei Federal nº 4.320/1964)."
+              },
+              {
+                "id": "tadm_3_3",
+                "texto": "3.3. Restos a pagar e suprimento de fundos."
+              },
+              {
+                "id": "tadm_3_4",
+                "texto": "3.4. Noções da Lei Complementar Federal nº 101/2000 (Lei de Responsabilidade Fiscal)."
+              }
+            ]
           },
           {
-            "id": "ana_ti_9",
-            "titulo": "9. Segurança de dados e Privacidade",
-            "descricao": "Lei Geral de Proteção de Dados Pessoais - LGPD (Lei nº 13.709/2018), princípios, bases legais, direitos do titular, segurança e conformidade."
+            "id": "tadm_4",
+            "titulo": "4. Noções de Licitações, Compras e Patrimônio",
+            "subtopicos": [
+              {
+                "id": "tadm_4_1",
+                "texto": "4.1. Lei Federal nº 14.133/2021: princípios, modalidades, contratação direta e fases do processo."
+              },
+              {
+                "id": "tadm_4_2",
+                "texto": "4.2. Gestão de materiais e almoxarifado: recebimento, armazenamento, controle de estoque e inventário."
+              },
+              {
+                "id": "tadm_4_3",
+                "texto": "4.3. Controle patrimonial: tombamento, movimentação e baixa de bens."
+              }
+            ]
+          },
+          {
+            "id": "tadm_5",
+            "titulo": "5. Noções de Gestão de Pessoas",
+            "subtopicos": [
+              {
+                "id": "tadm_5_1",
+                "texto": "5.1. Registros funcionais, frequência, férias e licenças."
+              },
+              {
+                "id": "tadm_5_2",
+                "texto": "5.2. Lei Municipal nº 301/1991: direitos, deveres, proibições e regime disciplinar."
+              }
+            ]
+          },
+          {
+            "id": "tadm_6",
+            "titulo": "6. Matemática Aplicada às Rotinas Administrativas",
+            "subtopicos": [
+              {
+                "id": "tadm_6_1",
+                "texto": "6.1. Razão, proporção, regra de três e porcentagem."
+              },
+              {
+                "id": "tadm_6_2",
+                "texto": "6.2. Juros simples."
+              },
+              {
+                "id": "tadm_6_3",
+                "texto": "6.3. Leitura e interpretação de tabelas e gráficos."
+              }
+            ]
+          },
+          {
+            "id": "tadm_7",
+            "titulo": "7. Noções de Informática",
+            "subtopicos": [
+              {
+                "id": "tadm_7_1",
+                "texto": "7.1. Sistemas operacionais Windows e Linux (pastas, arquivos e atalhos); MS Office M365 (Word, Excel, PowerPoint, OneDrive e SharePoint)."
+              },
+              {
+                "id": "tadm_7_2",
+                "texto": "7.2. Correio eletrônico; internet e navegadores; ferramentas de reuniões on-line."
+              },
+              {
+                "id": "tadm_7_3",
+                "texto": "7.3. Segurança da informação (senhas, autenticação em dois fatores, phishing e cópias de segurança); noções de ferramentas de inteligência artificial generativa: usos, limites e uso responsável."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "tecnico_legislativa": {
+      "id": "tecnico_legislativa",
+      "nome": "Técnico Legislativo – Legislativa",
+      "codigo": "08",
+      "nivel": "Médio",
+      "jornada": "30h semanais",
+      "remuneracao": "R$ 3.512,00",
+      "taxa_inscricao": 120,
+      "turno": "Manhã (Portões fecham às 08h00 • Duração: 4h)",
+      "vagas": {
+        "total": 5,
+        "ampla": 3,
+        "pcd": 1,
+        "pp": 1,
+        "cr": 15
+      },
+      "pdf_edital": "edital_n_01_2026_1707176.pdf",
+      "link_pdf": "https://www.idecan.org.br",
+      "disciplinas": [
+        "lingua_portuguesa_medio",
+        "raciocinio_logico",
+        "legislacao",
+        "especifica_tecnico_legislativa"
+      ],
+      "especifica": {
+        "id": "especifica_tecnico_legislativa",
+        "nome": "Conhecimentos Específicos - Técnico Legislativo / Legislativa",
+        "questoes": 20,
+        "topicos": [
+          {
+            "id": "tleg_1",
+            "titulo": "1. Organização do Poder Legislativo Municipal",
+            "subtopicos": [
+              {
+                "id": "tleg_1_1",
+                "texto": "1.1. O Município na Constituição Federal (arts. 29 a 31)."
+              },
+              {
+                "id": "tleg_1_2",
+                "texto": "1.2. Lei Orgânica do Município de Petrolina: competências e funcionamento da Câmara Municipal; atribuições da Mesa Diretora; prerrogativas e vedações dos Vereadores."
+              }
+            ]
+          },
+          {
+            "id": "tleg_2",
+            "titulo": "2. Processo Legislativo Municipal",
+            "subtopicos": [
+              {
+                "id": "tleg_2_1",
+                "texto": "2.1. Espécies normativas: emendas à Lei Orgânica, leis complementares, leis ordinárias, decretos legislativos e resoluções."
+              },
+              {
+                "id": "tleg_2_2",
+                "texto": "2.2. Proposições: projetos, requerimentos, indicações, moções, emendas, substitutivos e pareceres."
+              },
+              {
+                "id": "tleg_2_3",
+                "texto": "2.3. Iniciativa, discussão, votação, quórum, sanção, veto e promulgação."
+              },
+              {
+                "id": "tleg_2_4",
+                "texto": "2.4. Regimento Interno da Câmara Municipal de Petrolina: sessões e suas fases, comissões permanentes e temporárias, audiências públicas, tramitação e arquivamento de proposições."
+              }
+            ]
+          },
+          {
+            "id": "tleg_3",
+            "titulo": "3. Técnica e Redação Legislativa",
+            "subtopicos": [
+              {
+                "id": "tleg_3_1",
+                "texto": "3.1. Lei Complementar Federal nº 95/1998: estrutura e articulação das leis."
+              },
+              {
+                "id": "tleg_3_2",
+                "texto": "3.2. Redação de proposições, convites, convocações e documentos legislativos."
+              },
+              {
+                "id": "tleg_3_3",
+                "texto": "3.3. Redação oficial (Manual de Redação da Presidência da República)."
+              },
+              {
+                "id": "tleg_3_4",
+                "texto": "3.4. Elaboração de atas: conceito, estrutura e requisitos."
+              }
+            ]
+          },
+          {
+            "id": "tleg_4",
+            "titulo": "4. Pesquisa e Documentação Legislativa",
+            "subtopicos": [
+              {
+                "id": "tleg_4_1",
+                "texto": "4.1. Pesquisa de legislação e acompanhamento da tramitação de proposições."
+              },
+              {
+                "id": "tleg_4_2",
+                "texto": "4.2. Sistemas eletrônicos de processo legislativo: noções."
+              },
+              {
+                "id": "tleg_4_3",
+                "texto": "4.3. Arquivo e gestão documental (Lei Federal nº 8.159/1991)."
+              },
+              {
+                "id": "tleg_4_4",
+                "texto": "4.4. Transparência e publicidade dos atos legislativos (Lei Federal nº 12.527/2011)."
+              }
+            ]
+          },
+          {
+            "id": "tleg_5",
+            "titulo": "5. Noções de Informática",
+            "subtopicos": [
+              {
+                "id": "tleg_5_1",
+                "texto": "5.1. Sistemas operacionais Windows e Linux (pastas, arquivos e atalhos); MS Office M365 (Word, Excel, PowerPoint, OneDrive e SharePoint)."
+              },
+              {
+                "id": "tleg_5_2",
+                "texto": "5.2. Correio eletrônico; internet e navegadores; ferramentas de reuniões on-line."
+              },
+              {
+                "id": "tleg_5_3",
+                "texto": "5.3. Segurança da informação (senhas, autenticação em dois fatores, phishing e cópias de segurança); noções de ferramentas de inteligência artificial generativa: usos, limites e uso responsável."
+              }
+            ]
           }
         ]
       }
@@ -558,75 +791,12 @@
   "documentos_links": [
     {
       "id": "edital_completo",
-      "titulo": "Edital Nº 01/2026 (Retificado em 22/10/2026)",
-      "subtitulo": "Regras gerais, vagas, requisitos e cronograma oficial",
+      "titulo": "Edital Nº 01/2026 - Câmara de Petrolina/PE",
+      "subtitulo": "Edital completo com vagas, requisitos, conteúdo programático (Anexo II) e cronograma (Anexo III)",
       "categoria": "Edital Principal",
-      "arquivo": "/docs/edital_01_2026.pdf",
-      "paginas": 24,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/informacoes.php"
-    },
-    {
-      "id": "edital_retificacao_1",
-      "titulo": "1ª Retificação do Edital Nº 01/2026",
-      "subtitulo": "Alteração do prazo para pagamento da taxa de inscrição (27/10 a 13/11)",
-      "categoria": "Retificação",
-      "arquivo": "/docs/retificacao_01_2026.pdf",
-      "paginas": 2,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/informacoes.php"
-    },
-    {
-      "id": "prog_agente_adm",
-      "titulo": "Programa Específico - Agente Administrativo",
-      "subtitulo": "Conteúdo programático oficial específico (Retificado em 07/10/2026)",
-      "categoria": "Agente Administrativo",
-      "arquivo": "/docs/especifico_agente_administrativo.pdf",
-      "paginas": 1,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_Agente_Administrativo_(retificado_em_07_de_outubro_de_2026).pdf"
-    },
-    {
-      "id": "prog_analista_ti",
-      "titulo": "Programa Específico - Analista de TI",
-      "subtitulo": "Conteúdo programático oficial para Nível Superior em TI",
-      "categoria": "Analista de TI",
-      "arquivo": "/docs/especifico_analista_ti.pdf",
-      "paginas": 1,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_Analista_de_TI.pdf"
-    },
-    {
-      "id": "prog_tec_info",
-      "titulo": "Programa Específico - Técnico em Informática",
-      "subtitulo": "Conteúdo programático oficial para Nível Médio/Técnico em TI",
-      "categoria": "Técnico em Informática",
-      "arquivo": "/docs/especifico_tecnico_informatica.pdf",
-      "paginas": 2,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_ESPEC%C3%8DFICO_$%23_T%C3%A9cnico_em_inform%C3%A1tica.pdf"
-    },
-    {
-      "id": "prog_portugues",
-      "titulo": "Programa Geral - Língua Portuguesa",
-      "subtitulo": "Conteúdo comum a todos os cargos do certame",
-      "categoria": "Conhecimentos Gerais",
-      "arquivo": "/docs/geral_lingua_portuguesa.pdf",
-      "paginas": 1,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_GERAL_$%23_L%C3%ADngua_Portuguesa.pdf"
-    },
-    {
-      "id": "prog_legislacao",
-      "titulo": "Programa Geral - Legislação",
-      "subtitulo": "Regimento Interno, Lei Orgânica de Mossoró e Lei 8.429/92",
-      "categoria": "Conhecimentos Gerais",
-      "arquivo": "/docs/geral_legislacao.pdf",
-      "paginas": 1,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_GERAL_$%23_Legisla%C3%A7%C3%A3o.pdf"
-    },
-    {
-      "id": "prog_informatica_geral",
-      "titulo": "Programa Geral - Informática",
-      "subtitulo": "Conhecimento geral para Agente Administrativo e outros cargos de nível médio/superior",
-      "categoria": "Conhecimentos Gerais",
-      "arquivo": "/docs/geral_informatica.pdf",
-      "paginas": 1,
-      "link_oficial": "https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/documentos/programas_estudo//PROGRAMA-V-B-CONHECIMENTO_GERAL_$%23_Inform%C3%A1tica.pdf"
+      "arquivo": "/docs/edital_01_2026_petrolina.pdf",
+      "paginas": 54,
+      "link_oficial": "https://www.idecan.org.br"
     }
   ]
 }

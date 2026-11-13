@@ -50,9 +50,9 @@ export function LoginScreen({ isDark, onToggleTheme }) {
           <div className="login-logo-circle">
             <ShieldCheck size={32} />
           </div>
-          <h2>Câmara de Mossoró</h2>
+          <h2>Câmara de Petrolina</h2>
           <p className="login-sub">Gestor de Estudos & Finanças de Viagem</p>
-          <span className="badge badge-primary">Edital nº 001/2026 • COMPERVE</span>
+          <span className="badge badge-primary">Edital nº 01/2026 • IDECAN</span>
         </div>
 
         <form onSubmit={handleSubmit} className="login-form card">
@@ -113,7 +113,7 @@ export function LoginScreen({ isDark, onToggleTheme }) {
               <div className="quick-avatar">LS</div>
               <div className="quick-info">
                 <strong>Lucas (TI)</strong>
-                <span>Técnico & Analista de TI</span>
+                <span>Analista Legislativo - TI</span>
               </div>
             </button>
 
@@ -125,7 +125,7 @@ export function LoginScreen({ isDark, onToggleTheme }) {
               <div className="quick-avatar">AD</div>
               <div className="quick-info">
                 <strong>Ana Dias (Adm)</strong>
-                <span>Agente Administrativo</span>
+                <span>Técnico Legislativo</span>
               </div>
             </button>
           </div>
@@ -134,9 +134,9 @@ export function LoginScreen({ isDark, onToggleTheme }) {
         <div className="login-footer-info">
           <p>Credenciais mock pré-definidas no sistema: senha <code>12345</code></p>
           <div className="login-status-tags">
-            <span>Prova: 06/12/2026</span>
+            <span>Prova: 17/01/2027</span>
             <span>•</span>
-            <span>Banca COMPERVE</span>
+            <span>Banca IDECAN</span>
           </div>
         </div>
       </div>

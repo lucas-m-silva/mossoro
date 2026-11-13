@@ -27,8 +27,8 @@ export function Navbar({ activeTab, onTabChange, isDark, onToggleTheme }) {
             <GraduationCap size={24} />
           </div>
           <div className="brand-title-group">
-            <h1>Câmara de Mossoró</h1>
-            <p>Concurso 2026 • COMPERVE</p>
+            <h1>Câmara de Petrolina</h1>
+            <p>Concurso 2026 • IDECAN</p>
           </div>
         </div>
 

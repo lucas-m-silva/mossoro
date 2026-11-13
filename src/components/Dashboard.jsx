@@ -29,8 +29,8 @@ import {
 export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
   const { user } = useAuth();
 
-  // Target exam date: 06/12/2026 08:00
-  const examDate = new Date('2026-12-06T08:00:00');
+  // Target exam date: 17/01/2027 08:00
+  const examDate = new Date('2027-01-17T08:00:00');
 
   // Real-time countdown state
   const [timeLeft, setTimeLeft] = useState({
@@ -71,11 +71,11 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
   }, []);
 
   // Financial Calculator State
-  const defaultFee = 100;
+  const defaultFee = user?.login === 'lucas' ? 140 : 120;
   const [finance, setFinance] = useState({
     registrationFee: defaultFee,
     vehicleType: 'fox', // 'fox' | 'mt03' | 'custom'
-    roundTripDistanceKm: 1578, // Distância padrão configurada (1578 km)
+    roundTripDistanceKm: 1274, // 637 km ida + 637 km volta = 1274 km
     fuelPricePerLiter: 6.29,
     vehicleConsumptionKmPerL: 11.5, // 11.5 km/l for Fox, 22 km/l for MT-03
     fuelCostManual: 0,
@@ -85,7 +85,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
     daysEating: 2,
     foodPerDay: 75,
     extraEmergency: 80,
-    notes: 'Orçamento previsto para a viagem de prova em Mossoró/RN'
+    notes: 'Orçamento previsto para a viagem de prova em Petrolina/PE'
   });
 
   const [savedSuccess, setSavedSuccess] = useState(false);
@@ -93,11 +93,10 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
   // Load user's saved finance plan
   useEffect(() => {
     if (user?.login) {
+      const roleDefaultFee = user.login === 'lucas' ? 140 : 120;
       loadFinancePlan(user.login).then((saved) => {
         if (saved) {
-          const distance = (!saved.roundTripDistanceKm || saved.roundTripDistanceKm === 560)
-            ? 1578
-            : saved.roundTripDistanceKm;
+          const distance = !saved.roundTripDistanceKm ? 1274 : saved.roundTripDistanceKm;
           setFinance({
             ...saved,
             roundTripDistanceKm: distance
@@ -105,8 +104,8 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
         } else {
           setFinance(prev => ({
             ...prev,
-            roundTripDistanceKm: 1578,
-            registrationFee: 100
+            roundTripDistanceKm: 1274,
+            registrationFee: roleDefaultFee
           }));
         }
       });
@@ -190,8 +189,8 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
       <section className="dashboard-hero card">
         <div className="hero-content">
           <div className="hero-badge-row">
-            <span className="badge badge-primary">Concurso Câmara de Mossoró/RN</span>
-            <span className="badge badge-success">Banca COMPERVE</span>
+            <span className="badge badge-primary">Concurso Câmara de Petrolina/PE</span>
+            <span className="badge badge-success">Banca IDECAN</span>
             <span className="badge badge-info">
               {user?.login === 'lucas' ? 'Perfil: Lucas Silva (TI)' : 'Perfil: Ana Dias (Administrativo)'}
             </span>
@@ -212,12 +211,12 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
               <span>Ver Editais em PDF</span>
             </button>
             <a
-              href="https://www.comperve.ufrn.br/conteudo/concursos/mossoro_202601/informacoes.php"
+              href="https://www.idecan.org.br"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline"
             >
-              <span>Site Oficial COMPERVE</span>
+              <span>Site Oficial IDECAN</span>
               <ExternalLink size={16} />
             </a>
           </div>
@@ -226,12 +225,12 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
         <div className="hero-official-card">
           <div className="official-card-header">
             <MapPin size={18} className="text-brand" />
-            <strong>Cidade da Prova: Mossoró / RN</strong>
+            <strong>Cidade da Prova: Petrolina / PE</strong>
           </div>
           <div className="official-stat-grid">
             <div className="official-stat-item">
               <span className="stat-label">Data da Prova</span>
-              <strong className="stat-val text-brand">06/12/2026</strong>
+              <strong className="stat-val text-brand">17/01/2027</strong>
             </div>
             <div className="official-stat-item">
               <span className="stat-label">Duração</span>
@@ -239,22 +238,22 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
             </div>
             <div className="official-stat-item">
               <span className="stat-label">Total de Questões</span>
-              <strong className="stat-val">60 Questões</strong>
+              <strong className="stat-val">40 Questões</strong>
             </div>
             <div className="official-stat-item">
               <span className="stat-label">Remuneração Base</span>
               <strong
                 className="stat-val text-success"
-                title={user?.login === 'lucas' ? 'Técnico: R$ 4.921,08 | Analista: R$ 8.810,69' : 'Agente: R$ 4.921,08'}
+                title={user?.login === 'lucas' ? 'Analista Legislativo (TI): R$ 4.553,94' : 'Técnico Legislativo: R$ 3.512,00'}
               >
-                {user?.login === 'lucas' ? 'R$ 4.921 a R$ 8.810' : 'R$ 4.921,08'}
+                {user?.login === 'lucas' ? 'R$ 4.553,94' : 'R$ 3.512,00'}
               </strong>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Official Gate Times & Exam Shifts (Item 11.4 a 11.10 do Edital) */}
+      {/* Official Gate Times & Exam Shifts (Itens 10.2 e 12.3 do Edital) */}
       <section className="card gate-times-section">
         <div className="card-header">
           <div className="card-title-group">
@@ -264,11 +263,11 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
             <div>
               <h3 className="card-title">Horários Oficiais de Prova & Fechamento dos Portões</h3>
               <p className="card-subtitle">
-                Regras oficiais do Edital nº 001/2026 (Itens 11.4, 11.8, 11.9 e 11.10)
+                Regras oficiais do Edital nº 01/2026 (Itens 10.2, 12.3 e 12.4)
               </p>
             </div>
           </div>
-          <span className="badge badge-warning">Mossoró/RN • Horário Local</span>
+          <span className="badge badge-warning">Petrolina/PE • Horário de Brasília</span>
         </div>
 
         <div className="gate-shifts-grid">
@@ -277,14 +276,14 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
             <div className="shift-card-header">
               <div className="shift-title-group">
                 <span className="badge badge-info">Turno Matutino (Manhã)</span>
-                <h4>Nível Médio & Técnico</h4>
+                <h4>Nível Médio (Técnico Legislativo)</h4>
               </div>
               <div className="shift-meta-row">
                 <span className="shift-cargos-tag">
-                  Agente Administrativo (101) & Técnico em Informática (102)
+                  Técnico Legislativo: Administrativa (07) & Legislativa (08)
                 </span>
                 <span className="shift-salary-tag">
-                  R$ 4.921,08 • 30h semanais
+                  R$ 3.512,00 • 30h semanais
                 </span>
               </div>
             </div>
@@ -296,8 +295,8 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                 </div>
                 <div className="time-info">
                   <span className="time-label">Abertura dos Portões</span>
-                  <strong className="time-val">07h20</strong>
-                  <span className="time-sub">Acesso das 7h20 às 7h59</span>
+                  <strong className="time-val">07h00</strong>
+                  <span className="time-sub">Acesso das 07h00 às 08h00</span>
                 </div>
               </div>
 
@@ -334,14 +333,14 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
             <div className="shift-card-header">
               <div className="shift-title-group">
                 <span className="badge badge-primary">Turno Vespertino (Tarde)</span>
-                <h4>Nível Superior</h4>
+                <h4>Nível Superior (Analista Legislativo)</h4>
               </div>
               <div className="shift-meta-row">
                 <span className="shift-cargos-tag">
-                  Analista de Tecnologia da Informação (Cód. 205)
+                  Analista Legislativo – Tecnologia da Informação (Cód. 04)
                 </span>
                 <span className="shift-salary-tag">
-                  R$ 8.810,69 • 1 vaga imediata + 2 CR
+                  R$ 4.553,94 • 1 vaga imediata + 3 CR
                 </span>
               </div>
             </div>
@@ -353,8 +352,8 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                 </div>
                 <div className="time-info">
                   <span className="time-label">Abertura dos Portões</span>
-                  <strong className="time-val">13h20</strong>
-                  <span className="time-sub">Acesso das 13h20 às 13h59</span>
+                  <strong className="time-val">13h00</strong>
+                  <span className="time-sub">Acesso das 13h00 às 14h00</span>
                 </div>
               </div>
 
@@ -391,13 +390,13 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
           <div className="rule-item">
             <ShieldAlert size={18} className="text-warning" />
             <span>
-              <strong>Item 11.9 / 11.10:</strong> Quem chegar após às <strong>7h59</strong> (manhã) ou após às <strong>13h59</strong> (tarde) não terá acesso e estará <strong>eliminado</strong>. Chegue com no mínimo <strong>30 minutos de antecedência</strong>!
+              <strong>Itens 12.3 / 12.4:</strong> Os portões fecham pontualmente às <strong>08h00</strong> (manhã) e às <strong>14h00</strong> (tarde), horário oficial de Brasília/DF. Compareça com antecedência mínima de <strong>60 minutos</strong>!
             </span>
           </div>
           <div className="rule-item">
             <PenTool size={18} className="text-brand" />
             <span>
-              <strong>Item 11.14:</strong> Obrigatório uso de caneta esferográfica de <strong>tinta preta</strong>, fabricada em <strong>material transparente</strong>.
+              <strong>Item 12.3:</strong> Obrigatório uso de caneta esferográfica de <strong>tinta azul ou preta</strong>, fabricada em <strong>material transparente</strong> e de ponta grossa.
             </span>
           </div>
         </div>
@@ -414,10 +413,10 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
               </div>
               <div>
                 <h3 className="card-title">Contagem Regressiva para a Prova</h3>
-                <p className="card-subtitle">Aplicação em Mossoró/RN • 06 de Dezembro de 2026</p>
+                <p className="card-subtitle">Aplicação em Petrolina/PE • 17 de Janeiro de 2027</p>
               </div>
             </div>
-            <span className="badge badge-warning">06/12/2026</span>
+            <span className="badge badge-warning">17/01/2027</span>
           </div>
 
           <div className="timer-display">
@@ -459,7 +458,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
               </div>
               <div>
                 <h3 className="card-title">Prazos & Cronograma Oficial</h3>
-                <p className="card-subtitle">Retificado em 22 de outubro de 2026</p>
+                <p className="card-subtitle">Edital nº 01/2026 • Anexo III</p>
               </div>
             </div>
           </div>
@@ -472,8 +471,8 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                   <strong>Período de Inscrições</strong>
                   <span className="badge badge-success">Abertas</span>
                 </div>
-                <p className="timeline-date">13/10/2026 a 12/11/2026</p>
-                <span className="timeline-note">Exclusivamente no sítio oficial da COMPERVE</span>
+                <p className="timeline-date">06/11/2026 a 05/12/2026</p>
+                <span className="timeline-note">Exclusivamente no site oficial do IDECAN</span>
               </div>
             </div>
 
@@ -482,10 +481,10 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
               <div className="timeline-content">
                 <div className="timeline-header">
                   <strong>Pagamento da Taxa de Inscrição</strong>
-                  <span className="badge badge-info">1ª Retificação</span>
+                  <span className="badge badge-info">Prazo Final</span>
                 </div>
-                <p className="timeline-date">27/10/2026 a 13/11/2026</p>
-                <span className="timeline-note">R$ 100 (Médio/Técnico) ou R$ 150 (Superior)</span>
+                <p className="timeline-date">Até 07/12/2026</p>
+                <span className="timeline-note">R$ 120 (Nível Médio) ou R$ 140 (Nível Superior)</span>
               </div>
             </div>
 
@@ -496,8 +495,8 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                   <strong>Divulgação dos Locais de Prova</strong>
                   <span className="badge badge-warning">Previsto</span>
                 </div>
-                <p className="timeline-date">Data provável: 01/12/2026</p>
-                <span className="timeline-note">Cartão de Inscrição no site da COMPERVE</span>
+                <p className="timeline-date">08/01/2027</p>
+                <span className="timeline-note">Cartão de Confirmação (CCI) no site do IDECAN</span>
               </div>
             </div>
 
@@ -508,8 +507,8 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                   <strong>Aplicação das Provas Objetivas</strong>
                   <span className="badge badge-primary">Grande Dia</span>
                 </div>
-                <p className="timeline-date">06/12/2026 (Domingo)</p>
-                <span className="timeline-note">Mossoró/RN • Duração de 4 horas</span>
+                <p className="timeline-date">17/01/2027 (Domingo)</p>
+                <span className="timeline-note">Petrolina/PE • Duração de 4 horas</span>
               </div>
             </div>
           </div>
@@ -524,7 +523,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
               <DollarSign size={22} />
             </div>
             <div>
-              <h3 className="card-title">Calculadora Financeira de Viagem para Mossoró</h3>
+              <h3 className="card-title">Calculadora Financeira de Viagem para Petrolina</h3>
               <p className="card-subtitle">
                 Simule e gerencie com precisão todos os custos de inscrição, transporte, hospedagem e alimentação
               </p>
@@ -557,10 +556,10 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                   <>
                     <button
                       type="button"
-                      className={`preset-pill ${finance.registrationFee === 100 ? 'active' : ''}`}
-                      onClick={() => setFinance(p => ({ ...p, registrationFee: 100 }))}
+                      className={`preset-pill ${finance.registrationFee === 120 ? 'active' : ''}`}
+                      onClick={() => setFinance(p => ({ ...p, registrationFee: 120 }))}
                     >
-                      R$ 100 (Médio/Técnico)
+                      R$ 120 (Técnico Legislativo)
                     </button>
                     <button
                       type="button"
@@ -574,24 +573,24 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                   <>
                     <button
                       type="button"
-                      className={`preset-pill ${finance.registrationFee === 100 ? 'active' : ''}`}
-                      onClick={() => setFinance(p => ({ ...p, registrationFee: 100 }))}
+                      className={`preset-pill ${finance.registrationFee === 140 ? 'active' : ''}`}
+                      onClick={() => setFinance(p => ({ ...p, registrationFee: 140 }))}
                     >
-                      R$ 100 (Técnico de TI)
+                      R$ 140 (Analista de TI)
                     </button>
                     <button
                       type="button"
-                      className={`preset-pill ${finance.registrationFee === 150 ? 'active' : ''}`}
-                      onClick={() => setFinance(p => ({ ...p, registrationFee: 150 }))}
+                      className={`preset-pill ${finance.registrationFee === 120 ? 'active' : ''}`}
+                      onClick={() => setFinance(p => ({ ...p, registrationFee: 120 }))}
                     >
-                      R$ 150 (Analista de TI)
+                      R$ 120 (Técnico Legislativo)
                     </button>
                     <button
                       type="button"
-                      className={`preset-pill ${finance.registrationFee === 250 ? 'active' : ''}`}
-                      onClick={() => setFinance(p => ({ ...p, registrationFee: 250 }))}
+                      className={`preset-pill ${finance.registrationFee === 260 ? 'active' : ''}`}
+                      onClick={() => setFinance(p => ({ ...p, registrationFee: 260 }))}
                     >
-                      R$ 250 (Dois Cargos)
+                      R$ 260 (Dois Cargos)
                     </button>
                     <button
                       type="button"
@@ -628,7 +627,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
               <div className="calc-header-row">
                 <label className="calc-label">
                   <Fuel size={16} />
-                  <span>Transporte & Combustível até Mossoró</span>
+                  <span>Transporte & Combustível até Petrolina</span>
                 </label>
                 <div className="vehicle-pills">
                   <button
@@ -679,6 +678,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                         </button>
                       </div>
                     </div>
+                    <span className="mini-hint">637 km cada trecho (1.274 km ida e volta)</span>
                   </div>
 
                   <div className="mini-input-group">
@@ -743,7 +743,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
             <div className="calc-group">
               <label className="calc-label">
                 <Hotel size={16} />
-                <span>Hospedagem em Mossoró (Diárias)</span>
+                <span>Hospedagem em Petrolina (Diárias)</span>
               </label>
               <div className="dual-inputs-grid">
                 <div className="mini-input-group">
@@ -920,16 +920,16 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
               <span>
                 Custo de {(
                   (grandTotal /
-                    (finance.registrationFee === 150 || (user?.login === 'lucas' && finance.registrationFee === 250)
-                      ? 8810.69
-                      : 4921.08)) *
+                    (finance.registrationFee === 140 || (user?.login === 'lucas' && finance.registrationFee === 260)
+                      ? 4553.94
+                      : 3512.00)) *
                   100
                 ).toFixed(1)}% do 1º salário ({
-                  finance.registrationFee === 150
-                    ? 'R$ 8.810,69 - Analista de TI'
-                    : finance.registrationFee === 250
-                    ? 'R$ 8.810,69 - Nível Superior'
-                    : 'R$ 4.921,08 - Nível Médio/Técnico'
+                  finance.registrationFee === 140
+                    ? 'R$ 4.553,94 - Analista de TI'
+                    : finance.registrationFee === 260
+                    ? 'R$ 4.553,94 - Nível Superior'
+                    : 'R$ 3.512,00 - Técnico Legislativo'
                 })
               </span>
             </div>
