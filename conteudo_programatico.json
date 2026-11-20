@@ -181,8 +181,13 @@
         },
         {
           "id": "inf_9",
-          "titulo": "9. Fundamentos de Sistemas de Informação e Administração Pública",
-          "descricao": "Dado, informação e conhecimento; conceitos básicos de banco de dados e qualidade dos dados; autenticação, autorização e auditoria; segregação de funções, princípio do menor privilégio, trilhas de auditoria e disponibilidade; publicidade e transparência ativa e passiva; proteção de dados pessoais em documentos públicos."
+          "titulo": "9. Fundamentos de Sistemas de Informação",
+          "descricao": "Dado, informação e conhecimento; conceitos básicos de banco de dados e qualidade dos dados; autenticação, autorização e auditoria; segregação de funções, princípio do menor privilégio, trilhas de auditoria e disponibilidade."
+        },
+        {
+          "id": "inf_10",
+          "titulo": "10. Sistemas Aplicados à Administração Pública",
+          "descricao": "Publicidade e transparência ativa e passiva; informações públicas, sigilosas e classificadas; restrição de acesso e necessidade de conhecimento; proteção de dados pessoais em documentos públicos; cuidados na publicação e no compartilhamento de documentos digitais."
         }
       ]
     },
@@ -225,55 +230,81 @@
       "topicos": [
         {
           "id": "leg_1",
-          "titulo": "1. Legislação Aplicada ao Serviço Público (LGPD e LAI)",
+          "titulo": "1. Legislação Aplicada ao Serviço Público",
           "subtopicos": [
             {
               "id": "leg_1_1",
-              "texto": "1.1. Lei Federal nº 13.709/2018 – Lei Geral de Proteção de Dados Pessoais (LGPD)."
+              "texto": "1.1. Lei Federal nº 13.709, de 14 de agosto de 2018 – Lei Geral de Proteção de Dados Pessoais (LGPD)."
             },
             {
               "id": "leg_1_2",
-              "texto": "1.2. Lei Federal nº 12.527/2011 – Lei de Acesso à Informação (LAI)."
+              "texto": "1.2. Lei Federal nº 12.527, de 18 de novembro de 2011 – Lei de Acesso à Informação (LAI)."
             }
           ]
         },
         {
           "id": "leg_2",
-          "titulo": "2. Ética no Serviço Público e Princípios da Administração Pública",
+          "titulo": "2. Ética no Serviço Público",
           "subtopicos": [
             {
               "id": "leg_2_1",
-              "texto": "2.1. Ética e função pública; ética e moral (definição e distinção); valores, virtude, honestidade, integridade, decoro e zelo; ética, democracia, cidadania e o papel do servidor público."
+              "texto": "2.1. Ética no serviço público."
             },
             {
               "id": "leg_2_2",
-              "texto": "2.2. Princípios da Administração Pública aplicados à ética: legalidade, impessoalidade, moralidade, publicidade e eficiência."
+              "texto": "2.2. Ética e função pública."
+            },
+            {
+              "id": "leg_2_3",
+              "texto": "2.3. Ética e moral: definição e distinção."
+            },
+            {
+              "id": "leg_2_4",
+              "texto": "2.4. Valores, virtude, honestidade, integridade, decoro e zelo no serviço público: conceitos."
+            },
+            {
+              "id": "leg_2_5",
+              "texto": "2.5. Ética, democracia, cidadania e o papel do servidor público."
             }
           ]
         },
         {
           "id": "leg_3",
-          "titulo": "3. Legislação Interna de Petrolina/PE",
+          "titulo": "3. Princípios da Administração Pública Aplicados à Ética",
           "subtopicos": [
             {
               "id": "leg_3_1",
-              "texto": "3.1. Lei Orgânica do Município de Petrolina."
+              "texto": "3.1. Princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência."
             },
             {
               "id": "leg_3_2",
-              "texto": "3.2. Regimento Interno da Câmara Municipal de Petrolina (com alterações posteriores)."
+              "texto": "3.2. Aplicação dos princípios éticos na Administração Pública."
+            }
+          ]
+        },
+        {
+          "id": "leg_4",
+          "titulo": "4. Legislação Interna de Petrolina/PE",
+          "subtopicos": [
+            {
+              "id": "leg_4_1",
+              "texto": "4.1. Lei Orgânica do Município de Petrolina."
             },
             {
-              "id": "leg_3_3",
-              "texto": "3.3. Lei Municipal nº 301/1991 (Estatuto dos Funcionários Públicos do Município de Petrolina): provimento, vacância, direitos e vantagens, deveres, proibições, responsabilidades e regime disciplinar."
+              "id": "leg_4_2",
+              "texto": "4.2. Regimento Interno da Câmara Municipal de Petrolina, com alterações posteriores."
             },
             {
-              "id": "leg_3_4",
-              "texto": "3.4. Lei Municipal nº 3.960/2026 (Plano de Cargos, Carreira e Vencimentos da Câmara Municipal de Petrolina): provimento, estágio probatório, progressão funcional, deveres, proibições e penalidades."
+              "id": "leg_4_3",
+              "texto": "4.3. Lei Municipal nº 301/1991, com alterações posteriores (Estatuto dos Funcionários Públicos do Município de Petrolina): provimento, vacância, direitos e vantagens, deveres, proibições, responsabilidades e regime disciplinar."
             },
             {
-              "id": "leg_3_5",
-              "texto": "3.5. Lei Municipal nº 3.937/2026 (Transformação e extinção de cargos do quadro permanente do Poder Legislativo Municipal)."
+              "id": "leg_4_4",
+              "texto": "4.4. Lei Municipal nº 3.960/2026 (Plano de Cargos, Carreira e Vencimentos do quadro de servidores públicos da Câmara Municipal de Petrolina): provimento, estágio probatório, progressão funcional, deveres, proibições e penalidades."
+            },
+            {
+              "id": "leg_4_5",
+              "texto": "4.5. Lei Municipal nº 3.937/2026 (transformação e extinção de cargos do quadro permanente do Poder Legislativo Municipal)."
             }
           ]
         }

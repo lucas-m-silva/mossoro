@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { loadStudyProgress, saveStudyProgress } from '../services/db';
 import syllabusData from '../data/conteudo_programatico.json';
 import { TopicMediaPanel } from './TopicMediaPanel';
+import { SimuladoModal } from './SimuladoModal';
 import {
   CheckSquare,
   Square,
@@ -24,7 +25,9 @@ import {
   Maximize2,
   Video,
   HelpCircle,
-  PlayCircle
+  PlayCircle,
+  Award,
+  Shuffle
 } from 'lucide-react';
 
 export function StudyTracker() {
@@ -46,6 +49,7 @@ export function StudyTracker() {
 
   // Expand/collapse state for discipline groups
   const [collapsedGroups, setCollapsedGroups] = useState({});
+  const [simuladoMode, setSimuladoMode] = useState(null); // null | 'caderno_1' | 'caderno_2' | 'caderno_3' | 'embaralhada'
 
   // Roles available for current user
   const allowedRoles = useMemo(() => {
@@ -346,12 +350,56 @@ export function StudyTracker() {
             )}
           </div>
           <p className="tracker-sub">
-            Conteúdo oficial extraído diretamente do edital do IDECAN.
-            {user?.login === 'lucas'
-              ? ' Acesso configurado para Técnico em Informática e Analista de TI.'
-              : ' Acesso configurado para Agente Administrativo.'}
+            Conteúdo oficial extraído diretamente do Edital nº 01/2026 (IDECAN) — Câmara de Petrolina/PE.
+            {user?.roleNames?.length ? ` Cargo(s): ${user.roleNames.join(' • ')}.` : ''}
           </p>
         </div>
+
+        {/* Simulador Oficial IDECAN - Testar Conhecimento (Analista de TI) */}
+        {currentCargoKey === 'analista_ti' && (
+        <div className="simulado-cta-card">
+          <div className="simulado-cta-info">
+            <div className="simulado-cta-badge-row">
+              <span className="badge badge-primary">120 Questões Validadas do IDECAN</span>
+              <span className="badge badge-success">40 Questões / 60 Pontos por Prova</span>
+            </div>
+            <h3>🎯 Testar Conhecimento — Simulados Analista Legislativo / TI</h3>
+            <p>
+              Provas montadas com questões reais da banca IDECAN filtradas para o edital de Petrolina (10 Português, 5 Informática, 5 Legislação/Ética e 20 Específicas de TI), com gabarito e justificativa na hora.
+            </p>
+          </div>
+          <div className="simulado-cta-actions">
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => setSimuladoMode('caderno_1')}
+            >
+              <Award size={18} />
+              <span>Testar Conhecimento</span>
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary btn-sm"
+              onClick={() => setSimuladoMode('embaralhada')}
+              title="Sortear e misturar 40 questões entre todas as provas"
+            >
+              <Shuffle size={15} />
+              <span>Embaralhar Provas</span>
+            </button>
+            <div className="simulado-quick-cadernos">
+              <button type="button" className="btn btn-outline btn-sm" onClick={() => setSimuladoMode('caderno_1')}>
+                Caderno 1 (MPA)
+              </button>
+              <button type="button" className="btn btn-outline btn-sm" onClick={() => setSimuladoMode('caderno_2')}>
+                Caderno 2 (IFPA)
+              </button>
+              <button type="button" className="btn btn-outline btn-sm" onClick={() => setSimuladoMode('caderno_3')}>
+                Caderno 3 (Misto)
+              </button>
+            </div>
+          </div>
+        </div>
+        )}
 
         {/* Role Selector Tabs (Only if user has more than 1 role, e.g. Lucas) */}
         {allowedRoles.length > 1 && (
@@ -1413,7 +1461,79 @@ export function StudyTracker() {
             margin-right: 1rem;
           }
         }
+
+        .simulado-cta-card {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1.25rem;
+          flex-wrap: wrap;
+          padding: 1.1rem 1.25rem;
+          border-radius: var(--radius-md);
+          background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(16, 185, 129, 0.08) 100%);
+          border: 1px solid rgba(37, 99, 235, 0.25);
+        }
+
+        .simulado-cta-info {
+          flex: 1;
+          min-width: 260px;
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+        }
+
+        .simulado-cta-badge-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.45rem;
+        }
+
+        .simulado-cta-info h3 {
+          font-size: 1.05rem;
+          margin: 0.1rem 0 0;
+          color: var(--text-primary);
+        }
+
+        .simulado-cta-info p {
+          font-size: 0.84rem;
+          color: var(--text-secondary);
+          margin: 0;
+          line-height: 1.45;
+        }
+
+        .simulado-cta-actions {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0.55rem;
+        }
+
+        .simulado-cta-actions > .btn-primary,
+        .simulado-cta-actions > .btn-secondary {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .simulado-quick-cadernos {
+          display: flex;
+          gap: 0.4rem;
+          flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+          .simulado-cta-actions {
+            width: 100%;
+            align-items: stretch;
+          }
+        }
       `}</style>
+
+      {simuladoMode && (
+        <SimuladoModal
+          initialMode={simuladoMode}
+          onClose={() => setSimuladoMode(null)}
+        />
+      )}
     </div>
   );
 }
