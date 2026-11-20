@@ -363,7 +363,10 @@ export function StudyTracker() {
               <span className="badge badge-primary">120 Questões Validadas do IDECAN</span>
               <span className="badge badge-success">40 Questões / 60 Pontos por Prova</span>
             </div>
-            <h3>🎯 Testar Conhecimento — Simulados Analista Legislativo / TI</h3>
+            <h3 className="simulado-cta-title">
+              <Award size={19} className="text-brand" />
+              <span>Testar Conhecimento — Simulados Analista Legislativo / TI</span>
+            </h3>
             <p>
               Provas montadas com questões reais da banca IDECAN filtradas para o edital de Petrolina (10 Português, 5 Informática, 5 Legislação/Ética e 20 Específicas de TI), com gabarito e justificativa na hora.
             </p>
@@ -1488,7 +1491,10 @@ export function StudyTracker() {
           gap: 0.45rem;
         }
 
-        .simulado-cta-info h3 {
+        .simulado-cta-title {
+          display: flex;
+          align-items: center;
+          gap: 0.45rem;
           font-size: 1.05rem;
           margin: 0.1rem 0 0;
           color: var(--text-primary);

@@ -92,8 +92,15 @@ WITH CHECK (true);`;
           <p>
             Funciona imediatamente sem necessidade de cadastro em nuvem. Salva diretamente no navegador (LocalStorage) com segurança e rapidez.
           </p>
-          <span className="provider-status-text">
-            {config.provider === 'local' ? '✔ Modo Padrão Ativo' : 'Clique para selecionar'}
+          <span className="provider-status-text" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+            {config.provider === 'local' ? (
+              <>
+                <CheckCircle2 size={14} />
+                <span>Modo Padrão Ativo</span>
+              </>
+            ) : (
+              'Clique para selecionar'
+            )}
           </span>
         </div>
 
@@ -114,8 +121,15 @@ WITH CHECK (true);`;
           <p>
             Banco de dados relacional gratuito na nuvem. Sincroniza seu progresso entre celular e computador em tempo real.
           </p>
-          <span className="provider-status-text">
-            {config.provider === 'supabase' ? '✔ Configuração Ativa' : 'Clique para configurar'}
+          <span className="provider-status-text" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+            {config.provider === 'supabase' ? (
+              <>
+                <CheckCircle2 size={14} />
+                <span>Configuração Ativa</span>
+              </>
+            ) : (
+              'Clique para configurar'
+            )}
           </span>
         </div>
 
@@ -136,8 +150,15 @@ WITH CHECK (true);`;
           <p>
             Banco de dados NoSQL gratuito do Google. Persistência de documentos em tempo real e sincronização automática.
           </p>
-          <span className="provider-status-text">
-            {config.provider === 'firebase' ? '✔ Configuração Ativa' : 'Clique para configurar'}
+          <span className="provider-status-text" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+            {config.provider === 'firebase' ? (
+              <>
+                <CheckCircle2 size={14} />
+                <span>Configuração Ativa</span>
+              </>
+            ) : (
+              'Clique para configurar'
+            )}
           </span>
         </div>
       </div>

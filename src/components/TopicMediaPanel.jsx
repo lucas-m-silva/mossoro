@@ -14,7 +14,9 @@ import {
   Layers,
   ChevronLeft,
   ChevronRight,
-  BookOpen
+  BookOpen,
+  Lightbulb,
+  Check
 } from 'lucide-react';
 
 /**
@@ -276,7 +278,7 @@ export function TopicMediaPanel({
                   <span>{q.numero}</span>
                   {isAnswered && (
                     <span className="q-nav-status-icon">
-                      {isCorrect ? '✓' : '×'}
+                      {isCorrect ? <Check size={11} /> : <X size={11} />}
                     </span>
                   )}
                 </button>
@@ -914,7 +916,19 @@ function QuestionCard({ question, userAnswer, onSelectAnswer }) {
           Questão {question.numero}
         </span>
         <span className={`q-status-tag ${isAnswered ? (isCorrect ? 'correct' : 'incorrect') : 'unanswered'}`}>
-          {isAnswered ? (isCorrect ? '✓ Resposta Correta' : '× Resposta Incorreta') : 'Pendente'}
+          {isAnswered ? (
+            isCorrect ? (
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+                <CheckCircle2 size={13} /> Resposta Correta
+              </span>
+            ) : (
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
+                <XCircle size={13} /> Resposta Incorreta
+              </span>
+            )
+          ) : (
+            'Pendente'
+          )}
         </span>
       </div>
 
@@ -975,7 +989,10 @@ function QuestionCard({ question, userAnswer, onSelectAnswer }) {
 
           {question.explicacao && (
             <div className="q-explicacao">
-              <strong>💡 Justificativa / Comentário:</strong> {question.explicacao}
+              <strong style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', marginRight: '0.35rem' }}>
+                <Lightbulb size={14} /> Justificativa / Comentário:
+              </strong>
+              {question.explicacao}
             </div>
           )}
         </div>

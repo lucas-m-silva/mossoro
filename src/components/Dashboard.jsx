@@ -23,7 +23,8 @@ import {
   PenTool,
   ShieldAlert,
   Plus,
-  Minus
+  Minus,
+  ArrowRight
 } from 'lucide-react';
 
 export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
@@ -300,7 +301,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                 </div>
               </div>
 
-              <div className="time-arrow">➜</div>
+              <div className="time-arrow"><ArrowRight size={18} /></div>
 
               <div className="time-box close">
                 <div className="time-icon">
@@ -313,7 +314,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                 </div>
               </div>
 
-              <div className="time-arrow">➜</div>
+              <div className="time-arrow"><ArrowRight size={18} /></div>
 
               <div className="time-box exam">
                 <div className="time-icon">
@@ -357,7 +358,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                 </div>
               </div>
 
-              <div className="time-arrow">➜</div>
+              <div className="time-arrow"><ArrowRight size={18} /></div>
 
               <div className="time-box close">
                 <div className="time-icon">
@@ -370,7 +371,7 @@ export function Dashboard({ onNavigateToTracker, onNavigateToDocs }) {
                 </div>
               </div>
 
-              <div className="time-arrow">➜</div>
+              <div className="time-arrow"><ArrowRight size={18} /></div>
 
               <div className="time-box exam">
                 <div className="time-icon">

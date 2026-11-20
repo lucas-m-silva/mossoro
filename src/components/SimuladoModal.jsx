@@ -17,7 +17,11 @@ import {
   AlertTriangle,
   ListChecks,
   Eye,
-  Filter
+  Filter,
+  Lightbulb,
+  Check,
+  ChevronUp,
+  ChevronDown
 } from 'lucide-react';
 
 const DISCIPLINE_ORDER = [
@@ -409,13 +413,13 @@ export function SimuladoModal({ initialMode = 'caderno_1', onClose }) {
                       </div>
                       <div className="sim-disc-nums">
                         <span className="pts">{d.points.toFixed(1)} / {d.maxPoints.toFixed(1)} pts</span>
-                        <span className="acc">{d.correct}✓ / {d.wrong}× ({pct}%)</span>
+                        <span className="acc">{d.correct} acertos / {d.wrong} erros ({pct}%)</span>
                       </div>
                       <div className="sim-disc-bar">
                         <div className="sim-disc-fill" style={{ width: `${pct}%` }} />
                       </div>
                       <small className="sim-disc-min">
-                        Mínimo edital: {d.minimoPontos.toFixed(1)} pt {d.answered > 0 && (metMin ? '• Atingido ✓' : '• Não atingido')}
+                        Mínimo edital: {d.minimoPontos.toFixed(1)} pt {d.answered > 0 && (metMin ? '• Atingido' : '• Não atingido')}
                       </small>
                     </div>
                   );
@@ -437,14 +441,16 @@ export function SimuladoModal({ initialMode = 'caderno_1', onClose }) {
                     className={`filter-btn ${reportFilter === 'wrong' ? 'active' : ''}`}
                     onClick={() => setReportFilter('wrong')}
                   >
-                    ❌ Questões que Errei ({stats.wrong})
+                    <XCircle size={14} />
+                    <span>Questões que Errei ({stats.wrong})</span>
                   </button>
                   <button
                     type="button"
                     className={`filter-btn ${reportFilter === 'correct' ? 'active' : ''}`}
                     onClick={() => setReportFilter('correct')}
                   >
-                    ✅ Questões que Acertei ({stats.correct})
+                    <CheckCircle2 size={14} />
+                    <span>Questões que Acertei ({stats.correct})</span>
                   </button>
                 </div>
 
@@ -492,11 +498,19 @@ export function SimuladoModal({ initialMode = 'caderno_1', onClose }) {
                             <span className="sim-origin-tag">{q.origem}</span>
                           </div>
                           <span className={`sim-status-pill ${userAns ? (isRight ? 'right' : 'wrong') : 'pending'}`}>
-                            {!userAns
-                              ? 'Não respondida'
-                              : isRight
-                              ? `✓ Acertou (${userAns})`
-                              : `× Errou (Marcou ${userAns} • Correta: ${q.gabarito})`}
+                            {!userAns ? (
+                              'Não respondida'
+                            ) : isRight ? (
+                              <>
+                                <CheckCircle2 size={13} />
+                                <span>Acertou ({userAns})</span>
+                              </>
+                            ) : (
+                              <>
+                                <XCircle size={13} />
+                                <span>Errou (Marcou {userAns} • Correta: {q.gabarito})</span>
+                              </>
+                            )}
                           </span>
                         </div>
 
@@ -514,7 +528,11 @@ export function SimuladoModal({ initialMode = 'caderno_1', onClose }) {
                         </div>
 
                         <div className="sim-review-just">
-                          <strong>💡 Justificativa:</strong> {q.explicacao}
+                          <div className="sim-just-label">
+                            <Lightbulb size={15} className="text-brand" />
+                            <strong>Justificativa:</strong>
+                          </div>
+                          <span>{q.explicacao}</span>
                         </div>
                       </div>
                     );
@@ -1259,10 +1277,30 @@ export function SimuladoModal({ initialMode = 'caderno_1', onClose }) {
           flex-wrap: wrap;
         }
         .sim-status-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.3rem;
           font-size: 0.78rem;
           font-weight: 700;
           padding: 0.2rem 0.55rem;
           border-radius: var(--radius-full);
+        }
+        .sim-just-label {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          margin-right: 0.35rem;
+          color: var(--text-primary);
+        }
+        .sim-texto-base-label {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45rem;
+        }
+        .sim-report-filters .filter-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
         }
         .sim-status-pill.right { background: rgba(16, 185, 129, 0.14); color: #10b981; }
         .sim-status-pill.wrong { background: rgba(239, 68, 68, 0.14); color: #ef4444; }
@@ -1317,7 +1355,21 @@ function SimuladoQuestionCard({
         </div>
 
         <span className={`sim-status-pill ${isAnswered ? (isCorrect ? 'right' : 'wrong') : 'pending'}`}>
-          {isAnswered ? (isCorrect ? '✓ Resposta Correta' : '× Resposta Incorreta') : 'Aguardando resposta'}
+          {isAnswered ? (
+            isCorrect ? (
+              <>
+                <CheckCircle2 size={13} />
+                <span>Resposta Correta</span>
+              </>
+            ) : (
+              <>
+                <XCircle size={13} />
+                <span>Resposta Incorreta</span>
+              </>
+            )
+          ) : (
+            'Aguardando resposta'
+          )}
         </span>
       </div>
 
@@ -1326,8 +1378,11 @@ function SimuladoQuestionCard({
       {question.textoBase && (
         <div className="sim-texto-base-box">
           <button type="button" className="sim-texto-base-toggle" onClick={onToggleTextoBase}>
-            <span>📖 Texto de apoio da prova ({showTextoBase ? 'clique para recolher' : 'clique para ler'})</span>
-            <span>{showTextoBase ? '▲' : '▼'}</span>
+            <span className="sim-texto-base-label">
+              <BookOpen size={15} className="text-brand" />
+              <span>Texto de apoio da prova ({showTextoBase ? 'clique para recolher' : 'clique para ler'})</span>
+            </span>
+            {showTextoBase ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
           </button>
           {showTextoBase && (
             <div className="sim-texto-base-content">{question.textoBase}</div>
@@ -1384,7 +1439,11 @@ function SimuladoQuestionCard({
           </div>
           {question.explicacao && (
             <div className="sim-feedback-just">
-              <strong>💡 Justificativa:</strong> {question.explicacao}
+              <span className="sim-just-label">
+                <Lightbulb size={15} className="text-brand" />
+                <strong>Justificativa:</strong>
+              </span>
+              <span>{question.explicacao}</span>
             </div>
           )}
         </div>
