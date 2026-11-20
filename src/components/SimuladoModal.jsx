@@ -431,14 +431,14 @@ export function SimuladoModal({ initialMode = 'caderno_1', onClose }) {
                 <div className="sim-report-filters">
                   <button
                     type="button"
-                    className={`filter-btn ${reportFilter === 'all' ? 'active' : ''}`}
+                    className={`sim-filter-btn ${reportFilter === 'all' ? 'active' : ''}`}
                     onClick={() => setReportFilter('all')}
                   >
                     Todas ({stats.answered})
                   </button>
                   <button
                     type="button"
-                    className={`filter-btn ${reportFilter === 'wrong' ? 'active' : ''}`}
+                    className={`sim-filter-btn ${reportFilter === 'wrong' ? 'active' : ''}`}
                     onClick={() => setReportFilter('wrong')}
                   >
                     <XCircle size={14} />
@@ -446,7 +446,7 @@ export function SimuladoModal({ initialMode = 'caderno_1', onClose }) {
                   </button>
                   <button
                     type="button"
-                    className={`filter-btn ${reportFilter === 'correct' ? 'active' : ''}`}
+                    className={`sim-filter-btn ${reportFilter === 'correct' ? 'active' : ''}`}
                     onClick={() => setReportFilter('correct')}
                   >
                     <CheckCircle2 size={14} />
@@ -548,7 +548,7 @@ export function SimuladoModal({ initialMode = 'caderno_1', onClose }) {
                 <div className="sim-disc-pills">
                   <button
                     type="button"
-                    className={`filter-btn ${discFilter === 'all' ? 'active' : ''}`}
+                    className={`sim-filter-btn ${discFilter === 'all' ? 'active' : ''}`}
                     onClick={() => handleFilterChange('all')}
                   >
                     Todas (40)
@@ -557,7 +557,7 @@ export function SimuladoModal({ initialMode = 'caderno_1', onClose }) {
                     <button
                       key={dId}
                       type="button"
-                      className={`filter-btn ${discFilter === dId ? 'active' : ''}`}
+                      className={`sim-filter-btn ${discFilter === dId ? 'active' : ''}`}
                       onClick={() => handleFilterChange(dId)}
                     >
                       {DISCIPLINE_SHORT[dId]} ({distMeta[dId].questoes})
@@ -565,20 +565,22 @@ export function SimuladoModal({ initialMode = 'caderno_1', onClose }) {
                   ))}
                 </div>
 
-                <div className="mode-toggle-group">
+                <div className="sim-mode-toggle-group">
                   <button
                     type="button"
-                    className={`btn-mode-toggle ${viewMode === 'single' ? 'active' : ''}`}
+                    className={`sim-btn-mode-toggle ${viewMode === 'single' ? 'active' : ''}`}
                     onClick={() => setViewMode('single')}
                   >
-                    Uma por Vez
+                    <Eye size={14} />
+                    <span>Uma por Vez</span>
                   </button>
                   <button
                     type="button"
-                    className={`btn-mode-toggle ${viewMode === 'list' ? 'active' : ''}`}
+                    className={`sim-btn-mode-toggle ${viewMode === 'list' ? 'active' : ''}`}
                     onClick={() => setViewMode('list')}
                   >
-                    Lista ({filteredQuestions.length})
+                    <ListChecks size={14} />
+                    <span>Lista ({filteredQuestions.length})</span>
                   </button>
                 </div>
               </div>
@@ -886,8 +888,72 @@ export function SimuladoModal({ initialMode = 'caderno_1', onClose }) {
         .sim-disc-pills {
           display: flex;
           align-items: center;
-          gap: 0.4rem;
+          gap: 0.45rem;
           flex-wrap: wrap;
+        }
+
+        .sim-filter-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          padding: 0.4rem 0.75rem;
+          border-radius: var(--radius-full);
+          border: 1px solid var(--border-light);
+          background: var(--bg-secondary);
+          color: var(--text-secondary);
+          font-size: 0.8rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.15s ease;
+        }
+
+        .sim-filter-btn:hover {
+          border-color: var(--brand-primary);
+          color: var(--text-primary);
+          background: var(--bg-tertiary);
+        }
+
+        .sim-filter-btn.active {
+          background: var(--brand-primary);
+          border-color: var(--brand-primary);
+          color: #ffffff;
+        }
+
+        .sim-mode-toggle-group {
+          display: inline-flex;
+          align-items: center;
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-light);
+          border-radius: var(--radius-sm);
+          padding: 0.2rem;
+          gap: 0.2rem;
+        }
+
+        .sim-btn-mode-toggle {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          padding: 0.38rem 0.75rem;
+          border-radius: calc(var(--radius-sm) - 2px);
+          border: none;
+          background: transparent;
+          color: var(--text-secondary);
+          font-size: 0.8rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.15s ease;
+          white-space: nowrap;
+        }
+
+        .sim-btn-mode-toggle:hover:not(.active) {
+          background: var(--bg-tertiary);
+          color: var(--text-primary);
+        }
+
+        .sim-btn-mode-toggle.active {
+          background: var(--brand-primary);
+          color: #ffffff;
+          box-shadow: var(--shadow-sm);
         }
 
         .sim-nav-grid {
